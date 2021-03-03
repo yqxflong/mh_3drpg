@@ -1,0 +1,20 @@
+{
+    "downloadUrls" : 
+    {
+        "WebPlayer" : "",        
+        "Standalones" : "",        
+        "IOS" : "IOS",        
+        "Android" : "Android"
+    },    
+    "outputs" : 
+    {
+        "WebPlayer" : "",        
+        "Standalones" : "",        
+        "IOS" : "$(Personal)/LTSites/$(Version)/$(Platform)",        
+        "Android" : "$(Personal)/LTSites/$(Version)/$(Platform)"
+    },    
+    "bundleTarget" : 3,    
+    "useEditorTarget" : true,    
+    "downloadFromOutput" : false,    
+    "offlineCache" : false
+}

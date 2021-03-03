@@ -1,0 +1,43 @@
+{
+	"CityView":
+	{
+		"Load": ["MainMenu"],
+		"Show": ["MainMenu"]
+	},
+
+	"MapView":
+	{
+		"Load": ["MainMenu"],
+		"Show": ["MainMenu"]
+	},
+
+	"InventoryView":
+	{
+		"Load": ["MainMenu"],
+		"Show": []
+	},
+
+	"CampaignView":
+	{
+		"Load": ["LTMainMenu","GlobalMenuManager","CombatHudV4"],
+		"Show": ["LTMainMenu"]
+	},
+
+	"MainLandView":
+	{
+		"Load": ["LTMainMenu","GlobalMenuManager","TooltipContainer_New"],
+		"Show": ["LTMainMenu","GlobalMenuManager","TooltipContainer_New"]
+	},
+
+	"CombatView":
+	{
+		"Load": ["GlobalMenuManager","CombatHudV4","TooltipContainer_New"],
+		"Show": ["GlobalMenuManager","CombatHudV4","TooltipContainer_New"]
+	},
+
+	"InstanceView":
+	{
+		"Load": ["GlobalMenuManager","TooltipContainer_New"],
+		"Show": ["GlobalMenuManager","TooltipContainer_New"]
+	}
+}

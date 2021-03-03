@@ -1,0 +1,12 @@
+{
+    "name": "StylizedWater_Editor",
+    "references": [
+        "StylizedWater"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

@@ -1,0 +1,84 @@
+ID_SPARX_ERROR_UNKNOWN,An unknown error has occurred. Please try again later.
+ID_SPARX_ERROR_INVALID_CREDENTIALS,Your email or password was entered incorrectly
+ID_SPARX_ERROR_NAME_SHORT,Name must be between 3 and 12 characters
+ID_SPARX_ERROR_NAME_TAKEN,Name has already been taken
+ID_SPARX_ERROR_NAME_INVALID,Name contains invalid characters
+ID_SPARX_ERROR_PASSWORD_LENGTH,Password must be at least 7 characters,
+ID_SPARX_ERROR_PASSWORDS_DONT_MATCH,Passwords don't match
+ID_SPARX_ERROR_ACCOUNT_EXISTS,Account already exists. Please login.
+ID_SPARX_ERROR_ACCOUNT_DOESNT_EXISTS,Account does not exist
+ID_SPARX_ERROR_INVALID_EMAIL,Please enter a valid email address.
+ID_SPARX_ERROR_NOT_CONNECTED,Could not connect to the Internet. Please check your connection and try again.
+ID_SPARX_ERROR_SESSION,Your session has timed out. You will now be returned to the home screen.
+ID_SPARX_ERROR_FAILED_DNS,Failed to resolve network address. Please check your network settings and try again.
+ID_SPARX_ERROR_MASTER_SERVER_UNKNOWN,Failed to find master server for private game.
+ID_SPARX_ERROR_NOT_JOINABLE,Failed to join game. The game has already started.
+ID_SPARX_ERROR_LOST_CONNECT,The connection to the game was lost
+ID_SPARX_ERROR_JOIN_GAME,Failed to join game. Please check your network settings and try again.
+ID_SPARX_ERROR_GAME_KICKED,You have been kicked from the game.
+ID_SPARX_ERROR_NOFREEGAMES,All servers are full. Please try again later.
+ID_SPARX_ERROR_DUPLICATE_LOGIN,You have been logged out because signed in on another device.
+ID_SPARX_ERROR_MUST_BE_LOGGED_IN,You must be signed in to to purchase items.
+ID_SPARX_ERROR_FAILED_TO_VERIFY_PAYMENT,Failed to verify payment. Please try again later.
+ID_SPARX_ERROR_PROFANITY,Profanities are not allowed.
+ID_SPARX_ERROR_GAME_LOST_CONNECTION,You have lost connection to the game.
+ID_SPARX_ERROR_FACEBOOK,Failed to fetch information from Facebook. Please try again.
+ID_SPARX_ERROR_FACEBOOK_INIT,Facebook failed to initialize.
+ID_SPARX_ERROR_EMAIL_RESET,An email has been sent to {0} with instructions to reset your password.
+ID_SPARX_ERROR_FACEBOOK_CANCELED,Login with Facebook has been canceled.
+ID_SPARX_ERROR_FACEBOOK,Failed to login with Facebook. Please try again later.
+ID_SPARX_ERROR_TEMP_BANNED,Account is Frozen,Please contact custom service for more information.\nFrozen EndTime: {0}
+ID_SPARX_ERROR_BANNED,Account is Frozen,Please contact custom service for more information.\nFrozen EndTime: Forever
+ID_SPARX_ERROR_PUSH_BANNED,Account is Frozen,Please contact custom service for more information.
+
+ID_SPARX_CONTENT_CHECKING,Checking for new content
+ID_SPARX_CONTENT_DOWNLOAD_PROGRESS, Downloading file {0} of {1}: {2}%
+ID_SPARX_CONTENT_EXTRACTING,Extracting new content
+ID_SPARX_CONTENT_FAILED,Failed to download content. Please check your internet settings and try again.
+ID_SPARX_CONTENT_FAILED_EXTRACT,Failed to download content. Please make sure that you have at least 500MB free on your device.
+ID_SPARX_CONTENT_RETRY,Retry
+
+ID_SPARX_OBB_ERROR,Failed to download expansion pack. External storage is not available.
+
+ID_SPARX_ERROR_MIN_VERSION,A new version is required to play online. Please update the application.
+
+ID_SPARX_PASSED_TIME_FORMAT_MONTHES,{0} monthes ago
+ID_SPARX_PASSED_TIME_FORMAT_WEEKS,{0} weeks ago
+ID_SPARX_PASSED_TIME_FORMAT_DAYS,{0} days ago
+ID_SPARX_PASSED_TIME_FORMAT_HOURS,{0} hours ago
+ID_SPARX_PASSED_TIME_FORMAT_MINUTES,{0} minutes ago
+ID_SPARX_PASSED_TIME_FORMAT_SECONDS,{0} senconds ago
+ID_SPARX_PASSED_TIME_FORMAT_MONTH,{0} month ago
+ID_SPARX_PASSED_TIME_FORMAT_WEEK,{0} week ago
+ID_SPARX_PASSED_TIME_FORMAT_DAY,{0} day ago
+ID_SPARX_PASSED_TIME_FORMAT_HOUR,{0} hour ago
+ID_SPARX_PASSED_TIME_FORMAT_MINUTE,{0} minute ago
+ID_SPARX_PASSED_TIME_FORMAT_SECOND,{0} sencond ago
+
+ID_SPARX_DURATION_FORMAT_DAYS,{0} days
+ID_SPARX_DURATION_FORMAT_DAY,{0} day
+ID_SPARX_DURATION_FORMAT_HOURS,{0} hours
+ID_SPARX_DURATION_FORMAT_HOUR,{0} hour
+ID_SPARX_DURATION_FORMAT_MINUTES,{0} minutes
+ID_SPARX_DURATION_FORMAT_MINUTE,{0} minute
+ID_SPARX_DURATION_FORMAT_SECONDS,{0} seconds
+ID_SPARX_DURATION_FORMAT_SECOND,{0} second
+
+ID_SPARX_STATUS_ONLINE,Online
+ID_SPARX_STATUS_OFFLINE,Offline
+
+ID_SPARX_APP_UPDATE_TITLE,Update
+ID_SPARX_APP_UPDATE_MESSAGE,A new version is avaliable. Click OK to download it.
+ID_SPARX_SERVER_MAINTENANCE_TITLE,Server Maintenance. Please try again later.
+ID_SPARX_NETWORK_RETYR,Unable to connect to network. Retry?
+ID_SPARX_NETWORK_CARRIER_DATA,Using carrier data network. Continue?
+ID_SPARX_NETWORK_ERROR,Network error! Please check your network settings and try again.
+ID_SPARX_LOGIN_RETRY,Unable to login. Retry?
+ID_SPARX_APP_EXIT_CONFIRM,Do you want to exit game?
+ID_SPARX_NOTIFICATION_TITLE,Reminder
+ID_SPARX_AUDIO_VENDER,Speech technology provided by iFLYTEK
+ID_SPARX_IAP_NOT_FINISHED,Parchase timeout, please restart game.
+ID_SPARX_CONTENT_DOWNLOADING_TITLE,Downloading
+ID_SPARX_CONTENT_DOWNLOADING_FORMAT,Downloading AssetBundle {0}/{1},Please wait a moment.
+
+ID_SPARX_LOGIN_FAIL_MORE,Failed to login. Please restart the game.

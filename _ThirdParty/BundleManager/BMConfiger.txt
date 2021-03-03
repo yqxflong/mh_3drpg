@@ -1,0 +1,12 @@
+{
+    "compress" : true,    
+    "optimizeTree" : true,    
+    "deterministicBundle" : false,    
+    "bundleSuffix" : "assetBundle",    
+    "buildOutputPath" : "",    
+    "useCache" : false,    
+    "useCRC" : false,    
+    "downloadThreadsCount" : 1,    
+    "downloadRetryTime" : 2,    
+    "bmVersion" : 1
+}

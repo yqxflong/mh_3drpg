@@ -1,0 +1,12 @@
+{
+    "name": "Utils_Editor",
+    "references": [
+        "Unity_ThirdParty"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

@@ -1,0 +1,12 @@
+{
+    "name": "MeshBaker_Editor",
+    "references": [
+        "MeshBaker"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true
+}

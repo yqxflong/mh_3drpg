@@ -1,0 +1,15 @@
+{
+    "name": "EBScripts_Editor",
+    "references": [
+        "Unity_ThirdParty",
+        "Unity_Main",
+        "BundleManager_Editor",
+        "Utils_Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true
+}

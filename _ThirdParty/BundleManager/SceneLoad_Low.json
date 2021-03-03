@@ -1,0 +1,50 @@
+{
+	"CityView":
+	{
+		"Load": ["CityView.unity.json"],
+		"Show": "CityView.unity.json",
+		"HideLayers": []
+	},
+
+	"CombatView":
+	{
+		"Load": ["CombatView.unity.json"],
+		"Show": "CombatView.unity.json",
+		"HideLayers": []
+	},
+
+	"CampaignView":
+	{
+		"Load": ["CampaignView.unity.json"],
+		"Show": "CampaignView.unity.json",
+		"HideLayers": []
+	},
+	
+	"MainLandView":
+	{
+		"Load": ["MainLandView.unity.json"],
+		"Show": "MainLandView.unity.json",
+		"HideLayers": []
+	},
+	
+	"MapView":
+	{
+		"Load": ["MapView.unity.json"],
+		"Show": "MapView.unity.json",
+		"HideLayers": []
+	},
+
+	"InventoryView":
+	{
+		"Load": ["InventoryView.unity.json"],
+		"Show": "InventoryView.unity.json",
+		"HideLayers": []
+	},
+
+	"InstanceView":
+	{
+		"Load": ["InstanceView.unity.json"],
+		"Show": "InstanceView.unity.json",
+		"HideLayers": []
+	}
+}
