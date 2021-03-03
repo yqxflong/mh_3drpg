@@ -1,0 +1,16 @@
+{
+    "name": "Unity_Main",
+    "references": [
+        "Unity_ThirdParty",
+        "StylizedWater",
+        "DragonBones"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

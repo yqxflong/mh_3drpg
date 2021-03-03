@@ -1,0 +1,21 @@
+{
+    "name": "Unity_Hotfix",
+    "references": [
+        "Unity_Main",
+        "EBScripts_Editor",
+        "Unity_ThirdParty",
+        "DragonBones"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

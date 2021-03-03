@@ -1,0 +1,4 @@
+1、UwaDataUploader组件工具放在工程的Assets同级目录下。
+2、UwaDataUploaderEditorWindow.cs是自定义脚本，用来控制UwaDataUploader工具的执行。
+
+注：如果当前操作系统是类Unix，请先安装mono环境（去mono的官网下载安装即可）。

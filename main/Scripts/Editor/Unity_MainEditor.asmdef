@@ -1,0 +1,16 @@
+{
+    "name": "Unity_MainEditor",
+    "references": [
+        "Unity_Main",
+        "NGUI_Editor",
+        "Unity_ThirdParty",
+        "EBScripts_Editor",
+        "Utils_Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

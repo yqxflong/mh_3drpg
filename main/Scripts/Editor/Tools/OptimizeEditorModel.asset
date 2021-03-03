@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62ac379e218fc44da58a59a030af6ab, type: 3}
+  m_Name: OptimizeEditorModel
+  m_EditorClassIdentifier: 
+  filterList:
+  - Assets/_ThirdParty
+  - Assets/Plugins
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LoadingSpinner_Atlas/LoadingSpinner_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTAllianceEscort_Atlas/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTArena_Atlas/Arena_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTArena_Atlas/LTDrop_Atlas/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTAwakenInstance_Atlas/LTAwakenInstance_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTBountyTask_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTChargeLimitTimeGift_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTChargeStore_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTChat_Atlas/Emoticon
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTCombatHud_Atlas/Buff_Atlas_Textures/Sprites
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTCombatHud_Atlas/LTCombatHud_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTCombatHud_Atlas/WatchTextures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTCombatReady_Atlas/AtlasTexture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTConcern_Atlas/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTFriend_Atlas/LTFriend_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTGeneral_Atlas/LTGeneral_Atlas_CN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTGeneral_Atlas/LTGeneral_Atlas_EN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTGeneral_Atlas/Resource_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTGeneral_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTIllustration_Atlas/LTIllustration_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/LTAlienMaze_Atlas/Sprites
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/LTChallengeInstance_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/LTMainInstance_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTLegion_Atlas/LTLegion_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTLegionWar_Atlas/LTLegionWar_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTLegionWar_Atlas/NewTextures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTLogin_Atlas/Login_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTMail_Atlas/LTMail_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTMainHud_Atlas/LTMainHud_Atlas_New_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTMainHud_Atlas/LTMainHud_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTNation_Atlas/Nation_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTNation_Atlas/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTNewInventory_Atlas/LTNewInventory_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTPartner_Atlas/LTPartner_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTPartnerEquipment_Atlas/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTResourceInstance_Atlas/LTResourceInstance_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTResourceShop_Atlas/Teture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTResourceShop_Atlas/LTResourceShop_Atlas_CN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTResourceShop_Atlas/LTResourceShop_Atlas_EN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTSecondaryGeneral_Atlas/LTSecondaryGeneral_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTSetting_Atlas/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTUltimateTrial_Atlas/LTUltimateTrial_Atlas_Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTWelfare_Atlas/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTWelfare_Atlas/LTWelfare_Atlas_CN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTWelfare_Atlas/LTWelfare_Atlas_EN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/Partnet_Head/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/Partnet_HeadFrame/Texture
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Role/SmallMap
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Role/Textures
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Common
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Gongdian
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Jinzita
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Manzupingyuan
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Pingyuan
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Pingyuan2
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Renyudao
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Shengcheng
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/TerraRole
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Tiankongcheng
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTInstance_Atlas/Terra/Xuedi
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTResourceInstance_Atlas/LTResourceInstance_Atlas_CN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTResourceInstance_Atlas/LTResourceInstance_Atlas_EN
+  - Assets/_GameAssets/Res/Textures/UI/Atlas/LTGeneral_Atlas/Activity_Texture
+  containList: []

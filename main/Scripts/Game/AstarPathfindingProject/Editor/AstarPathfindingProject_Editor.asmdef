@@ -1,0 +1,13 @@
+{
+    "name": "AstarPathfindingProject_Editor",
+    "references": [
+        "Unity_Main",
+        "Unity_ThirdParty"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

@@ -1,0 +1,7 @@
+fileFormatVersion: 2
+guid: 3dc8eba15e26c4b2480bfc44c298ba5d
+ShaderImporter:
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _MatcapTex: {fileID: 2800000, guid: eb5b5ee01120146d2b0cf95ea0c11726, type: 3}
+  userData: 

@@ -1,0 +1,96 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "EBG/Effects/RadialBlur" {
+	Properties {
+		_MainTex ("Base (RGB)", 2D) = "white" {}
+	}
+
+	CGINCLUDE
+		#include "UnityCG.cginc"
+
+		struct appdata_t {
+			float4 vertex : POSITION;
+			half2 texcoord : TEXCOORD0;
+		};
+
+		struct v2f {
+			float4 vertex : SV_POSITION;
+			half2 texcoord : TEXCOORD0;
+		};
+
+		sampler2D _MainTex;
+		sampler2D _RadialBlurTex;
+		half2 _RadialCenter;
+		uniform float _RadialSampleDist;
+		//uniform float _RadialSampleStrength;
+
+		v2f vert (appdata_t v)
+		{
+			v2f o;
+			o.vertex = UnityObjectToClipPos(v.vertex);
+			o.texcoord = v.texcoord;
+			return o;
+		}
+
+		fixed4 fragRadialBlur (v2f i) : COLOR
+		{
+			fixed2 dir = _RadialCenter - i.texcoord;
+			fixed dist = length(dir);
+			dir /= dist;
+			dir *= _RadialSampleDist;
+
+			fixed4 sum = tex2D(_MainTex, i.texcoord - dir*0.01);
+			sum += tex2D(_MainTex, i.texcoord - dir*0.02);
+			sum += tex2D(_MainTex, i.texcoord - dir*0.03);
+			sum += tex2D(_MainTex, i.texcoord - dir*0.05);
+			sum += tex2D(_MainTex, i.texcoord - dir*0.08);
+			sum += tex2D(_MainTex, i.texcoord + dir*0.01);
+			sum += tex2D(_MainTex, i.texcoord + dir*0.02);
+			sum += tex2D(_MainTex, i.texcoord + dir*0.03);
+			sum += tex2D(_MainTex, i.texcoord + dir*0.05);
+			sum += tex2D(_MainTex, i.texcoord + dir*0.08);
+			sum *= 0.1;
+
+			return sum;
+		}
+
+		//fixed4 fragCombine (v2f i) : COLOR
+		//{
+		//	// fixed2 dir = _RadialCenter-i.texcoord;
+		//	fixed dist = length(_RadialCenter-i.texcoord);
+		//	fixed4	col = tex2D(_MainTex, i.texcoord);
+		//	fixed4	blur = tex2D(_RadialBlurTex, i.texcoord);
+		//	col=lerp(col, blur,saturate(_RadialSampleStrength*dist));
+		//	return col;
+		//}
+	ENDCG
+
+	SubShader {
+		ZTest Always
+		ZWrite Off
+		Cull Off
+		Blend Off
+
+		Fog { Mode off }
+		// 0
+		Pass {
+			CGPROGRAM
+
+			#pragma vertex vert
+			#pragma fragment fragRadialBlur
+			#pragma fragmentoption ARB_precision_hint_fastest
+
+			ENDCG
+		}
+		// 1
+		//Pass{
+		//	CGPROGRAM
+
+		//	#pragma vertex vert
+		//	#pragma fragment fragCombine
+		//	#pragma fragmentoption ARB_precision_hint_fastest
+
+		//	ENDCG
+		//}
+	}
+}
