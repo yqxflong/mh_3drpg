@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<project name="GAM iOS Build Properties">
+	<description>GAM iOS Build Properties</description>
+
+	<property name="crittercism.app.id" value="525e0872e432f559d7000003"/>
+
+	<target name="-settings-ios">
+		<property name="dir.build.client" value="${dir.build}/Client/Temp/Client-iOS"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}"/>
+		<property name="file.app.location" value="${dir.project}"/>
+		<property name="dir.provision" value="${basedir}/Provisions"/>
+		<property name="dir.project" value="${dir.build.client}/${app.name}/Unity-iPhone.xcodeproj"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseiOSDeviceTarget"/>
+		<property name="dir.save.library" value="Unity-Library-iOS-Dev" />
+	</target>
+
+	<target name="-settings-ios-dev">
+		<property name="dir.build.client" value="${dir.build}/Client/Temp/Client-iOS"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}"/>
+		<property name="file.app.location" value="${dir.project}"/>
+		<property name="dir.provision" value="${basedir}/Provisions"/>
+		<property name="dir.project" value="${dir.build.client}/${app.name}/Unity-iPhone.xcodeproj"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseiOSDeviceTarget"/>
+		<property name="dir.save.library" value="Unity-Library-iOS-Dev" />
+	</target>
+	
+	
+	<target name="-provision-dev"
+			depends="-settings-ios-dev">
+		<property name="app.scheme" value="Unity-iPhone"/>
+		<property name="app.config" value="Debug"/>
+		<property name="app.provision" value="${dir.provision}/${app.name}_Development.mobileprovision"/>
+		<property name="app.code.sign.auto" value="iPhone Developer: chunzhi 于 (C588KTZ4ZP)"/>
+		<property name="dir.app" value="${dir.build.client}/${app.name}"/>
+		<property name="cmd.unity.method.build" value="Automation.BuildiOSDeviceDev"/>
+	</target>
+
+	<target name="-provision-adhoc"
+			depends="-settings-ios">
+		<property name="app.scheme" value="Unity-iPhone"/>
+		<property name="app.config" value="Release"/>
+		<property name="app.provision" value="${dir.provision}/${app.name}_Adhoc.mobileprovision"/>
+		<property name="app.code.sign.auto" value="iPhone Distribution: Kabam Inc. (43VP5W2U27)"/>
+		<property name="dir.app" value="${dir.build.client}/${app.name}"/>
+		<property name="file.app" value="${dir.app}/${app.name}.ipa"/>
+		<property name="cmd.unity.method.build" value="Automation.BuildiOSDeviceAdhoc"/>
+	</target>
+
+	<target name="-provision-release-candidate"
+			depends="-settings-ios">
+		<property name="app.scheme" value="Unity-iPhone"/>
+		<property name="app.config" value="Release"/>
+		<property name="app.provision" value="${dir.provision}/${app.name}_Adhoc.mobileprovision"/>
+		<property name="app.code.sign.auto" value="iPhone Distribution: Kabam Inc. (43VP5W2U27)"/>
+		<property name="dir.app" value="${dir.build.client}/${app.name}"/>
+		<property name="file.app" value="${dir.app}/${app.name}.ipa"/>
+		<property name="cmd.unity.method.build" value="Automation.BuildiOSDeviceReleaseCandidate"/>
+	</target>
+
+	<target name="-provision-release"
+			depends="-settings-ios">
+		<property name="app.scheme" value="Unity-iPhone"/>
+		<property name="app.config" value="Release"/>
+		<property name="app.provision" value="${dir.provision}/${app.name}.mobileprovision"/>
+		<property name="app.code.sign.auto" value="iPhone Distribution: Kabam Inc. (43VP5W2U27)"/>
+		<property name="dir.app" value="${dir.build.client}/${app.name}"/>
+		<property name="cmd.unity.method.build" value="Automation.BuildiOSDeviceRelease"/>
+	</target>
+
+	<target name="-code-sign-identity">
+		<property name="code.sign.identity" value="${app.code.sign.auto}"/>
+		<echo message="${code.sign.identity}"/>
+	</target>
+
+	<target name="-copy-provisioning-profiles">
+		<copy todir="${user.home}/Library/MobileDevice/Provisioning Profiles" overwrite="true">
+			<fileset dir="${dir.provision}"/>
+		</copy>
+	</target>
+
+	<target name="-build-ios"
+			depends="-code-sign-identity">
+		<echo message="Build .app: ${app.name}"/>
+		<!-- create .app -->
+		<exec executable="xcodebuild" resultproperty="xcodebuild.return" failonerror="true">
+			<arg value="-project"/>
+			<arg value="${dir.project}"/>
+			<!--
+			<arg value="-scheme"/>
+			<arg value="${app.scheme}"/>
+			-->
+			<arg value="-target"/>
+			<arg value="Unity-iPhone"/>
+			<arg value="-configuration"/>
+			<arg value="${app.config}"/>
+			<arg value="CONFIGURATION_BUILD_DIR=${dir.app}"/>
+			<arg value="clean"/>
+			<arg value="build"/>
+		</exec>
+		<echo message="Return status: ${xcodebuild.return}"/>
+		
+		<condition property="build.app.success">
+			<equals arg1="${xcodebuild.return}" arg2="0"/>
+		</condition>
+
+		<!-- Strip the app if we have to -->
+		<if>
+			<and>
+				<istrue value="${build.app.success}"/>
+				<equals arg1="${app.config}" arg2="Release" />
+			</and>
+			<then>
+				<echo message="Stripping executable for app: ${app.name}"/>
+		
+				<exec executable="/usr/bin/strip" resultproperty="strip.return" failonerror="true">
+					<arg value="${dir.app}/${app.name}.app/${app.name}"/>
+				</exec>
+		
+				<echo message="Return status: ${strip.return}"/>
+
+				<condition property="build.app.success">
+					<equals arg1="${strip.return}" arg2="0"/>
+				</condition>
+			</then>
+		</if>
+	</target>
+	
+	<target name="-unlock-keychain">
+		<echo message="Unlock keychain"/>
+		<exec executable="security" resultproperty="unlock.keychain.return" failonerror="true">
+			<arg value="unlock-keychain"/>
+			<arg value="-p"/>
+			<arg value="123456"/>
+			<arg value="${user.home}/Library/Keychains/login.keychain"/>
+		</exec>
+		<echo message="Return status: ${unlock.keychain.return}"/>
+	</target>
+
+	<target name="-build-ipa" if="${build.app.success}">
+		<echo message="Build .ipa: ${app.name}"/>
+
+		<!-- create .ipa -->
+		<exec executable="xcrun" resultproperty="xcrun.return" failonerror="true">
+			<arg value="-sdk"/>
+			<arg value="iphoneos"/>
+			<arg value="PackageApplication"/>
+			<arg value="-v"/>
+			<arg value="${dir.app}/${app.name}.app"/>
+			<arg value="-o"/>
+			<arg value="${dir.build.client}/${app.name}.ipa"/>
+			<arg value="--sign"/>
+			<arg value="${code.sign.identity}"/>
+			<arg value="--embed"/>
+			<arg value="${app.provision}"/>
+			</exec>
+		<echo message="Return status: ${xcrun.return}"/>
+	</target>
+
+	<target name="-clear-temp-dev">
+		<echo message ="Deleting temp iOS app folder"></echo>
+		<delete dir="${dir.build.client}"/>
+	</target>
+
+	<target name="-copy-dev-build-ios">
+		<copy file="${dir.build.client}/${app.name}.ipa" todir="/Users/${user.name}/builds/"/>
+	</target>
+
+	<target name="-zip-symbols-file">
+		<zip destfile="${dir.build.client}/godsandmonsters.app.dSYM.zip" basedir="${dir.app}" includes="*app.dSYM/**/*" />
+	</target>
+
+
+</project>

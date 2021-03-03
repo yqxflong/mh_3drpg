@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<project name="Fusion Windows Build Properties">
+	<description>Fusion Windows Build Properties</description>
+
+	<target name="-settings-windows">
+		<property name="dir.build.client" value="${dir.build}/Client/Client-Windows"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}.exe"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseWindowsTarget"/>
+	</target>
+
+	<target name="-settings-windows-dev">
+		<property name="dir.build.client" value="${dir.build}/Client/Temp/Client-Windows"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}.exe"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseWindowsTarget"/>
+	</target>
+	
+	<target name="-windows-cmd-dev">
+		<property name="cmd.unity.method.build" value="Automation.BuildWindowsDev"/>
+	</target>
+
+	<target name="-windows-cmd">
+		<property name="cmd.unity.method.build" value="Automation.BuildWindows"/>
+	</target>
+</project>

@@ -1,0 +1,29 @@
+monoReserved: 457MB
+monoUsed: 214MB
+LeanTween: 672 bytes
+    d (LTDescrImpl) : 672
+MoveCameraShakeHelper: 3928 bytes
+    shakes (Thinksquirrel.CShake.CameraShake[]:2) : 3928
+LT.MainMessenger: 135700 bytes
+    eventTable (System.Collections.Generic.Dictionary`2[System.String,System.Delegate]) : 135628
+Hotfix_LT.UI.LTCombatEventReceiver+<>c: 656 bytes
+    <>9__77_0 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 248
+    <>9__103_0 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 64
+    <>9__108_0 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 64
+    <>9__109_0 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 64
+    <>9__110_0 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 64
+    <>9__110_1 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 64
+    <>9__110_2 (Hotfix_LT.UI.LTCombatEventReceiver+CombatantCallbackVoid) : 64
+    <>9 (Hotfix_LT.UI.LTCombatEventReceiver+<>c) : 24
+Hotfix_LT.Messenger: 8340981 bytes
+    eventTable (System.Collections.Generic.Dictionary`2[System.String,System.Delegate]) : 8340981
+Hotfix_LT.UI.GuideNodeEvent: 488403 bytes
+    GateEvent (System.Action`1[System.String]) : 488403
+Hotfix_LT.UI.LegionEvent: 163059 bytes
+    LegionShowUI (System.Action) : 161451
+Hotfix_LT.UI.LTHeroBattleEvent: 162427 bytes
+    ChangeHeroType (System.Action`1[Hotfix_LT.Data.eRoleAttr]) : 161531
+Hotfix_LT.UI.LTSpeedSnatchHotfixEvent: 2042844 bytes
+    SpeedSnatchBase (System.Action`1[System.Int32[]]) : 2039064
+I18N.Common.Handlers: 13016 bytes
+    List (System.String[]:173) : 13016

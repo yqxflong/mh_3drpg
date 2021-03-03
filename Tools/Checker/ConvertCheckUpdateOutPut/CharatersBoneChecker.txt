@@ -1,0 +1,2611 @@
+
+LICENSE SYSTEM [20181212 17:57:24] Next license update check is after 2028-09-19T00:00:00
+
+Built from '2018.1/release' branch; Version is '2018.1.1f1 (b8cbb5de9840) revision 12110773'; Using compiler version '191125508'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'zh' Physical Memory: 16226 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+[Package Manager] Server::Start -- Port 55260 was selected
+
+ COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\Editor\Unity.exe
+-projectPath
+C:\client\manhuangji\client_gam\Tools\Checker\..\..\Source\
+-batchmode
+-executeMethod
+ResCheckMenuItemEntry.CharatersBoneChecker
+-logFile
+C:\client\manhuangji\client_gam\Tools\Checker\ConvertCheckUpdateOutPut\CharatersBoneChecker.txt
+-nographics
+-params
+
+-quit
+Successfully changed project path to: C:\client\manhuangji\client_gam\Tools\Checker\..\..\Source\
+C:/client/manhuangji/client_gam/Source
+Loading GUID <-> Path mappings...0.000110 seconds
+Loading Asset Database...0.246739 seconds
+Audio: FMOD Profiler initialized on port 54900
+AssetDatabase consistency checks...0.272346 seconds
+Refreshing native plugins compatible for Editor in 97.62 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+DisplayProgressbar: Unity Package Manager
+[Package Manager] Done resolving packages in 0.19s seconds
+[Package Manager] Registering 62 packages:
+[Package Manager]  * Package :  com.unity.ads@2.0.7
+    (location: C:\Users\DELL\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.ads@2.0.7)
+[Package Manager]  * Package :  com.unity.analytics@2.0.16
+    (location: C:\Users\DELL\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.analytics@2.0.16)
+[Package Manager]  * Package :  com.unity.modules.accessibility@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.accessibility
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.accessibility)
+[Package Manager]  * Package :  com.unity.modules.ai@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.ai
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.ai)
+[Package Manager]  * Package :  com.unity.modules.animation@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.animation
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.animation)
+[Package Manager]  * Package :  com.unity.modules.ar@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.ar
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.ar)
+[Package Manager]  * Package :  com.unity.modules.assetbundle@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.assetbundle
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.assetbundle)
+[Package Manager]  * Package :  com.unity.modules.audio@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.audio
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.audio)
+[Package Manager]  * Package :  com.unity.modules.baselib@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.baselib
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.baselib)
+[Package Manager]  * Package :  com.unity.modules.cloth@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.cloth
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.cloth)
+[Package Manager]  * Package :  com.unity.modules.cloudwebservices@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.cloudwebservices
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.cloudwebservices)
+[Package Manager]  * Package :  com.unity.modules.clusterinput@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.clusterinput
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.clusterinput)
+[Package Manager]  * Package :  com.unity.modules.clusterrenderer@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.clusterrenderer
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.clusterrenderer)
+[Package Manager]  * Package :  com.unity.modules.core@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.core
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.core)
+[Package Manager]  * Package :  com.unity.modules.crashreporting@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.crashreporting
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.crashreporting)
+[Package Manager]  * Package :  com.unity.modules.director@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.director
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.director)
+[Package Manager]  * Package :  com.unity.modules.facebook@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.facebook
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.facebook)
+[Package Manager]  * Package :  com.unity.modules.gamecenter@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.gamecenter
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.gamecenter)
+[Package Manager]  * Package :  com.unity.modules.grid@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.grid
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.grid)
+[Package Manager]  * Package :  com.unity.modules.hotreload@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.hotreload
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.hotreload)
+[Package Manager]  * Package :  com.unity.modules.imageconversion@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.imageconversion
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.imageconversion)
+[Package Manager]  * Package :  com.unity.modules.imgui@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.imgui
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.imgui)
+[Package Manager]  * Package :  com.unity.modules.input@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.input
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.input)
+[Package Manager]  * Package :  com.unity.modules.jsonserialize@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.jsonserialize
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.jsonserialize)
+[Package Manager]  * Package :  com.unity.modules.particleslegacy@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.particleslegacy
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.particleslegacy)
+[Package Manager]  * Package :  com.unity.modules.particlesystem@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.particlesystem
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.particlesystem)
+[Package Manager]  * Package :  com.unity.modules.performancereporting@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.performancereporting
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.performancereporting)
+[Package Manager]  * Package :  com.unity.modules.physics2d@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.physics2d
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.physics2d)
+[Package Manager]  * Package :  com.unity.modules.physics@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.physics
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.physics)
+[Package Manager]  * Package :  com.unity.modules.screencapture@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.screencapture
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.screencapture)
+[Package Manager]  * Package :  com.unity.modules.sharedinternals@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.sharedinternals
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.sharedinternals)
+[Package Manager]  * Package :  com.unity.modules.spatialtracking@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.spatialtracking
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.spatialtracking)
+[Package Manager]  * Package :  com.unity.modules.spritemask@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.spritemask
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.spritemask)
+[Package Manager]  * Package :  com.unity.modules.spriteshape@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.spriteshape
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.spriteshape)
+[Package Manager]  * Package :  com.unity.modules.stylesheets@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.stylesheets
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.stylesheets)
+[Package Manager]  * Package :  com.unity.modules.substance@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.substance
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.substance)
+[Package Manager]  * Package :  com.unity.modules.terrain@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.terrain
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.terrain)
+[Package Manager]  * Package :  com.unity.modules.terrainphysics@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.terrainphysics
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.terrainphysics)
+[Package Manager]  * Package :  com.unity.modules.textrendering@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.textrendering
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.textrendering)
+[Package Manager]  * Package :  com.unity.modules.tilemap@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.tilemap
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.tilemap)
+[Package Manager]  * Package :  com.unity.modules.timeline@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.timeline
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.timeline)
+[Package Manager]  * Package :  com.unity.modules.tls@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.tls
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.tls)
+[Package Manager]  * Package :  com.unity.modules.ui@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.ui
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.ui)
+[Package Manager]  * Package :  com.unity.modules.uielements@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.uielements
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.uielements)
+[Package Manager]  * Package :  com.unity.modules.umbra@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.umbra
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.umbra)
+[Package Manager]  * Package :  com.unity.modules.unet@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unet
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unet)
+[Package Manager]  * Package :  com.unity.modules.unityanalytics@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unityanalytics
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unityanalytics)
+[Package Manager]  * Package :  com.unity.modules.unityconnect@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unityconnect
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unityconnect)
+[Package Manager]  * Package :  com.unity.modules.unitywebrequest@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequest
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequest)
+[Package Manager]  * Package :  com.unity.modules.unitywebrequestassetbundle@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequestassetbundle
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequestassetbundle)
+[Package Manager]  * Package :  com.unity.modules.unitywebrequestaudio@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequestaudio
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequestaudio)
+[Package Manager]  * Package :  com.unity.modules.unitywebrequesttexture@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequesttexture
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequesttexture)
+[Package Manager]  * Package :  com.unity.modules.unitywebrequestwww@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequestwww
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.unitywebrequestwww)
+[Package Manager]  * Package :  com.unity.modules.vehicles@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.vehicles
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.vehicles)
+[Package Manager]  * Package :  com.unity.modules.video@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.video
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.video)
+[Package Manager]  * Package :  com.unity.modules.vr@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.vr
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.vr)
+[Package Manager]  * Package :  com.unity.modules.web@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.web
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.web)
+[Package Manager]  * Package :  com.unity.modules.wind@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.wind
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.wind)
+[Package Manager]  * Package :  com.unity.modules.xr@file:D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.xr
+    (location: D:\Program Files\Unity\Editor\Data\Resources\PackageManager\Editor\com.unity.modules.xr)
+[Package Manager]  * Package :  com.unity.package-manager-ui@1.8.8
+    (location: C:\Users\DELL\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8)
+[Package Manager]  * Package :  com.unity.purchasing@2.0.1
+    (location: C:\Users\DELL\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.purchasing@2.0.1)
+[Package Manager]  * Package :  com.unity.standardevents@1.0.13
+    (location: C:\Users\DELL\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13)
+[Package Manager] Done registering packages in 0.00s seconds
+Initialize engine version: 2018.1.1f1 (b8cbb5de9840)
+Forcing GfxDevice: Null
+GfxDevice: creating device client; threaded=0
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+WARNING: Shader Unsupported: 'Hidden/FrameDebuggerRenderTargetDisplay' - Pass '' has no vertex shader
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/Editor/Data/Mono/lib/mono/2.0'
+Mono config path = 'D:/Program Files/Unity/Editor/Data/Mono/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56116
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 3.69 ms, found 13 plugins.
+Initializing Unity.PackageManager (PackageManager) v2018.1.1 for Unity v2018.1.1f1
+Registering precompiled unity dll's ...
+Register platform support module: D:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:\Program Files\Unity\Editor\Data\PlaybackEngines\WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:\Program Files\Unity\Editor\Data\PlaybackEngines\windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001157 seconds.
+Registering precompiled user dll's ...
+Registered in 0.367461 seconds.
+Refreshing native plugins compatible for Editor in 4.90 ms, found 13 plugins.
+Preloading 3 native plugins for Editor in 2.35 ms.
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/.\libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/.\libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Mono: successfully reloaded assembly
+- Completed reload, in  1.590 seconds
+Registering platform support modules:
+Registered platform support modules in: 0.10378s.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Native extension for Android target not found
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 3.49 ms, found 13 plugins.
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/.\libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Refreshing native plugins compatible for Editor in 6.78 ms, found 13 plugins.
+Preloading 3 native plugins for Editor in 0.19 ms.
+12/12/2018 5:57:35 PM|Fatal|WebSocket.connect|System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+                            
+                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+                              at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
+                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
+                              at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+BundleServerHelper: Add search path to BundlerServer
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BundleServerHelper:.cctor() (at Assets\Editor\Asset\BundleServerHelper.cs:10)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Runtime.CompilerServices/RuntimeHelpers.cs:101)
+UnityEditor.EditorAssemblies:ProcessEditorInitializeOnLoad(Type) (at C:\buildslave\unity\build\Editor\Mono\EditorAssemblies.cs:93)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes() (at C:\buildslave\unity\build\Editor\Mono\EditorAssemblies.cs:131)
+ 
+(Filename: Assets/Editor/Asset/BundleServerHelper.cs Line: 10)
+
+Refreshing native plugins compatible for Editor in 4.89 ms, found 13 plugins.
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/.\libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/.\libdl.dylib
+Fallback handler could not load library D:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dylib
+Mono: successfully reloaded assembly
+- Completed reload, in  3.999 seconds
+Initializing Unity.PackageManager (PackageManager) v2018.1.1 for Unity v2018.1.1f1
+Registering platform support modules:
+Registered platform support modules in: 0.0862327s.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Native extension for Android target not found
+Validating Project structure ... 0.218513 seconds.
+Refresh: detecting if any assets need to be imported or removed ... 
+Hashing assets (1 files)... 0.001 seconds
+  file read: 0.000 seconds (0.001 MB)
+  wait for write: 0.000 seconds (I/O thread blocked by consumer, aka CPU bound)
+  wait for read: 0.000 seconds (CPUT thread waiting for I/O thread, aka disk bound)
+  hash: 0.000 seconds
+----- Compute hash(es) for 1 asset(s).
+----- Asset named Assets/BundleManager/Resources/Urls.txt is skipped as no actual change.
+
+Refresh: elapses 0.352570 seconds (Nothing changed)
+Refreshing native plugins compatible for Editor in 4.15 ms, found 13 plugins.
+Preloading 3 native plugins for Editor in 0.15 ms.
+
+----- Total AssetImport time: 0.155562s, AssetImport time: 0.000000s, Asset hashing: 0.000746s [0.7 KB, 0.925322 mb/s]
+
+Refresh completed in 0.357892 seconds.
+Warming cache for 33766 main assets: 0.158556 seconds elapsed
+Initializing Unity extensions:
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll'  GUID: 12fd8a0055b84bb59e84c9835a37e333
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll'  GUID: 6a10b2909283487f913b00d94cd3faf5
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/portable/nunit.framework.dll'  GUID: 405b9b51bb344a128608d968297df79c
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Standalone/UnityEngine.UI.dll'  GUID: f70555f144d8491a825f0804e09c671c
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'  GUID: f5f67c52d1564df4a8936ccd202a3bd8
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'  GUID: 844f815391db42d49455cbf1a7bfc434
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Standalone/UnityEngine.Networking.dll'  GUID: dc443db3e92b4983b9738c1131f555cb
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Runtime/UnityEngine.SpatialTracking.dll'  GUID: ed7343f30e3843b3afda8f8b02669cea
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll'  GUID: 4a3ecb1425d14502837abea459cf2b70
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll'  GUID: 5f32cd94baa94578a686d4b9d6b660f7
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Runtime/UnityEngine.HoloLens.dll'  GUID: f7b54ff4a43d4fcf81b4538b678e0bcc
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll'  GUID: b5da970776034f77a070d99423d68791
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll'  GUID: adebbd281f1a4ef3a30be7f21937e02f
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'  GUID: 870353891bb340e2b2a9c8707e7419ba
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll'  GUID: 53ebcfaa2e1e4e2dbc85882cd5a73fa1
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'  GUID: ead147da21254ff9a0a936bdd75e1680
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Runtime/UnityEngine.GoogleAudioSpatializer.dll'  GUID: e4f4cf1b9b434137a499903a7a1d651a
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'  GUID: 4ba2329b63d54f0187bcaa12486b1b0f
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'  GUID: 1c6d1fbb51834b64847b1b73a75bfc77
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'  GUID: 3a84de5cd0624681b6b6dcd8921d912a
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'  GUID: 80a3616ca19596e4da0f10f14d241e9f
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll'  GUID: c768acbc9cf24d398488bb4c93b91288
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll'  GUID: 4113173d5e95493ab8765d7b08371de4
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll'  GUID: 4b3fa4bde7f1451a8218c03ee6a8ded8
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll'  GUID: b8a0574e92bd43a59e19d6c3c6ae54c7
+ 'D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll'  GUID: 7668179ede524d6396c8b7d84461ea29
+Failed to insert item. Name: Test GM Controller, Command: SCRIPT13690
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Test Grid Scroll, Command: SCRIPT13256
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Testing Color Tweening, Command: SCRIPT4668
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Testing Issue, Command: SCRIPT9910
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Testing Issue 2, Command: SCRIPT11642
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Test X, Command: SCRIPT12640
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Texture Move, Command: SCRIPT5576
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Theme Load Manager, Command: SCRIPT5126
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Double Type Logic, Command: SCRIPT13346
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Data Lookup, Command: SCRIPT2846
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Reward Type Scroll Item, Command: SCRIPT10304
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Type Fight Rank Scroll Item, Command: SCRIPT2778
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Type Logic, Command: SCRIPT14002
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Type Scroll, Command: SCRIPT12184
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Got Reward Type Sroll Item, Command: SCRIPT12804
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Item Controller, Command: SCRIPT10798
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Message Type Logic, Command: SCRIPT2748
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Limit Activity Logic, Command: SCRIPT3976
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Limit Activity Scroll, Command: SCRIPT9896
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Limit Activity Scroll Item, Command: SCRIPT6856
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Title List Controller, Command: SCRIPT6398
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Toggle Group State, Command: SCRIPT13858
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tooltip Controller, Command: SCRIPT5402
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Top Scene Manager, Command: SCRIPT11364
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Touch Controller, Command: SCRIPT7288
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Touch Logic, Command: SCRIPT8278
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Touzi Test, Command: SCRIPT5906
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Track At Base, Command: SCRIPT8666
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Track Mouse Movement, Command: SCRIPT9412
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Track Parent Position, Command: SCRIPT5068
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tracks Decals, Command: SCRIPT13862
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Trail Renderer Helper, Command: SCRIPT8258
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Trail Renderer Instance, Command: SCRIPT7010
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Trail Renderer Manager, Command: SCRIPT12122
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Dart Controller, Command: SCRIPT3416
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Dart Item, Command: SCRIPT13212
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Rob Head Bar Hud, Command: SCRIPT2930
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Rob Head Bar Hud Controller, Command: SCRIPT5098
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Treasure Drop Component, Command: SCRIPT2982
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Treasury Rating GM, Command: SCRIPT5448
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tutorial Instructions UI, Command: SCRIPT3066
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tutorial Pointer UI, Command: SCRIPT2976
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tween Label Effect Color, Command: SCRIPT3376
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI2D Sprite Animation, Command: SCRIPT13506
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI3D Lobby, Command: SCRIPT9346
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI3D Vs Lobby, Command: SCRIPT3140
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Action Progress Bar Manager, Command: SCRIPT11208
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Activity Scroll Tip Message, Command: SCRIPT13810
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Alliance Store Controller, Command: SCRIPT7486
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Arena Store Controller, Command: SCRIPT3924
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Attributes Data Lookup, Command: SCRIPT10014
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Back Time Component, Command: SCRIPT5898
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item, Command: SCRIPT9244
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup, Command: SCRIPT11896
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup Drag Drop, Command: SCRIPT11948
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup Drag Drop Container, Command: SCRIPT2996
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup With GAMVFX, Command: SCRIPT11444
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item With Fly, Command: SCRIPT7708
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item With Lazy Drag Data Lookup, Command: SCRIPT9490
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Blinker, Command: SCRIPT5408
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Box Data Lookup, Command: SCRIPT5612
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Broad Cast Message Controller, Command: SCRIPT7186
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy 3D Model Creater, Command: SCRIPT4894
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy BG, Command: SCRIPT5632
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Equiped Items Update, Command: SCRIPT2598
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Icon Effect Play Data Lookup, Command: SCRIPT6728
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Item, Command: SCRIPT6002
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Show Contoller, Command: SCRIPT4734
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Show Item, Command: SCRIPT11580
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Button Data Lookup, Command: SCRIPT9780
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Button Text, Command: SCRIPT7836
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Campaign Controller, Command: SCRIPT5398
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Campaign Item Data Lookup, Command: SCRIPT12674
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Campaign List Item, Command: SCRIPT11680
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Carousel, Command: SCRIPT10842
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Carousel Data Lookup, Command: SCRIPT13302
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Chapter Item Data Lookup, Command: SCRIPT8790
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Chapter List, Command: SCRIPT12084
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Chapter List Item, Command: SCRIPT6938
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Color Picker, Command: SCRIPT9702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Color Set Data Lookup, Command: SCRIPT9534
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Combine BG State Data Lookup, Command: SCRIPT5536
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Common Store Controller, Command: SCRIPT13864
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Condition Tab Adapt, Command: SCRIPT4752
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Condition Tab Controller, Command: SCRIPT13834
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Controller, Command: SCRIPT13252
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Controller Base, Command: SCRIPT9216
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Controller ILR, Command: SCRIPT13650
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Convert Controller, Command: SCRIPT3692
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Cost Data Lookup, Command: SCRIPT5936
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Custom Dialogue, Command: SCRIPT8596
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Dialogue, Command: SCRIPT12110
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Downloading Bar, Command: SCRIPT11636
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Dynamic Show Item, Command: SCRIPT9070
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Enchant Button, Command: SCRIPT9438
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Enchant Controller, Command: SCRIPT8998
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Event Trigger Ex, Command: SCRIPT2938
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Expedition Store Controller, Command: SCRIPT8580
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI First List, Command: SCRIPT4104
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI First List Item, Command: SCRIPT12066
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Flying Message Component, Command: SCRIPT3088
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Flying Message Manager, Command: SCRIPT6442
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Forge Controller, Command: SCRIPT12664
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Func Condition Tab Adapt, Command: SCRIPT10344
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Func Condition Tab Adapt Ex, Command: SCRIPT13904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Fusion Drag Scroll View, Command: SCRIPT10762
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Fusion Widget Container, Command: SCRIPT7420
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UIFX Camera Helper, Command: SCRIPT4012
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Game Item, Command: SCRIPT11878
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Game Object Data Lookup, Command: SCRIPT6828
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Game Object Toggle, Command: SCRIPT6588
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gem Tool Tip Controller, Command: SCRIPT11246
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gift Controller, Command: SCRIPT3424
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gold Buy Logic, Command: SCRIPT13406
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gold Multi Buy Logic, Command: SCRIPT10440
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Hide Tooltip Controller, Command: SCRIPT5210
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Hierarchy Helper, Command: SCRIPT7076
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI High Threten Controller, Command: SCRIPT7574
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Hud Lua Behavior, Command: SCRIPT7968
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Image Advanced Data Lookup, Command: SCRIPT12384
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Image Data Lookup, Command: SCRIPT11192
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Image Only Data Lookup, Command: SCRIPT9410
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Indexed Name Sorted Table, Command: SCRIPT5782
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Input On GUI, Command: SCRIPT5930
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Bag Cell Controller, Command: SCRIPT8124
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Bag Logic, Command: SCRIPT6538
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Bag Row Controller, Command: SCRIPT12286
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Grid Scroll, Command: SCRIPT13656
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory View Buddy BG, Command: SCRIPT11410
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory View Fight Up Flying Message, Command: SCRIPT5286
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Invite Reject Flying Message, Command: SCRIPT9370
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Invites Controller, Command: SCRIPT4890
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Item Equiped Data Lookup, Command: SCRIPT5102
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Item Lvl Data Lookup, Command: SCRIPT8308
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Advanced Data Lookup, Command: SCRIPT6274
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Data Lookup, Command: SCRIPT13844
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Delta Time Data Lookup, Command: SCRIPT12238
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Localization, Command: SCRIPT12752
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Timer Data Lookup, Command: SCRIPT7924
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Ladder Store Controller, Command: SCRIPT11600
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Layered FX, Command: SCRIPT9814
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Layout Helper, Command: SCRIPT12496
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lazy Label, Command: SCRIPT10408
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI List Data Lookup, Command: SCRIPT10518
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Loading Spinner, Command: SCRIPT6278
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Buddy Show Logic, Command: SCRIPT9046
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Controller, Command: SCRIPT7706
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Item, Command: SCRIPT2816
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Logic, Command: SCRIPT8638
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Preview Component, Command: SCRIPT12908
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Preview Controller, Command: SCRIPT11000
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Preview Grid Item, Command: SCRIPT11996
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Result Controller, Command: SCRIPT10462
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Scroll, Command: SCRIPT4278
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Scroll Item, Command: SCRIPT6376
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Message Dialog Component, Command: SCRIPT5710
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UIMH Bindable Item Data Look Up, Command: SCRIPT10012
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Mistery Store Controller, Command: SCRIPT13980
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Modal Ability Window, Command: SCRIPT3634
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Modal Window, Command: SCRIPT13394
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Name Data Lookup, Command: SCRIPT12632
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI News Line, Command: SCRIPT3702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI News Template, Command: SCRIPT5600
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Normal Task Scroll, Command: SCRIPT5270
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Normal Task Scroll Item, Command: SCRIPT11834
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Normal Task Scroll List Logic Data Lookup, Command: SCRIPT5474
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Object Text, Command: SCRIPT12510
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Ui Panel Set, Command: SCRIPT5266
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Particle System Scale, Command: SCRIPT7850
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Percentage Data Lookup, Command: SCRIPT7816
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Perspective, Command: SCRIPT8068
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Press Button, Command: SCRIPT6830
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Progressbar Data Lookup, Command: SCRIPT13550
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Progress Bar Timer, Command: SCRIPT10702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Progress Bar Timer Data Lookup, Command: SCRIPT9920
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Rank Controller, Command: SCRIPT4120
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Recommend Logic, Command: SCRIPT7406
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Recommend Scroll, Command: SCRIPT5756
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Recommend Scroll Item, Command: SCRIPT13702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Refine Controller, Command: SCRIPT4872
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Region List, Command: SCRIPT10290
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Region List Item, Command: SCRIPT8148
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Resource Bar Logic, Command: SCRIPT10756
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Resource Component, Command: SCRIPT9148
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Res Src Tool Tip Controller, Command: SCRIPT7382
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Reward Item, Command: SCRIPT12388
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Root Adjustment, Command: SCRIPT7096
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Scroll Input, Command: SCRIPT5488
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Second List, Command: SCRIPT5642
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Second List Item, Command: SCRIPT10700
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Cell Controller, Command: SCRIPT8588
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Dynamic Scroll, Command: SCRIPT12794
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server List, Command: SCRIPT11874
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server List Item, Command: SCRIPT8204
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Request, Command: SCRIPT8688
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Row Controller, Command: SCRIPT5668
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Show Control Scheme, Command: SCRIPT8302
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Show Item, Command: SCRIPT5674
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Show Items Controller, Command: SCRIPT11910
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Simple Common Tooltip Controller, Command: SCRIPT13936
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Skill Desc Contorller, Command: SCRIPT7364
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Sliding Tab, Command: SCRIPT8168
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Socket Controller, Command: SCRIPT9308
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Sprite Color Tint Data Lookup, Command: SCRIPT13804
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Sprite Progress Data Lookup, Command: SCRIPT8546
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Stack, Command: SCRIPT3054
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Cell Controller, Command: SCRIPT8100
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Condition Tab Adapt, Command: SCRIPT11866
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Controller, Command: SCRIPT3112
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Grid Scroll, Command: SCRIPT13642
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Page Controller, Command: SCRIPT12354
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Page Data Lookup, Command: SCRIPT13658
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Row Controller, Command: SCRIPT11056
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Animation, Command: SCRIPT9776
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Input, Command: SCRIPT8710
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Input On GUI, Command: SCRIPT11172
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Label, Command: SCRIPT8040
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tab Controller, Command: SCRIPT10354
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Task Follow Task Btn Logic, Command: SCRIPT3700
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Task System Controller, Command: SCRIPT5894
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Task View Filter, Command: SCRIPT4798
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Temporary Panel, Command: SCRIPT3128
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Texture Async, Command: SCRIPT5904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Timer Sprite Data Lookup, Command: SCRIPT11036
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Toggle Data Lookup, Command: SCRIPT12904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Toggle Lock Data Lookup, Command: SCRIPT13316
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Button, Command: SCRIPT7246
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Equip Controller, Command: SCRIPT9556
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Manager, Command: SCRIPT11546
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tool Tip Panel Controller, Command: SCRIPT12270
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Press Pos, Command: SCRIPT3440
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tween Data Lookup, Command: SCRIPT13590
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Upgrade Controller, Command: SCRIPT11862
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Vigor Buy Logic, Command: SCRIPT7958
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Widget Color Compare Data Lookup, Command: SCRIPT12190
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Worker Lobby, Command: SCRIPT8000
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI World Boss Blood, Command: SCRIPT3386
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI World Boss Rank Logic, Command: SCRIPT6012
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Umeng Manager, Command: SCRIPT7560
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Un Enough Controller, Command: SCRIPT7860
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Unit HUD, Command: SCRIPT3904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Universal Tutotial Highlight Mesh Click Listener, Command: SCRIPT3452
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Uni Web View, Command: SCRIPT5436
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Uni Web View Event Processor, Command: SCRIPT5960
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Upgrade Stats Data Lookup, Command: SCRIPT2684
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Uprade View Upgrade Button Handler, Command: SCRIPT11672
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Use With Code Scene Manager, Command: SCRIPT11406
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VFX Component, Command: SCRIPT7564
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VFX Performance Controll, Command: SCRIPT3208
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VIP Controller, Command: SCRIPT3122
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VIP Level Data Lookup, Command: SCRIPT4696
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Virtual UI Label, Command: SCRIPT10584
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Virtual UI Sprite, Command: SCRIPT9448
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Waitting Logic, Command: SCRIPT2672
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Water Scroll, Command: SCRIPT11394
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Waypoint Cam, Command: SCRIPT4088
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Weekend Award Controller, Command: SCRIPT3434
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Welfare Controller, Command: SCRIPT11992
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wind Maker, Command: SCRIPT4808
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wing Controller, Command: SCRIPT5620
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wing Item, Command: SCRIPT7024
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wing Item Tool Tip Controller, Command: SCRIPT4846
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Winner IOSSDK Controller, Command: SCRIPT13914
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: XP Component, Command: SCRIPT6932
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Boundary, Command: SCRIPT4502
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Descriptor, Command: SCRIPT3008
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Helper, Command: SCRIPT12466
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Loader, Command: SCRIPT6106
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Loader Manager, Command: SCRIPT12444
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Test GM Controller, Command: SCRIPT13690
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Test Grid Scroll, Command: SCRIPT13256
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Testing Color Tweening, Command: SCRIPT4668
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Testing Issue, Command: SCRIPT9910
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Testing Issue 2, Command: SCRIPT11642
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Test X, Command: SCRIPT12640
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Texture Move, Command: SCRIPT5576
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Theme Load Manager, Command: SCRIPT5126
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Double Type Logic, Command: SCRIPT13346
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Data Lookup, Command: SCRIPT2846
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Reward Type Scroll Item, Command: SCRIPT10304
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Type Fight Rank Scroll Item, Command: SCRIPT2778
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Type Logic, Command: SCRIPT14002
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Exchange Type Scroll, Command: SCRIPT12184
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Got Reward Type Sroll Item, Command: SCRIPT12804
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Item Controller, Command: SCRIPT10798
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Activity Message Type Logic, Command: SCRIPT2748
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Limit Activity Logic, Command: SCRIPT3976
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Limit Activity Scroll, Command: SCRIPT9896
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Time Limit Activity Scroll Item, Command: SCRIPT6856
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Title List Controller, Command: SCRIPT6398
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Toggle Group State, Command: SCRIPT13858
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tooltip Controller, Command: SCRIPT5402
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Top Scene Manager, Command: SCRIPT11364
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Touch Controller, Command: SCRIPT7288
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Touch Logic, Command: SCRIPT8278
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Touzi Test, Command: SCRIPT5906
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Track At Base, Command: SCRIPT8666
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Track Mouse Movement, Command: SCRIPT9412
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Track Parent Position, Command: SCRIPT5068
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tracks Decals, Command: SCRIPT13862
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Trail Renderer Helper, Command: SCRIPT8258
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Trail Renderer Instance, Command: SCRIPT7010
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Trail Renderer Manager, Command: SCRIPT12122
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Dart Controller, Command: SCRIPT3416
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Dart Item, Command: SCRIPT13212
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Rob Head Bar Hud, Command: SCRIPT2930
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Transfer Rob Head Bar Hud Controller, Command: SCRIPT5098
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Treasure Drop Component, Command: SCRIPT2982
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Treasury Rating GM, Command: SCRIPT5448
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tutorial Instructions UI, Command: SCRIPT3066
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tutorial Pointer UI, Command: SCRIPT2976
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Tween Label Effect Color, Command: SCRIPT3376
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI2D Sprite Animation, Command: SCRIPT13506
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI3D Lobby, Command: SCRIPT9346
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI3D Vs Lobby, Command: SCRIPT3140
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Action Progress Bar Manager, Command: SCRIPT11208
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Activity Scroll Tip Message, Command: SCRIPT13810
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Alliance Store Controller, Command: SCRIPT7486
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Arena Store Controller, Command: SCRIPT3924
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Attributes Data Lookup, Command: SCRIPT10014
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Back Time Component, Command: SCRIPT5898
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item, Command: SCRIPT9244
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup, Command: SCRIPT11896
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup Drag Drop, Command: SCRIPT11948
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup Drag Drop Container, Command: SCRIPT2996
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item Data Lookup With GAMVFX, Command: SCRIPT11444
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item With Fly, Command: SCRIPT7708
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Bindable Item With Lazy Drag Data Lookup, Command: SCRIPT9490
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Blinker, Command: SCRIPT5408
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Box Data Lookup, Command: SCRIPT5612
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Broad Cast Message Controller, Command: SCRIPT7186
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy 3D Model Creater, Command: SCRIPT4894
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy BG, Command: SCRIPT5632
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Equiped Items Update, Command: SCRIPT2598
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Icon Effect Play Data Lookup, Command: SCRIPT6728
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Item, Command: SCRIPT6002
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Show Contoller, Command: SCRIPT4734
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Buddy Show Item, Command: SCRIPT11580
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Button Data Lookup, Command: SCRIPT9780
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Button Text, Command: SCRIPT7836
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Campaign Controller, Command: SCRIPT5398
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Campaign Item Data Lookup, Command: SCRIPT12674
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Campaign List Item, Command: SCRIPT11680
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Carousel, Command: SCRIPT10842
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Carousel Data Lookup, Command: SCRIPT13302
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Chapter Item Data Lookup, Command: SCRIPT8790
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Chapter List, Command: SCRIPT12084
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Chapter List Item, Command: SCRIPT6938
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Color Picker, Command: SCRIPT9702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Color Set Data Lookup, Command: SCRIPT9534
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Combine BG State Data Lookup, Command: SCRIPT5536
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Common Store Controller, Command: SCRIPT13864
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Condition Tab Adapt, Command: SCRIPT4752
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Condition Tab Controller, Command: SCRIPT13834
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Controller, Command: SCRIPT13252
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Controller Base, Command: SCRIPT9216
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Controller ILR, Command: SCRIPT13650
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Convert Controller, Command: SCRIPT3692
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Cost Data Lookup, Command: SCRIPT5936
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Custom Dialogue, Command: SCRIPT8596
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Dialogue, Command: SCRIPT12110
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Downloading Bar, Command: SCRIPT11636
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Dynamic Show Item, Command: SCRIPT9070
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Enchant Button, Command: SCRIPT9438
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Enchant Controller, Command: SCRIPT8998
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Event Trigger Ex, Command: SCRIPT2938
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Expedition Store Controller, Command: SCRIPT8580
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI First List, Command: SCRIPT4104
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI First List Item, Command: SCRIPT12066
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Flying Message Component, Command: SCRIPT3088
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Flying Message Manager, Command: SCRIPT6442
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Forge Controller, Command: SCRIPT12664
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Func Condition Tab Adapt, Command: SCRIPT10344
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Func Condition Tab Adapt Ex, Command: SCRIPT13904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Fusion Drag Scroll View, Command: SCRIPT10762
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Fusion Widget Container, Command: SCRIPT7420
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UIFX Camera Helper, Command: SCRIPT4012
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Game Item, Command: SCRIPT11878
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Game Object Data Lookup, Command: SCRIPT6828
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Game Object Toggle, Command: SCRIPT6588
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gem Tool Tip Controller, Command: SCRIPT11246
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gift Controller, Command: SCRIPT3424
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gold Buy Logic, Command: SCRIPT13406
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Gold Multi Buy Logic, Command: SCRIPT10440
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Hide Tooltip Controller, Command: SCRIPT5210
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Hierarchy Helper, Command: SCRIPT7076
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI High Threten Controller, Command: SCRIPT7574
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Hud Lua Behavior, Command: SCRIPT7968
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Image Advanced Data Lookup, Command: SCRIPT12384
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Image Data Lookup, Command: SCRIPT11192
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Image Only Data Lookup, Command: SCRIPT9410
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Indexed Name Sorted Table, Command: SCRIPT5782
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Input On GUI, Command: SCRIPT5930
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Bag Cell Controller, Command: SCRIPT8124
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Bag Logic, Command: SCRIPT6538
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Bag Row Controller, Command: SCRIPT12286
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory Grid Scroll, Command: SCRIPT13656
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory View Buddy BG, Command: SCRIPT11410
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Inventory View Fight Up Flying Message, Command: SCRIPT5286
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Invite Reject Flying Message, Command: SCRIPT9370
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Invites Controller, Command: SCRIPT4890
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Item Equiped Data Lookup, Command: SCRIPT5102
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Item Lvl Data Lookup, Command: SCRIPT8308
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Advanced Data Lookup, Command: SCRIPT6274
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Data Lookup, Command: SCRIPT13844
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Delta Time Data Lookup, Command: SCRIPT12238
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Localization, Command: SCRIPT12752
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Label Timer Data Lookup, Command: SCRIPT7924
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Ladder Store Controller, Command: SCRIPT11600
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Layered FX, Command: SCRIPT9814
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Layout Helper, Command: SCRIPT12496
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lazy Label, Command: SCRIPT10408
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI List Data Lookup, Command: SCRIPT10518
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Loading Spinner, Command: SCRIPT6278
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Buddy Show Logic, Command: SCRIPT9046
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Controller, Command: SCRIPT7706
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Item, Command: SCRIPT2816
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Logic, Command: SCRIPT8638
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Preview Component, Command: SCRIPT12908
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Preview Controller, Command: SCRIPT11000
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Preview Grid Item, Command: SCRIPT11996
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Result Controller, Command: SCRIPT10462
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Scroll, Command: SCRIPT4278
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Lottery Scroll Item, Command: SCRIPT6376
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Message Dialog Component, Command: SCRIPT5710
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UIMH Bindable Item Data Look Up, Command: SCRIPT10012
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Mistery Store Controller, Command: SCRIPT13980
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Modal Ability Window, Command: SCRIPT3634
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Modal Window, Command: SCRIPT13394
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Name Data Lookup, Command: SCRIPT12632
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI News Line, Command: SCRIPT3702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI News Template, Command: SCRIPT5600
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Normal Task Scroll, Command: SCRIPT5270
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Normal Task Scroll Item, Command: SCRIPT11834
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Normal Task Scroll List Logic Data Lookup, Command: SCRIPT5474
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Object Text, Command: SCRIPT12510
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Ui Panel Set, Command: SCRIPT5266
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Particle System Scale, Command: SCRIPT7850
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Percentage Data Lookup, Command: SCRIPT7816
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Perspective, Command: SCRIPT8068
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Press Button, Command: SCRIPT6830
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Progressbar Data Lookup, Command: SCRIPT13550
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Progress Bar Timer, Command: SCRIPT10702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Progress Bar Timer Data Lookup, Command: SCRIPT9920
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Rank Controller, Command: SCRIPT4120
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Recommend Logic, Command: SCRIPT7406
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Recommend Scroll, Command: SCRIPT5756
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Recommend Scroll Item, Command: SCRIPT13702
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Refine Controller, Command: SCRIPT4872
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Region List, Command: SCRIPT10290
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Region List Item, Command: SCRIPT8148
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Resource Bar Logic, Command: SCRIPT10756
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Resource Component, Command: SCRIPT9148
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Res Src Tool Tip Controller, Command: SCRIPT7382
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Reward Item, Command: SCRIPT12388
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Root Adjustment, Command: SCRIPT7096
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Scroll Input, Command: SCRIPT5488
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Second List, Command: SCRIPT5642
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Second List Item, Command: SCRIPT10700
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Cell Controller, Command: SCRIPT8588
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Dynamic Scroll, Command: SCRIPT12794
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server List, Command: SCRIPT11874
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server List Item, Command: SCRIPT8204
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Request, Command: SCRIPT8688
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Server Row Controller, Command: SCRIPT5668
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Show Control Scheme, Command: SCRIPT8302
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Show Item, Command: SCRIPT5674
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Show Items Controller, Command: SCRIPT11910
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Simple Common Tooltip Controller, Command: SCRIPT13936
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Skill Desc Contorller, Command: SCRIPT7364
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Sliding Tab, Command: SCRIPT8168
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Socket Controller, Command: SCRIPT9308
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Sprite Color Tint Data Lookup, Command: SCRIPT13804
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Sprite Progress Data Lookup, Command: SCRIPT8546
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Stack, Command: SCRIPT3054
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Cell Controller, Command: SCRIPT8100
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Condition Tab Adapt, Command: SCRIPT11866
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Controller, Command: SCRIPT3112
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Grid Scroll, Command: SCRIPT13642
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Page Controller, Command: SCRIPT12354
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Page Data Lookup, Command: SCRIPT13658
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Store Row Controller, Command: SCRIPT11056
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Animation, Command: SCRIPT9776
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Input, Command: SCRIPT8710
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Input On GUI, Command: SCRIPT11172
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Symbol Label, Command: SCRIPT8040
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tab Controller, Command: SCRIPT10354
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Task Follow Task Btn Logic, Command: SCRIPT3700
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Task System Controller, Command: SCRIPT5894
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Task View Filter, Command: SCRIPT4798
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Temporary Panel, Command: SCRIPT3128
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Texture Async, Command: SCRIPT5904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Timer Sprite Data Lookup, Command: SCRIPT11036
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Toggle Data Lookup, Command: SCRIPT12904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Toggle Lock Data Lookup, Command: SCRIPT13316
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Button, Command: SCRIPT7246
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Equip Controller, Command: SCRIPT9556
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Manager, Command: SCRIPT11546
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tool Tip Panel Controller, Command: SCRIPT12270
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tooltip Press Pos, Command: SCRIPT3440
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Tween Data Lookup, Command: SCRIPT13590
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Upgrade Controller, Command: SCRIPT11862
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Vigor Buy Logic, Command: SCRIPT7958
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Widget Color Compare Data Lookup, Command: SCRIPT12190
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI Worker Lobby, Command: SCRIPT8000
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI World Boss Blood, Command: SCRIPT3386
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: UI World Boss Rank Logic, Command: SCRIPT6012
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Umeng Manager, Command: SCRIPT7560
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Un Enough Controller, Command: SCRIPT7860
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Unit HUD, Command: SCRIPT3904
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Universal Tutotial Highlight Mesh Click Listener, Command: SCRIPT3452
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Uni Web View, Command: SCRIPT5436
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Uni Web View Event Processor, Command: SCRIPT5960
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Upgrade Stats Data Lookup, Command: SCRIPT2684
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Uprade View Upgrade Button Handler, Command: SCRIPT11672
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Use With Code Scene Manager, Command: SCRIPT11406
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VFX Component, Command: SCRIPT7564
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VFX Performance Controll, Command: SCRIPT3208
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VIP Controller, Command: SCRIPT3122
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: VIP Level Data Lookup, Command: SCRIPT4696
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Virtual UI Label, Command: SCRIPT10584
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Virtual UI Sprite, Command: SCRIPT9448
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Waitting Logic, Command: SCRIPT2672
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Water Scroll, Command: SCRIPT11394
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Waypoint Cam, Command: SCRIPT4088
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Weekend Award Controller, Command: SCRIPT3434
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Welfare Controller, Command: SCRIPT11992
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wind Maker, Command: SCRIPT4808
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wing Controller, Command: SCRIPT5620
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wing Item, Command: SCRIPT7024
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Wing Item Tool Tip Controller, Command: SCRIPT4846
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Winner IOSSDK Controller, Command: SCRIPT13914
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: XP Component, Command: SCRIPT6932
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Boundary, Command: SCRIPT4502
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Descriptor, Command: SCRIPT3008
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Helper, Command: SCRIPT12466
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Loader, Command: SCRIPT6106
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Failed to insert item. Name: Zone Loader Manager, Command: SCRIPT12444
+ 
+(Filename: C:\buildslave\unity\build\Editor/Platform/Windows/MenuControllerWin.cpp Line: 662)
+
+Unloading 5150 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 316.8 MB.
+System memory in use after: 254.9 MB.
+
+Unloading 1961 unused Assets to reduce memory usage. Loaded Objects now: 5989.
+Total: 30.838321 ms (FindLiveObjects: 1.756067 ms CreateObjectMapping: 0.842103 ms MarkObjects: 2.856736 ms  DeleteObjects: 25.382451 ms)
+
+DisplayProgressbar: check res for CharatersBoneChecker
+DisplayProgressbar: scanning
+reporter is null False
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:43)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/ResCheckerMgr.cs Line: 43)
+
+RunChecker reporter is UnityConsoleResCheckReporter
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:44)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/ResCheckerMgr.cs Line: 44)
+
+ErrorOut: CharatersBoneChecker error nums: 10
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:9)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 9)
+
+ErrorOut:M203-model-preview 丢失了脚部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M203-model-skin-body 丢失了头部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M203-model-skin-body 丢失了胸部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M203-model-skin-body 丢失了脚部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M204-model-preview 丢失了胸部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M204-model-skin-body 丢失了胸部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M205-model-preview 丢失了脚部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M205-model-skin-body 丢失了脚部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M206-model-preview 丢失了脚部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+ErrorOut:M206-model-skin-body 丢失了脚部挂点
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityConsoleResCheckReporter:<Report>m__0(String) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+System.Collections.Generic.List`1:ForEach(Action`1) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:361)
+UnityConsoleResCheckReporter:Report(ResCheckResult) (at Assets\Tools\Editor\ResCheck\Reporters\UnityConsoleResCheckReporter.cs:10)
+ResCheckerMgr:RunChecker(ResCheckReporter) (at Assets\Tools\Editor\ResCheck\ResCheckerMgr.cs:45)
+ResCheckMenuItemEntry:CharatersBoneChecker() (at Assets\Tools\Editor\ResCheck\ResCheckMenuItemEntry.cs:18)
+ 
+(Filename: Assets/Tools/Editor/ResCheck/Reporters/UnityConsoleResCheckReporter.cs Line: 10)
+
+Batchmode quit successfully invoked - shutting down!
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.210685 seconds (Nothing changed)
+Refresh completed in 0.210740 seconds.
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.215687 seconds (Nothing changed)
+Refresh completed in 0.215745 seconds.
+[Package Manager] Server::Kill -- Server was shutdown
+Cleanup mono
+Exiting batchmode successfully now!

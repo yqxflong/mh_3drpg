@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<project name="Fusion Web Build Properties">
+	<description>Fusion Web Build Properties</description>
+
+	<target name="-settings-web">
+		<property name="dir.build.client" value="${dir.build}/Client/Client-Web"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseWebTarget"/>
+	</target>
+
+	<target name="-settings-web-dev">
+		<property name="dir.build.client" value="${dir.build}/Client/Temp/Client-Web"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseWebTarget"/>
+	</target>
+	
+	<target name="-web-cmd-dev">
+		<property name="cmd.unity.method.build" value="Automation.BuildWebDev"/>
+	</target>
+
+	<target name="-web-cmd">
+		<property name="cmd.unity.method.build" value="Automation.BuildWeb"/>
+	</target>
+</project>

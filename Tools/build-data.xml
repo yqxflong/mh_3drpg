@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<project name="Build Data" xmlns:ac="antlib:net.sf.antcontrib">
+	<description>Build Data</description>
+
+	<property name="dir.level.src" value="${basedir}/trunk/Code/Client/Assets/Scenes/Levels"/>
+	<property name="dir.level.dest" value="${basedir}/../sparx-sandbox/data/levels"/>
+	<property name="server-data-folder" value="${dir.code}/Client/Assets/ServerData/..."/>
+	<property name="server-data-folder-upload" value="${dir.code}/Client/Assets/ServerData/"/>
+	<property name="server-data-zip" value="${dir.build}/Client/Temp/ServerData.zip"/>
+	<property name="p4.location" value="/usr/bin/p4"/>
+	<!-- Properties for curl calls -->
+	<property name ="host.url" value="http://ec2-54-215-10-175.us-west-1.compute.amazonaws.com:8090"/> <!-- Default host.url to dev -->
+	<property name ="host.login" value="/session/login"/>
+	<property name ="host.upload" value="/serverdata/upload"/>
+	<property name ="host.update" value="/serverdata/setcurrent"/>
+
+
+	<target name="-check-dir-levels">
+		<available file="${dir.level.dest}" type="dir" property="dir.level.dest.exists"/>
+		<fail>
+			<condition>
+				<not>
+					<isset property="dir.level.dest.exists"/>
+				</not>
+			</condition>
+
+...
+Dirctory: [${dir.level.dest}] does not exist
+
+		</fail>
+	</target>
+
+
+
+	<target name="copy-levels-data"
+			depends="-check-dir-levels"
+			description="Copy levels data to backend">
+		<copy todir="${dir.level.dest}" failonerror="true">
+			<fileset dir="${dir.level.src}">
+				<include name="**/*.json"/>
+			</fileset>
+		</copy>
+	</target>
+
+	
+	<target name="upload-server-data"
+		description="Upload Server Data to backend"
+		depends="get-build-number">
+		<!-- zip the server data excluding any meta files --> 
+		<zip destfile="${server-data-zip}"
+			basedir="${server-data-folder-upload}"
+			excludes="**/*.meta"
+		/>
+
+		<!-- Login to site -->
+		<echo message="Logging into host...  ${host.url}${host.login}"/>
+		<exec executable="curl">
+			<arg line ="-i -s -k -d 'email=fusion-eng@kabam.com&amp;password=K@bam123' -b cookies.txt -c cookies.txt '${host.url}${host.login}'"/>
+		</exec>	
+
+		<!-- Send Server Data -->
+		<echo message="Sending server data zip to host... ${host.url}${host.upload}/${basevalue}/${revision.value}"/>
+
+		<exec executable="curl">
+			<arg line="--form file=@${server-data-zip} -k -b cookies.txt -c cookies.txt '${host.url}${host.upload}/${basevalue}/${revision.value}'"/>
+		</exec>
+	</target>
+
+	<target name="set-current-data-version"
+		depends="get-build-number">
+		<!-- Setting current version -->
+		<echo message="Setting current version to: ${revision.value}"/>
+		<exec executable="curl">
+			<arg line=" -k -d 'versionId='${revision.value}'' -b cookies.txt -c cookies.txt '${host.url}${host.update}'"/>
+		</exec>
+	</target>
+
+<target name="-revert-server-data">
+	<exec executable="${p4.location}" failonerror="true">
+			<arg value="revert"/>
+			<arg value="-a"/>
+			<arg value="${server-data-folder}"/>
+	</exec>
+</target>
+
+<target name="-checkout-server-data" depends="-revert-server-data">
+	<exec executable="${p4.location}" failonerror="true">
+			<arg value="edit"/>
+			<arg value="${server-data-folder}"/>
+	</exec>
+</target>
+
+<!-- Always accept "theirs" to avoid wiping changes -->
+<target name="-resolve-conflicts">
+	<exec executable="${p4.location}" failonerror="false">
+			<arg value="resolve"/>
+			<arg value="-at"/>
+			<arg value="${server-data-folder}"/>
+	</exec>
+</target>
+
+<target name="-submit-server-data" depends="-resolve-conflicts">
+	<exec executable="${p4.location}" resultproperty="submit.server.return">
+			<arg value="submit"/>
+			<arg value="-d"/>
+			<arg value="'Export catalog diff detected, updating server data'"/>
+			<arg value="-f"/>
+			<arg value="revertunchanged"/>
+			<arg value="${server-data-folder}"/>
+	</exec>
+</target>
+
+<target name="-delete-server-changelist" depends="-revert-server-data">
+	<exec executable="bash">
+			<arg value="-c"/>
+			<arg value='${p4.location} changes -u ${p4.user} -s pending | cut -d " " -f 2 | xargs -n1 ${p4.location} change -d'/>
+	</exec>
+</target>
+
+<!-- works for now but needs to be refactored to a script -->
+	<target name="get-build-number"
+		description="Extracts build number from version.txt, assume number is like 0.0.49.revision_number">
+		<loadfile property="version.number" srcFile="${version.file}"/>
+
+		<propertyregex 
+    				property="version"
+      				input="${version.number}"
+      				regexp="[a-zA-z]"
+      				replace=""
+      				global="true" 
+      				defaultValue="${version.number}"
+       				/>
+
+
+		<propertyregex property="basevalue" 
+               input="${version}" 
+               regexp="(.*)\.(.*)$" 
+               select="\1" />
+
+         <propertyregex property="revision.value" 
+               input="${version}" 
+               regexp="(.*)\.(.*)$" 
+               select="\2" />
+	</target>
+
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project name="Fusion OSX Build Properties">
+	<description>Fusion OSX Build Properties</description>
+
+	<target name="-settings-osx">
+		<property name="dir.build.client" value="${dir.build}/Client/Client-OSX"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}.app"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseOSXTarget"/>
+	</target>
+
+	<target name="-settings-osx-dev">
+		<property name="dir.build.client" value="${dir.build}/Client/Temp/Client-OSX"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}.app"/>
+		<property name="file.app.location" value="${dir.build.client}/${app.name}.app"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseOSXTarget"/>
+	</target>
+	
+	<target name="-osx-cmd-dev">
+		<property name="cmd.unity.method.build" value="Automation.BuildOSXDev"/>
+	</target>
+
+	<target name="-osx-cmd">
+		<property name="cmd.unity.method.build" value="Automation.BuildOSX"/>
+	</target>
+</project>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project name="Fusion Android Build Properties">
+	<description>Fusion Android Build Properties</description>
+
+	<target name="-settings-android">
+		<property name="dir.build.client" value="${dir.build}/Client/Client-Android"/>
+		<property name="file.app" value="${dir.build.client}/${app.name}.apk"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+
+		<!-- Make sure build is checked out-->
+		<exec executable="${p4-location}" failonerror="true">
+			<arg value="edit"/>
+			<arg value="${file.app}"/>
+		</exec>
+
+		
+		<property name="cmd.unity.method.switch" value="Automation.UseAndroidTarget"/>
+	</target>
+
+	<target name="-settings-android-dev">
+		<property name="dir.build.client" value="${dir.build}/Client/Temp/Client-Android"/>
+		<property name="file.app.dev" value="${dir.build.client}/${app.name}.apk"/>
+		<property name="file.app.location" value="${dir.build.client}/${app.name}.apk"/>
+		<property name="dir.app" value="${dir.build.client}"/>
+		<property name="cmd.unity.method.switch" value="Automation.UseAndroidTarget"/>
+		<property name="dir.save.library" value="Unity-Library-Android-Dev" />
+	</target>
+	
+	<target name="-android-cmd-dev">
+		<property name="cmd.unity.method.build" value="Automation.BuildAndroidDev"/>
+	</target>
+
+	<target name="-android-cmd">
+		<property name="cmd.unity.method.build" value="Automation.BuildAndroidAdhoc"/>
+
+	</target>
+
+	<target name="-clear-android-temp">
+		<echo message ="Deleting temp Android app folder at ${file.app.dev}"></echo>
+		<delete file="${file.app.dev}"/>
+	</target>
+
+	<target name="-copy-dev-build-android">
+		<copy file="${file.app.dev}" todir="/Users/${user.name}/builds/"/>
+	</target>
+	
+</project>

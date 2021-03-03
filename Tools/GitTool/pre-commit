@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+#coding=utf-8
+#By Johny
+
+import sys, os, re
+from subprocess import check_output
+
+#CONST
+BRANCH_CHECK = b"Dev_LT_UNITY184_Hotfix"
+REJECT_LIST = ['Assets/_ThirdParty/', 'Assets/_GameAssets/Scripts/Game/', 'Assets/_GameAssets/Scripts/StorySequencer/', 'Assets/Plugins/']
+WHITE_LIST = ['Assets/_ThirdParty/BundleManager/BundleShipInfo.json', 'Assets/_ThirdParty/BundleManager/BuildStates.txt', 'Assets/_ThirdParty/BundleManager/BundleData.txt']
+#截取的Key
+STATUS_CLAMP_BEGIN = 'Changes to be committed:'
+STATUS_CLAMP_END1 = 'Changes not staged for commit:'
+STATUS_CLAMP_END2 = 'Untracked files:'
+
+def ExitByOutputLimitedFile(file):
+	print("Limited Commit File: ")
+	print(file)
+	sys.exit(1)
+
+#git symbolic-ref --short HEAD
+branch = check_output(['git', 'symbolic-ref', '--short', 'HEAD']).strip()
+#不是开发分支不需要检查
+if BRANCH_CHECK != branch:
+	sys.exit(0)
+
+#git status --short
+#获取缓存区文件信息
+changedStr = check_output(['git', 'status']).decode()
+changedList = changedStr.split('\n')
+
+#截取待提交文件信息===>
+clampBegin = changedList.index(STATUS_CLAMP_BEGIN)
+clampEnd1 = 0
+clampEnd2 = 0
+
+if STATUS_CLAMP_END1 in changedList:
+	clampEnd1 = changedList.index(STATUS_CLAMP_END1)
+if STATUS_CLAMP_END2 in changedList:
+	clampEnd2 = changedList.index(STATUS_CLAMP_END2)
+
+if clampEnd1 > 0:
+	changedList = changedList[clampBegin: clampEnd1]
+elif clampEnd2 > 0:
+    changedList = changedList[clampBegin: clampEnd2]
+else:
+	changedList = changedList[clampBegin:]
+#<===截取待提交文件信息
+
+#检查缓存区文件是否有被拒的文件
+for changedFile in changedList:
+	for rejectKey in REJECT_LIST:
+		if rejectKey in changedFile:
+			#检测白名单===>
+			isInWhiteList = False
+			for white in WHITE_LIST:
+				if white in changedFile:
+					isInWhiteList = True
+			#<===检测白名单
+			if not isInWhiteList:
+				ExitByOutputLimitedFile(changedFile)
+
+sys.exit(0)

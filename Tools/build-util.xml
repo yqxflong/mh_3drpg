@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<project name="Build Utility" xmlns:ac="antlib:net.sf.antcontrib">
+	<description>Build Utility</description>
+
+	<property name="version.sh" value="${dir.tool}/version.sh"/>
+	<property name="version.file" value="Code/Client/Assets/Resources/version.txt"/>
+	<property name="version.type" value=""/>
+	<property name="message.commit" value="Client checked-in"/>
+	<property name="log.file.editor" value="${user.home}/Library/Logs/Unity/Editor.log"/>
+	<property name="num.commit" value="1"/>
+	<property name="rm-untracked.sh" value="${dir.tool}/rm-untracked.sh"/>
+	<property name="delete-temp-folder" value="${dir.build}/Client/Temp/"/>
+	<property name="p4-location" value="/usr/bin/p4"/>
+	<property name="server-data-location" value="${dir.code}/Client/Assets/ServerData/"/>
+	<property name="imageOptim.location" value="/usr/local/lib/node_modules/imageoptim-cli/bin/imageOptim"/>
+
+	<!-- Check if a directory for application exists -->
+	<target name="-check-dir-app">
+		<available file="${dir.app}" type="dir" property="dir.app.exists"/>
+	</target>
+
+	<target name="-make-dir-app" unless="dir.app.exists"
+			depends="-check-dir-app">
+		<mkdir dir="${dir.app}"/>
+	</target>
+
+	<target name="-delete-app">
+		<delete dir="${dir.app}"/>
+	</target>
+	
+	
+	<target name="clean-temp"
+		description="Deletes temp app folder">
+		<echo message ="Deleting temp app folder"></echo>
+		<delete dir="${delete-temp-folder}"/>
+	</target>
+	
+	<!-- OSX Application -->
+	<target name="clean-osx" if="dir.app.exists"
+			depends="-settings-osx,-check-dir-app,-delete-app"
+			description="Delete directory for OSX stand-alone application"/>
+
+
+	<!-- iOS Application -->
+	<target name="clean-ios"
+			depends="-settings-ios"
+			description="Delete directories for all applications">
+		<delete dir="${dir.build.client}"/>
+	</target>
+
+	<target name="clean-ios-app-dev" if="dir.app.exists"
+			depends="-settings-ios,-provision-dev,-check-dir-app,-delete-app"
+			description="Delete directory for development application"/>
+
+	<target name="clean-ios-app-adhoc" if="dir.app.exists"
+			depends="-settings-ios,-provision-adhoc,-check-dir-app,-delete-app"
+			description="Delete directory for adhoc distribution application"/>
+
+	<target name="clean-ios-app-release" if="dir.app.exists"
+			depends="-settings-ios,-provision-release,-check-dir-app,-delete-app"
+			description="Delete directory for release distribution application"/>
+
+	<!-- Miscellaneous -->
+	<target name="get-user-fullname"
+			description="Get user full name">
+		<exec executable="bash" outputproperty="user.fullname">
+			<arg value="-c"/>
+			<arg value="finger ${user.name} | grep 'Name' | sed 's/.*Name: \(.*\)/\1/g'"/>
+		</exec>
+		<echo message="${user.fullname}"/>
+	</target>
+
+	<target name="-echo-message-patience">
+		<echo message="This can take a few minutes."/>
+	</target>
+
+	<target name="copy-log-file">
+		<copy file="${log.file.editor}" todir="${dir.build.client}">
+		</copy>
+	</target>
+
+
+	<target name="get-unity-changed"
+		description="Gets a list of delete or untracked(created) files by Unity">
+		<exec executable="bash" outputproperty="p4.deleted.files">
+						<arg value="-c"/>
+						<arg value="${p4-location} status | grep delete"/>
+					</exec>
+		<exec executable="bash" outputproperty="p4.untracked.files">
+					<arg value="-c"/>
+					<arg value="${p4-location} status | grep add"/>
+				</exec>
+		
+		<fail>
+			<condition>
+			<or>
+				<not>
+					<equals arg1="${p4.untracked.files}" arg2=""/>
+				</not>
+				<not>
+					<equals arg1="${p4.deleted.files}" arg2=""/>
+				</not>
+			</or>
+			</condition>
+...
+
+There are files that were added or deleted by Unity
+Added:
+${p4.untracked.files}			
+Deleted:
+${p4.deleted.files}				
+		</fail>
+	</target>
+
+	<target name="checkout-client">
+		<exec executable="${p4-location}" failonerror="true">
+			<arg value="edit"/>
+			<arg value="${dir.build.client}/*"/>
+		</exec>
+
+	</target>
+
+	<target name="checkin-client"
+			description="Checks in client builds">
+		
+		<echo message="Committing build at ${dir.build.client}"/>
+
+		<exec executable="cat" 
+			  outputproperty="version.number"
+			  failonerror="true">
+			<arg value="${basedir}/${version.file}"/>
+		</exec>
+	</target>
+
+	
+	
+	<target name="cat-log-file"
+			description="Display log content of last log file">
+		<exec executable="cat"
+			  outputproperty="editor.log.content"
+			  failonerror="true">
+			<arg value="${log.file.editor}"/>
+		</exec>
+		<echo message="${editor.log.content}"/>
+	</target>
+	
+	<!-- Version -->
+	<!--
+	Pass in version.type to specifiy build type
+	e.g. ant -Dversion.type=d version-get
+	
+	d - development
+	r - release
+	-->
+	<target name="version-get"
+			description="Get a new version without checking in version.txt"
+			depends="revert-version-file">
+		<echo message="Update version number"/>
+
+		<exec executable="${p4-location}" failonerror="true">
+			<arg value="edit"/>
+			<arg value="${version.file}"/>
+		</exec>
+
+		<exec executable="${version.sh}"
+			  resultproperty="version.update.success"
+			  failonerror="true">
+			<arg value="${version.file}"/>
+			<arg value="${version.type}"/>
+			<arg value="${branch.name}"/>
+		</exec>
+
+		<exec executable="cat" 
+			  outputproperty="version.number"
+			  failonerror="true">
+			<arg value="${basedir}/${version.file}"/>
+		</exec>
+
+		<echo message="New version is ${version.number}"/>
+		
+
+	</target>
+
+
+<!-- Reverting before updating guarantees no conflicts when a merge happens! -->
+	<target name="revert-version-file">
+		<exec executable="${p4-location}" failonerror="false">
+			<arg value="revert"/>
+			<arg value="${version.file}"/>
+		</exec>
+	</target>
+
+	<target name="get-revision-number">
+		<exec executable="bash">
+			<arg value="-c"/>
+			<arg value="${p4-location} changes -m1 //fusion/Fusion/trunk/... | awk '{print $2}' "/>
+			
+		</exec>
+	</target>
+
+	<target name="submit-version-file">
+		<exec executable="cat" 
+			  outputproperty="version.number"
+			  failonerror="true">
+			<arg value="${basedir}/${version.file}"/>
+		</exec>
+
+		<exec executable="${p4-location}" failonerror="true">
+			<arg value="submit"/>
+			<arg value="-d"/>
+			<arg value="'Updating version number to: ${version.number}'"/>
+			<arg value="${version.file}"/>
+		</exec>
+	</target>
+
+<!-- Tasks to save and restore the Library folder which is deleted by the P4 sync. We can't the Jenkins P4 plugin or
+     P4IGNORE to not touch this folder and it takes a long time to recreate.
+-->
+	<target name="-save-library-folder">
+		<echo message="Copying ${unity.project.path}/Library to ${basedir}/../../../${dir.save.library}"/>
+		<exec executable="cp">
+			<arg value="-fR"/>
+			<arg value="${unity.project.path}/Library/" />
+			<arg value="${basedir}/../../../${dir.save.library}/" />
+		</exec>
+	</target>
+	
+	<target name="-restore-library-folder">
+		<echo message="Copying ${basedir}/../../../${dir.save.library} to ${unity.project.path}/Library"/>
+		<exec executable="cp">
+			<arg value="-fR"/>
+			<arg value="${basedir}/../../../${dir.save.library}/" />
+			<arg value="${unity.project.path}/Library/" />
+		</exec>
+	</target>
+
+
+<!-- Image Processing Tasks -->
+
+
+<target name="optimize-images" 
+	depends="-revert-image-folders,-checkout-image-folders,-optimize,-submit-image-folders,-delete-changelist">
+</target>
+
+<target name="-optimize">
+	<exec executable="bash" failonerror="true">
+			<arg value="-c"/>
+			<arg value="find ${user.dir} -type f -name '*.png' -mtime -1  -o -name '*.jpg' -mtime -1 | grep 'Assets/GameAssets/UI\|Assets/Resources/Bundles/UI' | ${imageOptim.location} --image-alpha --quit"/>
+		</exec>
+</target>
+
+<target name="-checkout-image-folders">
+	<exec executable="${p4-location}" failonerror="false" outputproperty="null">
+			<arg value="edit"/>
+			<arg value="${dir.code}/Client/Assets/GameAssets/UI/..."/>
+	</exec>
+	<exec executable="${p4-location}" failonerror="false" outputproperty="null"> 
+			<arg value="edit"/>
+			<arg value="${dir.code}/Client/Assets/Resources/Bundles/UI/..."/>
+	</exec>
+</target>
+
+<target name="-revert-image-folders">
+	<exec executable="${p4.location}" failonerror="true">
+			<arg value="revert"/>
+			<arg value="//..."/>
+	</exec>
+</target>
+
+<target name="-submit-image-folders" >
+	<exec executable="${p4.location}" outputproperty="null">
+			<arg value="submit"/>
+			<arg value="-d"/>
+			<arg value="'Optimizing new images'"/>
+			<arg value="-f"/>
+			<arg value="revertunchanged"/>
+	</exec>
+</target>
+
+<target name="-delete-changelist" depends="-revert-image-folders">
+	<exec executable="bash">
+			<arg value="-c"/>
+			<arg value='${p4.location} changes -u ${p4.user} -s pending | cut -d " " -f 2 | xargs -n1 ${p4.location} change -d'/>
+	</exec>
+</target>
+<!-- End Image Processing Tasks -->
+</project>

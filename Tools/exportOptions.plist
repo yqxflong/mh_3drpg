@@ -1,0 +1,13 @@
+<?xml vesion="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PopetyList-1.0.dtd">
+<!-- https://gist.github.com/phatblat/0dd175b406cf2f3fbfc9 -->
+<plist>
+	<dict>
+		<key>teamID</key>
+		<string>C6S7QQJ99N</string>
+		<key>method</key>
+		<string>development</string>
+		<key>compileBitcode</key>
+		<false />
+	</dict>
+</plist>

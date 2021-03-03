@@ -1,0 +1,22 @@
+
+ErrorOut: CharatersBoneChecker error nums: 10
+
+ErrorOut:M203-model-preview 丢失了脚部挂点
+
+ErrorOut:M203-model-skin-body 丢失了头部挂点
+
+ErrorOut:M203-model-skin-body 丢失了胸部挂点
+
+ErrorOut:M203-model-skin-body 丢失了脚部挂点
+
+ErrorOut:M204-model-preview 丢失了胸部挂点
+
+ErrorOut:M204-model-skin-body 丢失了胸部挂点
+
+ErrorOut:M205-model-preview 丢失了脚部挂点
+
+ErrorOut:M205-model-skin-body 丢失了脚部挂点
+
+ErrorOut:M206-model-preview 丢失了脚部挂点
+
+ErrorOut:M206-model-skin-body 丢失了脚部挂点
