@@ -308,34 +308,6 @@ namespace ILRuntime.Runtime.Generated
                     }
                 }
             }
-            args = new Type[]{typeof(global::UILabel)};
-            if (genericMethods.TryGetValue("GetComponent", out lst))
-            {
-                foreach(var m in lst)
-                {
-                    if(m.MatchGenericParameters(args, typeof(global::UILabel), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
-                    {
-                        method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, GetComponent_21);
-
-                        break;
-                    }
-                }
-            }
-            args = new Type[]{typeof(global::UISprite)};
-            if (genericMethods.TryGetValue("GetComponent", out lst))
-            {
-                foreach(var m in lst)
-                {
-                    if(m.MatchGenericParameters(args, typeof(global::UISprite), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
-                    {
-                        method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, GetComponent_22);
-
-                        break;
-                    }
-                }
-            }
             args = new Type[]{typeof(global::DynamicMonoILRObjectAdaptor.Adaptor)};
             if (genericMethods.TryGetValue("GetMonoILRComponent", out lst))
             {
@@ -344,7 +316,7 @@ namespace ILRuntime.Runtime.Generated
                     if(m.MatchGenericParameters(args, typeof(global::DynamicMonoILRObjectAdaptor.Adaptor), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
                     {
                         method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, GetMonoILRComponent_23);
+                        app.RegisterCLRMethodRedirection(method, GetMonoILRComponent_21);
 
                         break;
                     }
@@ -358,7 +330,7 @@ namespace ILRuntime.Runtime.Generated
                     if(m.MatchGenericParameters(args, typeof(global::UIEventTrigger), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
                     {
                         method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, GetComponent_24);
+                        app.RegisterCLRMethodRedirection(method, GetComponent_22);
 
                         break;
                     }
@@ -370,6 +342,34 @@ namespace ILRuntime.Runtime.Generated
                 foreach(var m in lst)
                 {
                     if(m.MatchGenericParameters(args, typeof(global::UIButton), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
+                    {
+                        method = m.MakeGenericMethod(args);
+                        app.RegisterCLRMethodRedirection(method, GetComponent_23);
+
+                        break;
+                    }
+                }
+            }
+            args = new Type[]{typeof(global::UISprite)};
+            if (genericMethods.TryGetValue("GetComponent", out lst))
+            {
+                foreach(var m in lst)
+                {
+                    if(m.MatchGenericParameters(args, typeof(global::UISprite), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
+                    {
+                        method = m.MakeGenericMethod(args);
+                        app.RegisterCLRMethodRedirection(method, GetComponent_24);
+
+                        break;
+                    }
+                }
+            }
+            args = new Type[]{typeof(global::UILabel)};
+            if (genericMethods.TryGetValue("GetComponent", out lst))
+            {
+                foreach(var m in lst)
+                {
+                    if(m.MatchGenericParameters(args, typeof(global::UILabel), typeof(UnityEngine.GameObject), typeof(System.String), typeof(System.Boolean)))
                     {
                         method = m.MakeGenericMethod(args);
                         app.RegisterCLRMethodRedirection(method, GetComponent_25);
@@ -972,63 +972,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* GetComponent_21(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Boolean @showErrorTips = ptr_of_this_method->Value == 1;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.String @name = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
-            UnityEngine.GameObject @go = (UnityEngine.GameObject)typeof(UnityEngine.GameObject).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = global::GameObjectExtension.GetComponent<global::UILabel>(@go, @name, @showErrorTips);
-
-            object obj_result_of_this_method = result_of_this_method;
-            if(obj_result_of_this_method is CrossBindingAdaptorType)
-            {    
-                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
-            }
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* GetComponent_22(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Boolean @showErrorTips = ptr_of_this_method->Value == 1;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.String @name = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
-            UnityEngine.GameObject @go = (UnityEngine.GameObject)typeof(UnityEngine.GameObject).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = global::GameObjectExtension.GetComponent<global::UISprite>(@go, @name, @showErrorTips);
-
-            object obj_result_of_this_method = result_of_this_method;
-            if(obj_result_of_this_method is CrossBindingAdaptorType)
-            {    
-                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
-            }
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* GetMonoILRComponent_23(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* GetMonoILRComponent_21(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -1056,7 +1000,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* GetComponent_24(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* GetComponent_22(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -1084,7 +1028,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* GetComponent_25(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* GetComponent_23(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -1103,6 +1047,62 @@ namespace ILRuntime.Runtime.Generated
 
 
             var result_of_this_method = global::GameObjectExtension.GetComponent<global::UIButton>(@go, @name, @showErrorTips);
+
+            object obj_result_of_this_method = result_of_this_method;
+            if(obj_result_of_this_method is CrossBindingAdaptorType)
+            {    
+                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
+            }
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* GetComponent_24(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Boolean @showErrorTips = ptr_of_this_method->Value == 1;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.String @name = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
+            UnityEngine.GameObject @go = (UnityEngine.GameObject)typeof(UnityEngine.GameObject).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            var result_of_this_method = global::GameObjectExtension.GetComponent<global::UISprite>(@go, @name, @showErrorTips);
+
+            object obj_result_of_this_method = result_of_this_method;
+            if(obj_result_of_this_method is CrossBindingAdaptorType)
+            {    
+                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
+            }
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* GetComponent_25(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Boolean @showErrorTips = ptr_of_this_method->Value == 1;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.String @name = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
+            UnityEngine.GameObject @go = (UnityEngine.GameObject)typeof(UnityEngine.GameObject).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            var result_of_this_method = global::GameObjectExtension.GetComponent<global::UILabel>(@go, @name, @showErrorTips);
 
             object obj_result_of_this_method = result_of_this_method;
             if(obj_result_of_this_method is CrossBindingAdaptorType)

@@ -18,7 +18,9 @@ public class LocalizationEditor
     {
         "CN",//简体为默认，自己管理，删除会导致预设引用miss
         "EN",
-        "TW"
+        "TW",
+         "FR",
+         "GE"
     };
 
     #region GenLanguageAtlas

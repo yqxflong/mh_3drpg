@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Globalization;
 
 namespace EB.Sparx
 {
@@ -42,7 +43,7 @@ namespace EB.Sparx
 				if (data.Contains("resource") && data.Contains("balance"))
 				{
 					string resourceName = data["resource"].ToString();
-					double value = double.Parse(data["balance"].ToString());
+					double value = double.Parse(data["balance"].ToString(), NumberStyles.Any, CultureInfo.InvariantCulture);
 
 					if (string.IsNullOrEmpty(resourceName)) return;
 					DataLookupsCache.Instance.CacheData("res." + resourceName + ".v", value);
@@ -75,7 +76,7 @@ namespace EB.Sparx
                     {
                         string resourceName = data["resource"].ToString();
 
-                        double value = double.Parse(data["balance"].ToString());
+                        double value = double.Parse(data["balance"].ToString(), NumberStyles.Any, CultureInfo.InvariantCulture);
 
                         if (string.IsNullOrEmpty(resourceName))
                             return;

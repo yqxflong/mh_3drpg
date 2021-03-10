@@ -42,20 +42,20 @@ namespace ILRuntime.Runtime.Generated
             method = type.GetMethod("IsJoined", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, IsJoined_5);
             args = new Type[]{typeof(System.String), typeof(System.Collections.Hashtable), typeof(System.Action<System.String, System.Object>)};
+            method = type.GetMethod("History", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, History_6);
+            args = new Type[]{typeof(System.String), typeof(System.Collections.Hashtable), typeof(System.Action<System.String, System.Object>)};
             method = type.GetMethod("Join", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Join_6);
+            app.RegisterCLRMethodRedirection(method, Join_7);
             args = new Type[]{typeof(System.String), typeof(System.Collections.Hashtable), typeof(System.Action<System.String, System.Object>)};
             method = type.GetMethod("Leave", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Leave_7);
+            app.RegisterCLRMethodRedirection(method, Leave_8);
             args = new Type[]{typeof(System.String), typeof(System.String), typeof(System.Collections.Hashtable), typeof(System.Action<System.String, System.Object>)};
             method = type.GetMethod("SendText", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, SendText_8);
+            app.RegisterCLRMethodRedirection(method, SendText_9);
             args = new Type[]{typeof(System.String), typeof(UnityEngine.AudioClip), typeof(System.Int32), typeof(System.Collections.Hashtable), typeof(System.Action<System.String, System.Object>)};
             method = type.GetMethod("SendAudio", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, SendAudio_9);
-            args = new Type[]{typeof(System.String), typeof(System.Collections.Hashtable), typeof(System.Action<System.String, System.Object>)};
-            method = type.GetMethod("History", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, History_10);
+            app.RegisterCLRMethodRedirection(method, SendAudio_10);
             args = new Type[]{typeof(System.String)};
             method = type.GetMethod("GetLastSendTime", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, GetLastSendTime_11);
@@ -189,7 +189,34 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* Join_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* History_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 4);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Action<System.String, System.Object> @callback = (System.Action<System.String, System.Object>)typeof(System.Action<System.String, System.Object>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.Collections.Hashtable @options = (System.Collections.Hashtable)typeof(System.Collections.Hashtable).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
+            System.String @channel = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 4);
+            EB.Sparx.ChatManager instance_of_this_method = (EB.Sparx.ChatManager)typeof(EB.Sparx.ChatManager).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.History(@channel, @options, @callback);
+
+            return __ret;
+        }
+
+        static StackObject* Join_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -216,7 +243,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* Leave_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* Leave_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -243,7 +270,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* SendText_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* SendText_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -274,7 +301,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* SendAudio_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* SendAudio_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -304,33 +331,6 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
             instance_of_this_method.SendAudio(@channel, @audio, @samplePos, @attributes, @callback);
-
-            return __ret;
-        }
-
-        static StackObject* History_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 4);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Action<System.String, System.Object> @callback = (System.Action<System.String, System.Object>)typeof(System.Action<System.String, System.Object>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.Collections.Hashtable @options = (System.Collections.Hashtable)typeof(System.Collections.Hashtable).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
-            System.String @channel = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 4);
-            EB.Sparx.ChatManager instance_of_this_method = (EB.Sparx.ChatManager)typeof(EB.Sparx.ChatManager).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            instance_of_this_method.History(@channel, @options, @callback);
 
             return __ret;
         }

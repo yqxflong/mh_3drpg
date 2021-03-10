@@ -11,6 +11,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 using UnityEngine;
+using HutongGames.PlayMaker;
 
 public class SpawnerEnemiesAggroEvent : ReplicatedEvent, IPlayMakerEvent
 {

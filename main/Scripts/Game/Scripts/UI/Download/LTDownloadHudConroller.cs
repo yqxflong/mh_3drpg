@@ -17,6 +17,7 @@ public class LTDownloadHudConroller : MonoBehaviour
     private UIProgressBar SplashProgressBar;
     private LTDownloadDialogueController DownloadDialogue;
 
+
     private bool ShowProgress = false;
     private float _timer = 1;
     private float _timerFactor = 2f;
@@ -39,13 +40,14 @@ public class LTDownloadHudConroller : MonoBehaviour
         SplashLabel = SplashScreen.transform.Find("SplashLabel").GetComponent<UILabel>();
         VersionLabel = SplashScreen.transform.Find("DistributeAnchor/Layout/FullVersion").GetComponent<UILabel>();
         SplashProgressBar = SplashScreen.transform.Find("ProgressBar").GetComponent<UIProgressBar>();
-        DownloadDialogue = transform.Find("DialogueScreen").GetComponent<LTDownloadDialogueController>();
-
+        DownloadDialogue= transform.Find("DialogueScreen").GetComponent<LTDownloadDialogueController>();
+        
         SplashProgressBar.value = 0;
 
         _uiTexture = SplashScreen.GetComponent<UITexture>("Panel/Texture");
         _fxComponent = SplashScreen.FindEx("Panel/Texture/FX");
         _uiAtlas = WarningScreen.GetComponent<UISprite>().atlas;
+      
     }
 
     private void SetLoadingStr()
@@ -242,6 +244,8 @@ public class LTDownloadHudConroller : MonoBehaviour
 #else
         _fxComponent.CustomSetActive(true);
 #endif
+
+#if !USE_AOSHITANGSDK
         if (UserData.Locale == EB.Language.ChineseSimplified)
         {
             WarningScreen.CustomSetActive(true);
@@ -249,6 +253,7 @@ public class LTDownloadHudConroller : MonoBehaviour
             yield return new WaitForSeconds(2);
             WarningScreen.CustomSetActive(false);
         }
+#endif
         yield break;
     }
 
@@ -352,7 +357,7 @@ public class LTDownloadHudConroller : MonoBehaviour
 
     public void ShowNetworkRetryDialog(System.Action retry)
     {
-        DownloadDialogue.Show_Confirm(EB.Localizer.GetString("ID_SPARX_NETWORK_RETYR"), delegate (eUIDialogueButtons button)
+        DownloadDialogue.Show_Confirm(EB.Localizer.GetString("ID_codefont_in_UIAccountController_1302"), delegate (eUIDialogueButtons button)
         {
             if (button == eUIDialogueButtons.Accept)
             {
@@ -417,4 +422,5 @@ public class LTDownloadHudConroller : MonoBehaviour
             }
         });
     }
+
 }

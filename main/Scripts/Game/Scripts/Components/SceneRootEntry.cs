@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using HutongGames.PlayMaker;
 
 /// <summary>
 /// 场景控件
@@ -225,29 +226,20 @@ public class SceneRootEntry
 
 		m_LevelAssetIndex = 0;
 		m_Loading = true;
-		
-		if(OnBegin != null)
-		{
-			OnBegin();
-		}
+
+		OnBegin?.Invoke();
 
 		if(m_SceneRoot != null)
 		{
-			if(OnLoading != null)
-			{
-				OnLoading(m_LevelAssets.Length, m_LevelAssets.Length);
-			}
-
-			if (OnFinished != null)
-			{
-				OnFinished(this);
-			}
-
+		    OnLoading?.Invoke(m_LevelAssets.Length, m_LevelAssets.Length);
+			OnFinished?.Invoke(this);
 			ClearLoading();
-			return;
 		}
-		//先加载相应的场景JSON配置信息
-		GM.AssetManager.FetchSceneDescriptionFile(levelName, url, LoadedSceneDescription);
+        else
+        {
+            //加载相应的场景JSON配置信息
+            GM.AssetManager.FetchSceneDescriptionFile(levelName, url, LoadedSceneDescription);
+        }
 	}
 
 	public T GetComponentInChildren<T>() where T:MonoBehaviour
@@ -408,11 +400,7 @@ public class SceneRootEntry
 	
 	void HandleFinished ()
 	{		
-		if (OnFinished != null)
-		{
-			OnFinished(this);
-		}
-		
+		OnFinished?.Invoke(this);
 		ClearLoading();
 		PostLoadCleanUp();
 	}

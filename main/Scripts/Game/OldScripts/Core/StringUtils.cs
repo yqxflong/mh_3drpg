@@ -10,6 +10,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
+using System.Globalization;
 using UnityEngine;
 
 public class StringUtils
@@ -92,6 +93,6 @@ public class StringUtils
 	{
 		content = content.Replace("(", ""); content = content.Replace(")", ""); content.Trim();
 		string[] values = content.Split(separator);
-		return new Vector3(float.Parse(values[0]), float.Parse(values[1]), float.Parse(values[2]));
+		return new Vector3(float.Parse(values[0], NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(values[1], NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(values[2], NumberStyles.Any, CultureInfo.InvariantCulture));
 	}
 }

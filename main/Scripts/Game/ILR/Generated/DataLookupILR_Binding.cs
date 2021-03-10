@@ -31,10 +31,14 @@ namespace ILRuntime.Runtime.Generated
             app.RegisterCLRFieldGetter(field, get_BoolParamList_1);
             app.RegisterCLRFieldSetter(field, set_BoolParamList_1);
             app.RegisterCLRFieldBinding(field, CopyToStack_BoolParamList_1, AssignFromStack_BoolParamList_1);
+            field = type.GetField("StringParamList", flag);
+            app.RegisterCLRFieldGetter(field, get_StringParamList_2);
+            app.RegisterCLRFieldSetter(field, set_StringParamList_2);
+            app.RegisterCLRFieldBinding(field, CopyToStack_StringParamList_2, AssignFromStack_StringParamList_2);
             field = type.GetField("hotfixClassPath", flag);
-            app.RegisterCLRFieldGetter(field, get_hotfixClassPath_2);
-            app.RegisterCLRFieldSetter(field, set_hotfixClassPath_2);
-            app.RegisterCLRFieldBinding(field, CopyToStack_hotfixClassPath_2, AssignFromStack_hotfixClassPath_2);
+            app.RegisterCLRFieldGetter(field, get_hotfixClassPath_3);
+            app.RegisterCLRFieldSetter(field, set_hotfixClassPath_3);
+            app.RegisterCLRFieldBinding(field, CopyToStack_hotfixClassPath_3, AssignFromStack_hotfixClassPath_3);
 
 
         }
@@ -99,23 +103,52 @@ namespace ILRuntime.Runtime.Generated
             return ptr_of_this_method;
         }
 
-        static object get_hotfixClassPath_2(ref object o)
+        static object get_StringParamList_2(ref object o)
+        {
+            return ((global::DataLookupILR)o).StringParamList;
+        }
+
+        static StackObject* CopyToStack_StringParamList_2(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        {
+            var result_of_this_method = ((global::DataLookupILR)o).StringParamList;
+            object obj_result_of_this_method = result_of_this_method;
+            if(obj_result_of_this_method is CrossBindingAdaptorType)
+            {    
+                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
+            }
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static void set_StringParamList_2(ref object o, object v)
+        {
+            ((global::DataLookupILR)o).StringParamList = (System.Collections.Generic.List<System.String>)v;
+        }
+
+        static StackObject* AssignFromStack_StringParamList_2(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.Collections.Generic.List<System.String> @StringParamList = (System.Collections.Generic.List<System.String>)typeof(System.Collections.Generic.List<System.String>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            ((global::DataLookupILR)o).StringParamList = @StringParamList;
+            return ptr_of_this_method;
+        }
+
+        static object get_hotfixClassPath_3(ref object o)
         {
             return ((global::DataLookupILR)o).hotfixClassPath;
         }
 
-        static StackObject* CopyToStack_hotfixClassPath_2(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        static StackObject* CopyToStack_hotfixClassPath_3(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
         {
             var result_of_this_method = ((global::DataLookupILR)o).hotfixClassPath;
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static void set_hotfixClassPath_2(ref object o, object v)
+        static void set_hotfixClassPath_3(ref object o, object v)
         {
             ((global::DataLookupILR)o).hotfixClassPath = (System.String)v;
         }
 
-        static StackObject* AssignFromStack_hotfixClassPath_2(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        static StackObject* AssignFromStack_hotfixClassPath_3(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.String @hotfixClassPath = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));

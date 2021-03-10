@@ -14,7 +14,9 @@ using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Fabric;
+using HutongGames.PlayMaker.Actions;
 using Pathfinding.RVO;
 
 public class FusionAudio : MonoBehaviour

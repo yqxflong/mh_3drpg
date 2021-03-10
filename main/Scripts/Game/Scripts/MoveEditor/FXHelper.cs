@@ -516,10 +516,9 @@ namespace MoveEditor
 				PlayParticleOnTargetList(clone);
 				return null;
 			}
-
-			//在副本中，或者在赛跑活动中
-			if ((GameFlowControlManager.IsInView("InstanceView") || GameFlowControlManager.Instance.InActivityRacing)
-				&& properties._flippedParticleReference.Name.Contains("paobu"))
+			//ToDo:改调热更
+            //if (LTInstanceMapModel.Instance.IsInsatnceViewAction() && properties._flippedParticleReference.Name.Contains("paobu"))
+			if (GameFlowControlManager.IsInView("InstanceView") && properties._flippedParticleReference.Name.Contains("paobu"))
 			{
                 return null;
             }

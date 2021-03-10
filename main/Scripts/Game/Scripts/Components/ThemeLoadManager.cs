@@ -41,19 +41,18 @@ public class ThemeLoadManager : MonoBehaviour
             m_CurrentLevelPath = levelPath;
             m_OnFinished = finish;
             HandleFinished(m_RootEntry);
-            return;
         }
+		else
+		{
+			InitLoad();
 
-        InitLoad();
-
-		m_CurrentLevelName = levelName;
-		m_CurrentLevelPath = levelPath;
-		m_OnFinished = finish;
-
-		m_RootEntry = new SceneRootEntry(levelPath);
-		string sceneUrl = GameEngine.Instance.OtaServer + "/" + m_RootEntry.m_Path;
-
-		m_RootEntry.LoadOTALevelAsync(levelName, sceneUrl, begin, failed, loading, HandleFinished);
+			m_CurrentLevelName = levelName;
+			m_CurrentLevelPath = levelPath;
+			m_OnFinished = finish;
+			m_RootEntry = new SceneRootEntry(levelPath);
+			string sceneUrl = GameEngine.Instance.OtaServer + "/" + m_RootEntry.m_Path;
+			m_RootEntry.LoadOTALevelAsync(levelName, sceneUrl, begin, failed, loading, HandleFinished);
+		}
 	}
 
 	public void DestroyCurrentLevel()
@@ -89,11 +88,14 @@ public class ThemeLoadManager : MonoBehaviour
 		m_OnFinished = null;
 	}
 
+	private static bool aa = false;
+
 	void HandleFinished(SceneRootEntry entry)
 	{
-		// may be destroyed
+		// may be destroyed, 如果进了if则会卡76%
 		if (Equals(null))
 		{
+			EB.Debug.LogError("[ThemeLoadManager].HandleFinished===> Equals(null)");
 			entry.DestroyLevel();
 			return;
 		}
@@ -104,9 +106,6 @@ public class ThemeLoadManager : MonoBehaviour
 			entry.ShowLevel();
 		}
 
-		if(m_OnFinished != null)
-		{
-			m_OnFinished(entry);
-		}
+		m_OnFinished?.Invoke(entry);
 	}
 }

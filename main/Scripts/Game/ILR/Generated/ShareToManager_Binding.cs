@@ -28,6 +28,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.String)};
             method = type.GetMethod("ShareTextBySystem", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ShareTextBySystem_1);
+            args = new Type[]{typeof(System.String)};
+            method = type.GetMethod("CopyToClipboard", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, CopyToClipboard_2);
 
 
         }
@@ -58,6 +61,22 @@ namespace ILRuntime.Runtime.Generated
 
 
             global::ShareToManager.ShareTextBySystem(@text);
+
+            return __ret;
+        }
+
+        static StackObject* CopyToClipboard_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.String @copytext = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            global::ShareToManager.CopyToClipboard(@copytext);
 
             return __ret;
         }

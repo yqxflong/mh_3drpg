@@ -1,4 +1,7 @@
-﻿// #define LOG_GameStateDownload
+﻿//GameStateDownload
+//游戏状态--下载。（包括但不限于，加载本地bundles，下载远程bundles）
+
+// #define LOG_GameStateDownload
 
 using System;
 using UnityEngine;
@@ -17,6 +20,18 @@ public class GameStateDownload : GameState
 #endif
     }
 
+#if !UNITY_EDITOR && USE_AOSHITANGSDK
+    private void ShowWaitSDKInitScreen(bool shown)
+    {
+        var go = GameObject.Find("DownloadHudUI/WaitSDKInitScreen");
+        if(go)
+        {
+            go.CustomSetActive(shown);
+        }
+    }
+#endif
+
+
     public override IEnumerator Start(GameState oldState)
     {
         //debug服务器选择界面 debug screen view
@@ -24,18 +39,14 @@ public class GameStateDownload : GameState
         DebugSystem.DebugCameraClearNothing();
 #endif
 
-        //获取obb,分包时使用 fetch obb 
-#if UNITY_ANDROID && !UNITY_EDITOR && USE_GOOGLE && USE_OBB
-		var om = new EB.Sparx.ObbManager();
-		yield return om.Check();
+#if !UNITY_EDITOR && USE_AOSHITANGSDK
+        EB.Sparx.AoshitangSDKManager.getInstance().AstSDKInit();
+        yield return new WaitUntil(() => EB.Sparx.AoshitangSDKManager.getInstance().SDKInitSuccess);
+        //ShowWaitSDKInitScreen(false);花屏问题，得等loading出来再隐藏
 #endif
 
         //获取本地的玩家设置 load playersetting
         UserData.DeserializePrefs();
-
-		#region 加载LoadingUI
-		CreateLoadingUI();
-		#endregion
 
 		//加载当前语言的基础包
 		EB.Localizer.LoadCurrentLanguageBase(UserData.Locale);
@@ -52,11 +63,32 @@ public class GameStateDownload : GameState
         //显示普通loading界面（加载中。。。） show splash screen
         yield return GameEngine.Instance.StartCoroutine(LTDownloadHudConroller.instance.ShowSplashScreen());//GameEngine.Instance.StartCoroutine(ShowSplashScreen());
 
+#if !UNITY_EDITOR && USE_AOSHITANGSDK
+                ShowWaitSDKInitScreen(false);
+#endif
+
         //网络检测是否联网 confirm network
         yield return LTDownloadHudConroller.instance.WaitForNetwork();//BlockForNetworkWithDialog();
 
+#if USE_AOSHITANGSDK
+        if (PlayerPrefs.GetInt("astfirstopen", -1) != 1)
+        {
+            EB.Sparx.AoshitangSDKManager.getInstance().UploadLog("firstOpen", delegate(bool scucess) {
+                if (scucess)
+                {
+                    PlayerPrefs.SetInt("astfirstopen", 1);
+                    PlayerPrefs.Save();
+                }
+            });
+        }
+        EB.Sparx.AoshitangSDKManager.getInstance().UploadLog("open", null);
+#endif
+        EB.Debug.Log("USE_AOSHITANGSDK Pass!!!!");
+
         //获取api跟ota服务器信息 fetch api sever and ota server
         yield return GameEngine.Instance.StartCoroutine(FetchServerList());
+
+        EB.Debug.Log("FetchServerList Pass!!!!");
 
         if (GameEngine.Instance.ServerMaintenance)
         {
@@ -65,23 +97,31 @@ public class GameStateDownload : GameState
             yield break;
         }
 
+        EB.Debug.Log("ServerMaintenance Pass!!!!");
+
+        #region 下载AB包
         //资源限制配置 resource limit
         GM.AssetManager.MaxDecompressQueueSize = 100;
         GM.AssetManager.MaxMemorySize = 200 * 1024 * 1024;
         GM.AssetManager.InitilizeThreadPool();
-        
-        #region 下载AB包
-        //加载streaming下的资源 download streaming assets
+
+        //加载本地包体中的bundles
         yield return GameEngine.Instance.StartCoroutine(DownloadFromStreamingFolder());
 
-        //加载ota服务器资源 download ota assets
+        EB.Debug.Log("DownloadFromStreamingFolder Pass!!!!");
+
+        //下载服务器的bundles
         yield return GameEngine.Instance.StartCoroutine(DowloadFromOtaServer());
-        
+
+        EB.Debug.Log("DowloadFromOtaServer Pass!!!!");
+
         #region 强制回收GC
         System.GC.Collect(System.GC.MaxGeneration, System.GCCollectionMode.Forced);
         System.GC.WaitForPendingFinalizers();
         System.GC.Collect();
         #endregion
+
+        EB.Debug.Log("GC Pass!!!!");
 
         //背景下载资源限制配置 background download resource limit
         GM.AssetManager.MaxDecompressQueueSize = 100;
@@ -94,64 +134,74 @@ public class GameStateDownload : GameState
             UserData.InitedVersion = EB.Version.GetFullVersion();
             UserData.SerializePrefs();
         }
+
+        EB.Debug.Log("save version info Pass!!!!");
         #endregion
+
+
 
         #region 加载CommonText
         InitBundleTextData();
         yield return _waitUntilBundleTextData;
         #endregion
 
+        EB.Debug.Log("InitBundleTextData Pass!!!!");
+
         //加载Bundle中的当前语言文本
         yield return LoadCurrentLanguageText();
+
+        EB.Debug.Log("LoadCurrentLanguageText Pass!!!!");
 
 #if !UNITY_EDITOR
         //加载bundle配置表信息 load datacaches
         yield return LoadAllDataCachesFromBundles();
 #endif
 
-		#region InjectFix初始化 Inject Init
+        EB.Debug.Log("LoadAllDataCachesFromBundles Pass!!!!");
+
+        #region InjectFix初始化 Inject Init
 #if !UNITY_EDITOR
 		yield return IFix.InjectPatchManager.Instance.LoadScriptPatch();
 #endif
-		#endregion
+        #endregion
 
+        EB.Debug.Log("InjectPatchManager Pass!!!!");
 
-		#region ILR初始化 ILR Init
-		EB.Coroutines.Run(HotfixILRManager.GetInstance().StartProcess());
+        #region ILR初始化 ILR Init
+        EB.Coroutines.Run(HotfixILRManager.GetInstance().StartProcess());
         while (!HotfixILRManager.GetInstance().IsInit)
         {
             yield return null;
         }
         yield return null; //多等一帧 给依赖HotfixILRManager.GetInstance().IsInit判断初始化的协程能执行
         #endregion
+        
+        #region 初始化DynamicMonoILR
         EB.Debug.Log("DynamicMonoILR LTGameStateHofixController");
         var mono= GameStateManager.Instance.gameObject.AddComponent<DynamicMonoILR>();
         mono.hotfixClassPath = "Hotfix_LT.GameState.LTGameStateHofixController";
         mono.ILRObjInit();
+        #endregion
         
-        // FusionTelemetry.Initialize();
-        // Debug.LogError("CallStaticHotfixUI FusionTelemetry");
+        //初始化数据统计管理器
         GlobalUtils.CallStaticHotfix("Hotfix_LT.UI.FusionTelemetry", "Initialize");
 
 
+
+        #region 加载一坨不知道啥
         EB.Assets.LoadAsyncAndInit<UnityEngine.Object>("CharacterDependencies", null, GameEngine.Instance.gameObject);
         EB.Assets.LoadAsyncAndInit<UnityEngine.Object>("fx_aura04_Blueuv_02", null, GameEngine.Instance.gameObject);
         EB.Assets.LoadAsyncAndInit<UnityEngine.Object>("fx_dj_Reduv_fx02", null, GameEngine.Instance.gameObject);
         EB.Assets.LoadAsyncAndInit<UnityEngine.Object>("fx_Glo_0049", null, GameEngine.Instance.gameObject);
         EB.Assets.LoadAsyncAndInit<UnityEngine.Object>("fx_glwo_guangyun", null, GameEngine.Instance.gameObject);
         EB.Assets.LoadAsyncAndInit<UnityEngine.Object>("fx_m_bai_s", null, GameEngine.Instance.gameObject);
+        #endregion
+
+        EB.Debug.Log("GameDownload Pass!!!!");
     }
 
-    #region Create Loading UI
-	private void CreateLoadingUI()
-	{
-        GameObject.Instantiate(Resources.Load("DynamicAtlas/DynamicAtlasManager", typeof(GameObject))).name = "DynamicAtlasManager";
-        GameObject.Instantiate(Resources.Load("UI/DownloadHudUI", typeof(GameObject))).name = "DownloadHudUI";
-	}
-	#endregion
-
-	#region Load TextData in Bundle
-	private static bool _bundleTextDataFinished = false;
+    #region Load TextData in Bundle
+    private static bool _bundleTextDataFinished = false;
 	private int _bundleTextDataInitCount = 0;
 	private List<System.Action<System.Action<bool>>> _bundleTextDataInitList = new List<System.Action<System.Action<bool>>>()
 	{
@@ -224,7 +274,7 @@ public class GameStateDownload : GameState
     private WaitForSeconds _DownloadFromStreamingFolder_wait = new WaitForSeconds(1.0f);
     
     /// <summary>
-    /// 本地加载Bundle
+    /// 加载本地的bundles
     /// </summary>
     private IEnumerator DownloadFromStreamingFolder()
 	{
@@ -233,8 +283,6 @@ public class GameStateDownload : GameState
 			EB.Debug.Log("DownloadFromStreamingFolder: full version doesn't changed, skip local asset bundles");
 			yield break;
 		}
-
-		GM.AssetManager.SuppressErrors = true;
 
 		// load & check local manifest
 		DownloadLocalAssetBundleManifest();
@@ -274,7 +322,7 @@ public class GameStateDownload : GameState
     }
 
     /// <summary>
-    /// 从SteamingAsset中下载Bundle配置文件
+    /// 加载本地的bundleManifest
     /// </summary>
 	private void DownloadLocalAssetBundleManifest()
 	{
@@ -290,7 +338,7 @@ public class GameStateDownload : GameState
         GM.AssetManager.SetRemoteBundleFileBaseUrl(url);
 
         url = string.Format("{0}BundleShipInfo.json", url);
-        //url += "BundleShipInfo.json";
+        EB.Debug.Log("DownloadLocalAssetBundleManifest===>url: {0}", url);
         GM.AssetManager.GetRemoteBundlesInfoFile(url, DownloadLocalAssetBundleManifestResult, GameEngine.Instance.gameObject);
 	}
 
@@ -302,10 +350,7 @@ public class GameStateDownload : GameState
 	{
 		if (!success)
 		{
-			if (!GM.AssetManager.SuppressErrors)
-			{
-				EB.Debug.LogWarning("DownloadLocalAssetBundleManifestResult failed");
-			}
+			EB.Debug.LogWarning("DownloadLocalAssetBundleManifestResult failed");
 			EB.Assets.IsDownloadingManifest = false;
 		}
 		else
@@ -342,7 +387,6 @@ public class GameStateDownload : GameState
 			yield break;
 		}
 
-		GM.AssetManager.SuppressErrors = false;
 		// download asset bundle manifest
 		DownloadAssetBundleManifest();
 		while (EB.Assets.IsDownloadingManifest)
@@ -352,8 +396,10 @@ public class GameStateDownload : GameState
 
         // download each of the assets in order
         GM.AssetManager.DownloadRequiredAssetBundles(UserData.InitedVersion == EB.Version.GetFullVersion() ? -1 : 0);
-		if (EB.Assets.DownloadedBundles != EB.Assets.ToDownloadBundles)
+
+        if (EB.Assets.DownloadedBundles != EB.Assets.ToDownloadBundles)
         {
+
             yield return LTDownloadHudConroller.instance.ConfirmCarrierDataNetwork();
 		}
 
@@ -399,7 +445,7 @@ public class GameStateDownload : GameState
         {
             EB.Debug.LogError("SetResExtracting Fail!——{0}",e);
         }
-#endif 
+#endif
     }
 
     /// <summary>
@@ -419,7 +465,7 @@ public class GameStateDownload : GameState
         GM.AssetManager.SetRemoteBundleFileBaseUrl(url);
 
         url = string.Format("{0}BundleShipInfo.json", url);
-        //url += "BundleShipInfo.json";
+        EB.Debug.Log("DownloadAssetBundleManifest===>url: {0}", url);
 		GM.AssetManager.GetRemoteBundlesInfoFile(url, DownloadAssetBundleManifestResult, GameEngine.Instance.gameObject);
 	}
 
@@ -431,7 +477,7 @@ public class GameStateDownload : GameState
 	{
 		if (!success)
 		{
-			EB.Debug.LogWarning("DownloadAssetBundleManifest failed");
+			EB.Debug.LogError("DownloadAssetBundleManifest failed");
             LTDownloadHudConroller.instance.ShowNetworkRetryDialog(DownloadAssetBundleManifest);
 		}
 		else

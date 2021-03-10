@@ -13,13 +13,13 @@ using UnityEngine;
 using System.Collections;
 
 /// <summary>
-/// ç¯å¢ƒå…‰æè¿°ä¿¡æ¯
+/// »·¾³¹âÃèÊöĞÅÏ¢
 /// </summary>
 [ExecuteInEditMode]
 public class EnvironmentHelper : GridHelper
 {	
     /// <summary>
-    /// ç¯å¢ƒå…‰åˆ†ç±»ï¼ˆå·²ç»ä¸å†ä½¿ç”¨ï¼‰
+    /// »·¾³¹â·ÖÀà£¨ÒÑ¾­²»ÔÙÊ¹ÓÃ£©
     /// </summary>
 	public enum eEnvironmentType
 	{
@@ -58,16 +58,16 @@ public class EnvironmentHelper : GridHelper
 				return string.Empty;
 			}
             
-			if (GameFlowControlManager.Instance == null)
+			if (GameFlowControlManager.Instance == null || GameFlowControlManager.Instance.m_StateMachine == null)
 			{
 				return string.Empty;
 			}
 
-//			string evt = GameFlowControlManager .Instance.m_StateMachine.FsmVariables.GetFsmString("MusicLoopEvent").Value;
-//			if (!string.IsNullOrEmpty(evt))
-//			{
-//				return evt;
-//			}
+			string evt = GameFlowControlManager .Instance.m_StateMachine.FsmVariables.GetFsmString("MusicLoopEvent").Value;
+			if (!string.IsNullOrEmpty(evt))
+			{
+				return evt;
+			}
 
 			return string.Empty;
 		}
@@ -87,16 +87,16 @@ public class EnvironmentHelper : GridHelper
 				return string.Empty;
 			}
             
-			if (GameFlowControlManager.Instance== null)
+			if (GameFlowControlManager.Instance== null || GameFlowControlManager.Instance.m_StateMachine)
 			{
 				return string.Empty;
 			}
 
-//			string evt = GameFlowControlManager.Instance.m_StateMachine.FsmVariables.GetFsmString("AmbientLoopEvent").Value;
-//			if (!string.IsNullOrEmpty(evt))
-//			{
-//				return evt;
-//			}
+			string evt = GameFlowControlManager.Instance.m_StateMachine.FsmVariables.GetFsmString("AmbientLoopEvent").Value;
+			if (!string.IsNullOrEmpty(evt))
+			{
+				return evt;
+			}
 
 			return string.Empty;
 		}

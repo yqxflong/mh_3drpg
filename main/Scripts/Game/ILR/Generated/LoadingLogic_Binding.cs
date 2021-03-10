@@ -22,7 +22,7 @@ namespace ILRuntime.Runtime.Generated
             MethodBase method;
             Type[] args;
             Type type = typeof(global::LoadingLogic);
-            args = new Type[]{typeof(System.Int32)};
+            args = new Type[]{typeof(System.Int32), typeof(System.String)};
             method = type.GetMethod("AddCustomProgress", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, AddCustomProgress_0);
             args = new Type[]{};
@@ -40,13 +40,17 @@ namespace ILRuntime.Runtime.Generated
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.String @flag = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
             System.Int32 @prg = ptr_of_this_method->Value;
 
 
-            global::LoadingLogic.AddCustomProgress(@prg);
+            global::LoadingLogic.AddCustomProgress(@prg, @flag);
 
             return __ret;
         }

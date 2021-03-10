@@ -25,15 +25,18 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("get_instance", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_instance_0);
+            args = new Type[]{typeof(System.Int32).MakeByRefType()};
+            method = type.GetMethod("RemoveTimerSafely", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, RemoveTimerSafely_1);
             args = new Type[]{typeof(System.Int32), typeof(System.Int32), typeof(global::CTimer.OnTimeUpHandler)};
             method = type.GetMethod("AddFramer", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, AddFramer_1);
+            app.RegisterCLRMethodRedirection(method, AddFramer_2);
             args = new Type[]{typeof(System.Int32), typeof(System.Int32), typeof(global::CTimer.OnTimeUpHandler)};
             method = type.GetMethod("AddTimer", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, AddTimer_2);
+            app.RegisterCLRMethodRedirection(method, AddTimer_3);
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("RemoveTimer", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, RemoveTimer_3);
+            app.RegisterCLRMethodRedirection(method, RemoveTimer_4);
 
 
         }
@@ -50,7 +53,72 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* AddFramer_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* RemoveTimerSafely_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @sequence = __intp.RetriveInt32(ptr_of_this_method, __mStack);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            global::TimerManager instance_of_this_method = (global::TimerManager)typeof(global::TimerManager).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+
+            instance_of_this_method.RemoveTimerSafely(ref @sequence);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            switch(ptr_of_this_method->ObjectType)
+            {
+                case ObjectTypes.StackObjectReference:
+                    {
+                        var ___dst = ILIntepreter.ResolveReference(ptr_of_this_method);
+                        ___dst->ObjectType = ObjectTypes.Integer;
+                        ___dst->Value = @sequence;
+                    }
+                    break;
+                case ObjectTypes.FieldReference:
+                    {
+                        var ___obj = __mStack[ptr_of_this_method->Value];
+                        if(___obj is ILTypeInstance)
+                        {
+                            ((ILTypeInstance)___obj)[ptr_of_this_method->ValueLow] = @sequence;
+                        }
+                        else
+                        {
+                            var ___type = __domain.GetType(___obj.GetType()) as CLRType;
+                            ___type.SetFieldValue(ptr_of_this_method->ValueLow, ref ___obj, @sequence);
+                        }
+                    }
+                    break;
+                case ObjectTypes.StaticFieldReference:
+                    {
+                        var ___type = __domain.GetType(ptr_of_this_method->Value);
+                        if(___type is ILType)
+                        {
+                            ((ILType)___type).StaticInstance[ptr_of_this_method->ValueLow] = @sequence;
+                        }
+                        else
+                        {
+                            ((CLRType)___type).SetStaticFieldValue(ptr_of_this_method->ValueLow, @sequence);
+                        }
+                    }
+                    break;
+                 case ObjectTypes.ArrayReference:
+                    {
+                        var instance_of_arrayReference = __mStack[ptr_of_this_method->Value] as System.Int32[];
+                        instance_of_arrayReference[ptr_of_this_method->ValueLow] = @sequence;
+                    }
+                    break;
+            }
+
+            __intp.Free(ptr_of_this_method);
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            __intp.Free(ptr_of_this_method);
+            return __ret;
+        }
+
+        static StackObject* AddFramer_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -77,7 +145,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* AddTimer_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* AddTimer_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -104,7 +172,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* RemoveTimer_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* RemoveTimer_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

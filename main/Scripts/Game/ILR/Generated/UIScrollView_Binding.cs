@@ -53,9 +53,6 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("get_shouldMoveVertically", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_shouldMoveVertically_9);
-            args = new Type[]{typeof(System.Boolean)};
-            method = type.GetMethod("UpdateScrollbars", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, UpdateScrollbars_10);
 
             field = type.GetField("verticalScrollBar", flag);
             app.RegisterCLRFieldGetter(field, get_verticalScrollBar_0);
@@ -250,24 +247,6 @@ namespace ILRuntime.Runtime.Generated
             __ret->ObjectType = ObjectTypes.Integer;
             __ret->Value = result_of_this_method ? 1 : 0;
             return __ret + 1;
-        }
-
-        static StackObject* UpdateScrollbars_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Boolean @recalculateBounds = ptr_of_this_method->Value == 1;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            global::UIScrollView instance_of_this_method = (global::UIScrollView)typeof(global::UIScrollView).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            instance_of_this_method.UpdateScrollbars(@recalculateBounds);
-
-            return __ret;
         }
 
 

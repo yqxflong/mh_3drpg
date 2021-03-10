@@ -37,7 +37,7 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.String)};
             method = type.GetMethod("ToInt32", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ToInt32_4);
-            args = new Type[]{typeof(System.String)};
+            args = new Type[]{typeof(System.String), typeof(System.IFormatProvider)};
             method = type.GetMethod("ToSingle", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ToSingle_5);
             args = new Type[]{typeof(System.Int64)};
@@ -157,14 +157,18 @@ namespace ILRuntime.Runtime.Generated
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.IFormatProvider @provider = (System.IFormatProvider)typeof(System.IFormatProvider).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
             System.String @value = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
 
-            var result_of_this_method = System.Convert.ToSingle(@value);
+            var result_of_this_method = System.Convert.ToSingle(@value, @provider);
 
             __ret->ObjectType = ObjectTypes.Float;
             *(float*)&__ret->Value = result_of_this_method;

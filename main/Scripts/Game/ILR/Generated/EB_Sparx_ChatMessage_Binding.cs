@@ -111,18 +111,22 @@ namespace ILRuntime.Runtime.Generated
             app.RegisterCLRFieldGetter(field, get_monthVipType_20);
             app.RegisterCLRFieldSetter(field, set_monthVipType_20);
             app.RegisterCLRFieldBinding(field, CopyToStack_monthVipType_20, AssignFromStack_monthVipType_20);
+            field = type.GetField("achievementType", flag);
+            app.RegisterCLRFieldGetter(field, get_achievementType_21);
+            app.RegisterCLRFieldSetter(field, set_achievementType_21);
+            app.RegisterCLRFieldBinding(field, CopyToStack_achievementType_21, AssignFromStack_achievementType_21);
             field = type.GetField("privateUid", flag);
-            app.RegisterCLRFieldGetter(field, get_privateUid_21);
-            app.RegisterCLRFieldSetter(field, set_privateUid_21);
-            app.RegisterCLRFieldBinding(field, CopyToStack_privateUid_21, AssignFromStack_privateUid_21);
+            app.RegisterCLRFieldGetter(field, get_privateUid_22);
+            app.RegisterCLRFieldSetter(field, set_privateUid_22);
+            app.RegisterCLRFieldBinding(field, CopyToStack_privateUid_22, AssignFromStack_privateUid_22);
             field = type.GetField("isRead", flag);
-            app.RegisterCLRFieldGetter(field, get_isRead_22);
-            app.RegisterCLRFieldSetter(field, set_isRead_22);
-            app.RegisterCLRFieldBinding(field, CopyToStack_isRead_22, AssignFromStack_isRead_22);
+            app.RegisterCLRFieldGetter(field, get_isRead_23);
+            app.RegisterCLRFieldSetter(field, set_isRead_23);
+            app.RegisterCLRFieldBinding(field, CopyToStack_isRead_23, AssignFromStack_isRead_23);
             field = type.GetField("privateName", flag);
-            app.RegisterCLRFieldGetter(field, get_privateName_23);
-            app.RegisterCLRFieldSetter(field, set_privateName_23);
-            app.RegisterCLRFieldBinding(field, CopyToStack_privateName_23, AssignFromStack_privateName_23);
+            app.RegisterCLRFieldGetter(field, get_privateName_24);
+            app.RegisterCLRFieldSetter(field, set_privateName_24);
+            app.RegisterCLRFieldBinding(field, CopyToStack_privateName_24, AssignFromStack_privateName_24);
 
             app.RegisterCLRCreateArrayInstance(type, s => new EB.Sparx.ChatMessage[s]);
 
@@ -675,12 +679,36 @@ namespace ILRuntime.Runtime.Generated
             return ptr_of_this_method;
         }
 
-        static object get_privateUid_21(ref object o)
+        static object get_achievementType_21(ref object o)
+        {
+            return ((EB.Sparx.ChatMessage)o).achievementType;
+        }
+
+        static StackObject* CopyToStack_achievementType_21(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        {
+            var result_of_this_method = ((EB.Sparx.ChatMessage)o).achievementType;
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static void set_achievementType_21(ref object o, object v)
+        {
+            ((EB.Sparx.ChatMessage)o).achievementType = (System.String)v;
+        }
+
+        static StackObject* AssignFromStack_achievementType_21(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.String @achievementType = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            ((EB.Sparx.ChatMessage)o).achievementType = @achievementType;
+            return ptr_of_this_method;
+        }
+
+        static object get_privateUid_22(ref object o)
         {
             return ((EB.Sparx.ChatMessage)o).privateUid;
         }
 
-        static StackObject* CopyToStack_privateUid_21(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        static StackObject* CopyToStack_privateUid_22(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
         {
             var result_of_this_method = ((EB.Sparx.ChatMessage)o).privateUid;
             __ret->ObjectType = ObjectTypes.Long;
@@ -688,12 +716,12 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static void set_privateUid_21(ref object o, object v)
+        static void set_privateUid_22(ref object o, object v)
         {
             ((EB.Sparx.ChatMessage)o).privateUid = (System.Int64)v;
         }
 
-        static StackObject* AssignFromStack_privateUid_21(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        static StackObject* AssignFromStack_privateUid_22(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.Int64 @privateUid = *(long*)&ptr_of_this_method->Value;
@@ -701,12 +729,12 @@ namespace ILRuntime.Runtime.Generated
             return ptr_of_this_method;
         }
 
-        static object get_isRead_22(ref object o)
+        static object get_isRead_23(ref object o)
         {
             return ((EB.Sparx.ChatMessage)o).isRead;
         }
 
-        static StackObject* CopyToStack_isRead_22(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        static StackObject* CopyToStack_isRead_23(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
         {
             var result_of_this_method = ((EB.Sparx.ChatMessage)o).isRead;
             __ret->ObjectType = ObjectTypes.Integer;
@@ -714,12 +742,12 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static void set_isRead_22(ref object o, object v)
+        static void set_isRead_23(ref object o, object v)
         {
             ((EB.Sparx.ChatMessage)o).isRead = (System.Boolean)v;
         }
 
-        static StackObject* AssignFromStack_isRead_22(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        static StackObject* AssignFromStack_isRead_23(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.Boolean @isRead = ptr_of_this_method->Value == 1;
@@ -727,23 +755,23 @@ namespace ILRuntime.Runtime.Generated
             return ptr_of_this_method;
         }
 
-        static object get_privateName_23(ref object o)
+        static object get_privateName_24(ref object o)
         {
             return ((EB.Sparx.ChatMessage)o).privateName;
         }
 
-        static StackObject* CopyToStack_privateName_23(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        static StackObject* CopyToStack_privateName_24(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
         {
             var result_of_this_method = ((EB.Sparx.ChatMessage)o).privateName;
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static void set_privateName_23(ref object o, object v)
+        static void set_privateName_24(ref object o, object v)
         {
             ((EB.Sparx.ChatMessage)o).privateName = (System.String)v;
         }
 
-        static StackObject* AssignFromStack_privateName_23(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        static StackObject* AssignFromStack_privateName_24(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.String @privateName = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));

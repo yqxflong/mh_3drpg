@@ -22,7 +22,7 @@ namespace ILRuntime.Runtime.Generated
             MethodBase method;
             Type[] args;
             Type type = typeof(System.Double);
-            args = new Type[]{typeof(System.String)};
+            args = new Type[]{typeof(System.String), typeof(System.Globalization.NumberStyles), typeof(System.IFormatProvider)};
             method = type.GetMethod("Parse", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Parse_0);
             args = new Type[]{typeof(System.String)};
@@ -84,14 +84,22 @@ namespace ILRuntime.Runtime.Generated
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.IFormatProvider @provider = (System.IFormatProvider)typeof(System.IFormatProvider).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.Globalization.NumberStyles @style = (System.Globalization.NumberStyles)typeof(System.Globalization.NumberStyles).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
             System.String @s = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
 
-            var result_of_this_method = System.Double.Parse(@s);
+            var result_of_this_method = System.Double.Parse(@s, @style, @provider);
 
             __ret->ObjectType = ObjectTypes.Double;
             *(double*)&__ret->Value = result_of_this_method;

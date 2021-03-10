@@ -46,12 +46,12 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("set_fontSize", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, set_fontSize_7);
-            args = new Type[]{typeof(global::UILabel.Effect)};
-            method = type.GetMethod("set_effectStyle", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_effectStyle_8);
             args = new Type[]{typeof(global::NGUIText.Alignment)};
             method = type.GetMethod("set_alignment", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_alignment_9);
+            app.RegisterCLRMethodRedirection(method, set_alignment_8);
+            args = new Type[]{typeof(global::UILabel.Effect)};
+            method = type.GetMethod("set_effectStyle", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, set_effectStyle_9);
 
             app.RegisterCLRCreateArrayInstance(type, s => new global::UILabel[s]);
 
@@ -203,26 +203,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* set_effectStyle_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            global::UILabel.Effect @value = (global::UILabel.Effect)typeof(global::UILabel.Effect).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            global::UILabel instance_of_this_method = (global::UILabel)typeof(global::UILabel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            instance_of_this_method.effectStyle = value;
-
-            return __ret;
-        }
-
-        static StackObject* set_alignment_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* set_alignment_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -237,6 +218,25 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
             instance_of_this_method.alignment = value;
+
+            return __ret;
+        }
+
+        static StackObject* set_effectStyle_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            global::UILabel.Effect @value = (global::UILabel.Effect)typeof(global::UILabel.Effect).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            global::UILabel instance_of_this_method = (global::UILabel)typeof(global::UILabel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.effectStyle = value;
 
             return __ret;
         }

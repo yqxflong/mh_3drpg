@@ -3,7 +3,6 @@ using UnityEditor;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 
 public class MissingReferenceEditor : EditorWindow
 {
@@ -131,25 +130,16 @@ public class MissingReferenceEditor : EditorWindow
 
     private static void Execute()
     {
-#if UNITY_EDITOR_OSX
-        var originScenePath = EditorSceneManager.GetActiveScene().path;
-        EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
-#endif
         for (var i = 0; i < _searchPrefabsCount; i++)
         {
             SearchMissing(i);
 
-            if (i + 1 >= _searchPrefabsCount)  
+            if (i + 1 >= _searchPrefabsCount)
             {
                 EditorUtility.ClearProgressBar();
-                AssetDatabase.Refresh();  
+                AssetDatabase.Refresh();
             }
         }
-#if UNITY_EDITOR_OSX
-        if (!string.IsNullOrEmpty(originScenePath)) {
-            EditorSceneManager.OpenScene(originScenePath, OpenSceneMode.Single);
-        }
-#endif
     }
 
     private static void AddGameObjectToSelects(Object obj)
@@ -277,16 +267,18 @@ public class MissingReferenceEditor : EditorWindow
 
         var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(_searchPrefabPaths[index]);
         var instance = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
+        GameObject[] sceneObjs = GameObject.FindObjectsOfType<GameObject>();
+        int sceneObjsLength = sceneObjs.Length;
 
-        if (instance != null)
+        for (int i = 0; i < sceneObjsLength; i++)
         {
-            var comps = instance.GetComponentsInChildren<Component>(true);
+            var comps = sceneObjs[i].GetComponents<Component>();
 
             foreach (var c in comps)
             {
                 if (c == null)
                 {
-                    Debug.LogErrorFormat("【{0}】Missing component:【Path】{1}", _searchPrefabPaths[index], FullObjectPath(instance));
+                    Debug.LogErrorFormat("【{0}】Missing script:【Path】{1}", _searchPrefabPaths[index], FullObjectPath(sceneObjs[i]));
                     _hasError = true;
                     continue;
                 }
@@ -303,7 +295,7 @@ public class MissingReferenceEditor : EditorWindow
 
                     if (serializedProperty.objectReferenceValue == null && serializedProperty.objectReferenceInstanceIDValue != 0)
                     {
-                        ShowError(_searchPrefabPaths[index], FullObjectPath(c.gameObject), serializedProperty.name);
+                        ShowError(_searchPrefabPaths[index], FullObjectPath(sceneObjs[i]), serializedProperty.name);
                         _hasError = true;
                     }
                 }
@@ -353,7 +345,7 @@ public class MissingReferenceEditor : EditorWindow
         GUILayout.EndHorizontal();
     }
 
-#region Filter Setting
+    #region Filter Setting
     private string _lastFilterPath = "Assets";
     private Vector2 _filterScrollPos;
 
@@ -427,9 +419,9 @@ public class MissingReferenceEditor : EditorWindow
 
         return false;
     }
-#endregion
+    #endregion
 
-#region Contain Setting
+    #region Contain Setting
     private string _lastContainPath = "Assets";
     private Vector2 _containScrollPos;
 
@@ -509,5 +501,5 @@ public class MissingReferenceEditor : EditorWindow
 
         return false;
     }
-#endregion
+    #endregion
 }

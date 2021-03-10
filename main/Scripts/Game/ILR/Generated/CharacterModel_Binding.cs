@@ -26,9 +26,12 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("get_ResourcePrefabNameMain", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_ResourcePrefabNameMain_0);
+            args = new Type[]{};
+            method = type.GetMethod("get_AITrigger", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_AITrigger_1);
             args = new Type[]{typeof(global::eGender)};
             method = type.GetMethod("PrefabNameFromGenderMain", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, PrefabNameFromGenderMain_1);
+            app.RegisterCLRMethodRedirection(method, PrefabNameFromGenderMain_2);
 
             field = type.GetField("heightOffset", flag);
             app.RegisterCLRFieldGetter(field, get_heightOffset_0);
@@ -74,7 +77,22 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* PrefabNameFromGenderMain_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_AITrigger_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            global::CharacterModel instance_of_this_method = (global::CharacterModel)typeof(global::CharacterModel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            var result_of_this_method = instance_of_this_method.AITrigger;
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* PrefabNameFromGenderMain_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

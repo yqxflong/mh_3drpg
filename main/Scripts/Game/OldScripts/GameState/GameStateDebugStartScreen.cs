@@ -31,8 +31,7 @@ public class GameStateDebugStartScreen : GameState
         m_ota_selected_server_id = PlayerPrefs.GetInt("m_ota_selected_server_id");
         m_api_other_server_address = PlayerPrefs.GetString("m_api_other_server_address");
         m_ota_other_server_address = PlayerPrefs.GetString("m_ota_other_server_address");
-
-        authAPIAddress = "https://10.0.1.202:33333";
+		authAPIAddress = PlayerPrefs.GetString("debug_authAPIAddress", "https://10.0.1.202:33333");
 
         if (m_ota_servers.Length > 0)
         {
@@ -149,10 +148,8 @@ public class GameStateDebugStartScreen : GameState
 			new ServerConfiguration ("api.test", "https://api.test.manhuang.org"),
 			new ServerConfiguration ("api.mhj", "https://api.mhj.manhuang.org"),
 			new ServerConfiguration ("Lxy Server","http://10.1.0.230"),
-            new ServerConfiguration ("hzh Server","http://10.0.0.11"),
-			new ServerConfiguration ("xd Server","http://10.1.0.60"),
-			new ServerConfiguration ("ljl Server","http://10.1.0.59"),
             new ServerConfiguration ("Canada Server","https://s3.ca-central-1.amazonaws.com/api.manhuanggame.com"),
+			new ServerConfiguration ("Oversea Test Server", "http://lttest.ast.manhuanggame.com"),
 #endif
 	};
 
@@ -189,7 +186,9 @@ public class GameStateDebugStartScreen : GameState
 		EB.Language.English,
 		EB.Language.ChineseSimplified,
 		EB.Language.ChineseTraditional,
-	};
+        EB.Language.French,
+        EB.Language.German
+    };
 
 	public static string m_appVersion = "App Version: " + GetVersion();
 	string[] m_api_server_names = null;
@@ -335,6 +334,7 @@ public class GameStateDebugStartScreen : GameState
 		PlayerPrefs.SetInt("m_ota_selected_server_id", m_ota_selected_server_id);
 		PlayerPrefs.SetString("m_api_other_server_address", m_api_other_server_address);
 		PlayerPrefs.SetString("m_ota_other_server_address", m_ota_other_server_address);
+		PlayerPrefs.SetString("debug_authAPIAddress", authAPIAddress);
 		PlayerPrefs.Save();
 
 		if (m_show_fps || m_show_memory_usage)

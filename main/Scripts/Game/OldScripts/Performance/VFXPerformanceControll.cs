@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using HutongGames.PlayMaker;
 
 public class VFXPerformanceControll : MonoBehaviour {
 
@@ -18,12 +20,12 @@ public class VFXPerformanceControll : MonoBehaviour {
 			SDVersion = gameObject.transform.Find("SD").gameObject;
 		}
 	
-		if(GameFlowControlManager.Instance == null)
+		if(GameFlowControlManager.Instance == null || GameFlowControlManager.Instance.m_StateMachine == null)
 		{
 			return;
 		}
 		
-		PerformanceInfo.eVFX_QUALITY vfx = PerformanceManager.Instance.PerformanceInfo.EnvironmentInfoForScene (GameFlowControlManager.Instance.ActiveStateName).vfxQuality;
+		PerformanceInfo.eVFX_QUALITY vfx = PerformanceManager.Instance.PerformanceInfo.EnvironmentInfoForScene (GameFlowControlManager.Instance.m_StateMachine.ActiveStateName).vfxQuality;
 
 		switch(vfx)
 		{

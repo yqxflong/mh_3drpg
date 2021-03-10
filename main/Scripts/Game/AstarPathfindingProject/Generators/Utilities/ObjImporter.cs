@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Globalization;
 #if NETFX_CORE && !UNITY_EDITOR
 //using MarkerMetro.Unity.WinLegacy.IO;
 #endif
@@ -180,25 +181,25 @@ namespace Pathfinding {
 						case "mtllib":
 							break;
 						case "v":
-							mesh.vertices[v] = new Vector3(System.Convert.ToSingle(brokenString[1]), System.Convert.ToSingle(brokenString[2]),
-								System.Convert.ToSingle(brokenString[3]));
+							mesh.vertices[v] = new Vector3(System.Convert.ToSingle(brokenString[1], CultureInfo.InvariantCulture), System.Convert.ToSingle(brokenString[2], CultureInfo.InvariantCulture),
+								System.Convert.ToSingle(brokenString[3], CultureInfo.InvariantCulture));
 							v++;
 							break;
 						case "vt":
-							mesh.uv[vt] = new Vector2(System.Convert.ToSingle(brokenString[1]), System.Convert.ToSingle(brokenString[2]));
+							mesh.uv[vt] = new Vector2(System.Convert.ToSingle(brokenString[1], CultureInfo.InvariantCulture), System.Convert.ToSingle(brokenString[2], CultureInfo.InvariantCulture));
 							vt++;
 							break;
 						case "vt1":
-							mesh.uv[vt1] = new Vector2(System.Convert.ToSingle(brokenString[1]), System.Convert.ToSingle(brokenString[2]));
+							mesh.uv[vt1] = new Vector2(System.Convert.ToSingle(brokenString[1], CultureInfo.InvariantCulture), System.Convert.ToSingle(brokenString[2], CultureInfo.InvariantCulture));
 							vt1++;
 							break;
 						case "vt2":
-							mesh.uv[vt2] = new Vector2(System.Convert.ToSingle(brokenString[1]), System.Convert.ToSingle(brokenString[2]));
+							mesh.uv[vt2] = new Vector2(System.Convert.ToSingle(brokenString[1], CultureInfo.InvariantCulture), System.Convert.ToSingle(brokenString[2], CultureInfo.InvariantCulture));
 							vt2++;
 							break;
 						case "vn":
-							mesh.normals[vn] = new Vector3(System.Convert.ToSingle(brokenString[1]), System.Convert.ToSingle(brokenString[2]),
-								System.Convert.ToSingle(brokenString[3]));
+							mesh.normals[vn] = new Vector3(System.Convert.ToSingle(brokenString[1], CultureInfo.InvariantCulture), System.Convert.ToSingle(brokenString[2], CultureInfo.InvariantCulture),
+								System.Convert.ToSingle(brokenString[3], CultureInfo.InvariantCulture));
 							vn++;
 							break;
 						case "vc":

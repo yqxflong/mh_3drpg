@@ -40,12 +40,12 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Boolean)};
             method = type.GetMethod("ExitStack", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ExitStack_5);
-            args = new Type[]{typeof(System.Boolean)};
-            method = type.GetMethod("ForceHideLoadingScreen", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ForceHideLoadingScreen_6);
             args = new Type[]{typeof(System.Boolean), typeof(System.Boolean)};
             method = type.GetMethod("HideLoadingScreen", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, HideLoadingScreen_7);
+            app.RegisterCLRMethodRedirection(method, HideLoadingScreen_6);
+            args = new Type[]{typeof(System.Boolean)};
+            method = type.GetMethod("ForceHideLoadingScreen", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, ForceHideLoadingScreen_7);
             args = new Type[]{};
             method = type.GetMethod("ResetNextStackDepth", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ResetNextStackDepth_8);
@@ -199,25 +199,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* ForceHideLoadingScreen_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Boolean @fade = ptr_of_this_method->Value == 1;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            global::UIStack instance_of_this_method = (global::UIStack)typeof(global::UIStack).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            instance_of_this_method.ForceHideLoadingScreen(@fade);
-
-            return __ret;
-        }
-
-        static StackObject* HideLoadingScreen_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* HideLoadingScreen_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -234,6 +216,24 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
             instance_of_this_method.HideLoadingScreen(@fade, @WithCloud);
+
+            return __ret;
+        }
+
+        static StackObject* ForceHideLoadingScreen_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Boolean @fade = ptr_of_this_method->Value == 1;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            global::UIStack instance_of_this_method = (global::UIStack)typeof(global::UIStack).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.ForceHideLoadingScreen(@fade);
 
             return __ret;
         }

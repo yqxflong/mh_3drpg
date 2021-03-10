@@ -80,7 +80,7 @@ public partial class DebugSystemComponent
 			//File.Create(_logPath);
 
 			// Listen to Unity log
-			Application.logMessageReceived += OnUnityLog;
+			// Application.logMessageReceived += OnUnityLog;
 		}
 
 		void OnUnityLog(string message, string trace, LogType type)

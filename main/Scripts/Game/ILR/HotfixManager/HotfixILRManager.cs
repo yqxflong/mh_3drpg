@@ -40,8 +40,15 @@ public class HotfixILRManager : MonoBehaviour
 #endif
 
     public bool IsInit = false;
-
     private Coroutine LoadHotFix_Device(){
+#if USE_IL2CPP //热更代码合入主工程了
+        this.assembly = Assembly.GetExecutingAssembly();
+        onHotFixLoaded?.Invoke();
+        onHotFixLoaded = null;
+        EB.Debug.Log("LoadHotFix_Device Finish!");
+        IsInit = true;
+        return null;
+#else
         return EB.Assets.LoadAsyncAndInit<TextAsset>("Hotfix_LT", (assetName, ta, succ)=>
         {
             if (ta != null)
@@ -59,16 +66,13 @@ public class HotfixILRManager : MonoBehaviour
 #else
                 this.assembly = Assembly.Load(ta.bytes, null);
 #endif
-               
-                if (onHotFixLoaded != null)
-                {
-                    onHotFixLoaded();
-                    onHotFixLoaded = null;
-                }
+                onHotFixLoaded?.Invoke();
+                onHotFixLoaded = null;
                 EB.Debug.Log("LoadHotFix_Device Finish!");
                 IsInit = true;
             }
         }, GameEngine.Instance.gameObject, null, false);
+#endif
     }
 
     private IEnumerator LoadHotFix_Editor(){
@@ -250,11 +254,16 @@ public class HotfixILRManager : MonoBehaviour
         appdomain.DelegateManager.RegisterMethodDelegate<Hotfix_LT.Combat.CombatDamageEvent>();
         appdomain.DelegateManager.RegisterMethodDelegate<Hotfix_LT.Combat.CombatHealEvent>();
         appdomain.DelegateManager.RegisterMethodDelegate<global::eUIDialogueButtons, global::UIDialogeOption>();
-        appdomain.DelegateManager.RegisterMethodDelegate<System.String, UnityEngine.U2D.SpriteAtlas, System.Boolean>();
+        appdomain.DelegateManager.RegisterMethodDelegate<string, UnityEngine.U2D.SpriteAtlas, bool>();
+        appdomain.DelegateManager.RegisterMethodDelegate<string, UnityEngine.Texture2D, bool>();
+        #region For JohnyAction
         appdomain.DelegateManager.RegisterMethodDelegate<Johny.Action.ActionAlphaChange.FinishStatus>();
         appdomain.DelegateManager.RegisterMethodDelegate<Johny.Action.ActionCellBornMove.FinishStatus>();
-        appdomain.DelegateManager.RegisterMethodDelegate<System.String, UnityEngine.Texture2D, System.Boolean>();
-
+        appdomain.DelegateManager.RegisterMethodDelegate<Johny.Action.ActionCellStampDown.FinishStatus>();
+        appdomain.DelegateManager.RegisterMethodDelegate<Johny.Action.ActionCellUpAndDownLoop.FinishStatus>();
+        appdomain.DelegateManager.RegisterMethodDelegate<Johny.Action.ActionModelRotation.FinishStatus>();
+        appdomain.DelegateManager.RegisterMethodDelegate<Johny.Action.ActionGeneralParticle.FinishStatus>();
+        #endregion
 
         //DelegateManager.RegisterFunctionDelegate
         appdomain.DelegateManager.RegisterFunctionDelegate<EB.Sparx.Response, bool>();
@@ -649,9 +658,9 @@ public class HotfixILRManager : MonoBehaviour
                 ((Action<global::eUIDialogueButtons, global::UIDialogeOption>)act)(button, option);
             });
         });
-        appdomain.DelegateManager.RegisterDelegateConvertor<DG.Tweening.TweenCallback>((act) =>
+        appdomain.DelegateManager.RegisterDelegateConvertor<DG.Tweening.TweenCallback>((act) => 
         {
-            return new DG.Tweening.TweenCallback(() =>
+            return new DG.Tweening.TweenCallback(() => 
             {
                 ((Action)act)();
             });

@@ -101,7 +101,7 @@ public class GameEngine : MonoBehaviour
     public bool ServerMaintenance { get; set; }
     public string MaintenanceMessage { get; set; }
     public bool IsVerifyState { get; set; }
-
+    public static bool ASTIsHaveCommond = false;
     public string LoginBGPath = "ReplaceableRes/Login_BG.png";
     public string BrandPath = "ReplaceableRes/Login_Brand.png";
     public Dictionary<string, Texture2D> TextureDic = new Dictionary<string, Texture2D>();
@@ -342,8 +342,41 @@ public class GameEngine : MonoBehaviour
         }
     }
 
+    private void GlobalizationSetting() {
+#if UNITY_IOS && !UNITY_EDITOR
+        var culture = (System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture.Clone();
+
+        //switch (culture.Name) {
+        //    case "th-TH":
+        //        culture.DateTimeFormat.Calendar = new System.Globalization.ThaiBuddhistCalendar();
+        //        break;
+        //}
+
+        // https://github.com/xamarin/Xamarin.Forms/issues/4037
+        if (Environment.CurrentDirectory == "_never_POSSIBLE_") {
+            new System.Globalization.ChineseLunisolarCalendar();
+            new System.Globalization.HebrewCalendar();
+            new System.Globalization.HijriCalendar();
+            new System.Globalization.JapaneseCalendar();
+            new System.Globalization.JapaneseLunisolarCalendar();
+            new System.Globalization.KoreanCalendar();
+            new System.Globalization.KoreanLunisolarCalendar();
+            new System.Globalization.PersianCalendar();
+            new System.Globalization.TaiwanCalendar();
+            new System.Globalization.TaiwanLunisolarCalendar();
+            new System.Globalization.ThaiBuddhistCalendar();
+            new System.Globalization.UmAlQuraCalendar();
+        }
+
+        culture.NumberFormat = System.Globalization.NumberFormatInfo.InvariantInfo;
+        System.Globalization.CultureInfo.CurrentCulture = culture;
+#endif
+    }
+
     void Awake()
     {
+        GlobalizationSetting();
+
         if (instance != null)
         {
             EB.Debug.LogError("There should be only one GameEngine object");
@@ -351,9 +384,23 @@ public class GameEngine : MonoBehaviour
         }
 
         EB.Debug.Log("GameEngine Awake");
-        
-#if !DEBUG
-       BuglyManager.InitBugly();
+
+#if !DEBUG && USE_BUGLY
+        BuglyManager.InitBugly();
+#endif
+
+#if USE_AIHELP
+        AIHelp.AIHelpManager.Init(gameObject.name);
+#endif
+
+#if USE_APPSFLYER
+        Appsflyer.AppsflyManager.setIsDebug(ILRDefine.DEBUG);
+        Appsflyer.AppsflyManager.initSDK(gameObject);
+        Appsflyer.AppsflyManager.startSDK();
+#endif
+
+#if USE_AOSHITANGSDK
+        ASTIsHaveCommond = PlayerPrefs.GetInt("ASTIsHaveCommond", -1) == 1;
 #endif
 
         instance = this;
@@ -413,13 +460,6 @@ public class GameEngine : MonoBehaviour
 
         _nextApiUpdate = Time.time + ApiUpdateInterval;
 
-        //ToDo:
-        // FusionTelemetry.Initialize();
-        // Debug.LogError("CallStaticHotfixUI FusionTelemetry");
-        // GlobalUtils.CallStaticHotfix("Hotfix_LT.UI.FusionTelemetry", "Initialize");
-        //打开友盟日志开关
-        // GlobalUtils.AndroidCall("com.umeng.commonsdk.UMConfigure", "setLogEnabled", true);
-
         LoadingSpinner.Init();
     }
 
@@ -431,6 +471,60 @@ public class GameEngine : MonoBehaviour
 
         instance = null;
     }
+    #region(Appsflyer回调)
+#if USE_APPSFLYER
+    public void onConversionDataSuccess(string conversionData)
+    {
+        Appsflyer.AppsflyManager.AFLog("onConversionDataSuccess", conversionData);
+        Dictionary<string, object> conversionDataDictionary = Appsflyer.AppsflyManager.CallbackStringToDictionary(conversionData);
+        // add deferred deeplink logic here
+    }
+
+    public void onConversionDataFail(string error)
+    {
+        Appsflyer.AppsflyManager.AFLog("onConversionDataFail", error);
+    }
+
+    public void onAppOpenAttribution(string attributionData)
+    {
+        Appsflyer.AppsflyManager.AFLog("onAppOpenAttribution", attributionData);
+        Dictionary<string, object> attributionDataDictionary = Appsflyer.AppsflyManager.CallbackStringToDictionary(attributionData);
+        // add direct deeplink logic here
+    }
+
+    public void onAppOpenAttributionFailure(string error)
+    {
+        Appsflyer.AppsflyManager.AFLog("onAppOpenAttributionFailure", error);
+    }
+#endif
+    #endregion
+    #region (AIHelp回调)
+#if USE_AIHELP
+    //初始化回调
+    public void OnAIHelpInitialized(string str)
+    {
+        AIHelp.AIHelpManager.IsAihelpInitialize = true;
+        Debug.Log ("AIhelpInitCallback is called str:" + str);
+    }
+    //未读消息回调
+    public void OnAIHelpMessageArrived(string str)
+    {
+        GlobalUtils.CallStaticHotfix("Hotfix_LT.UI.LTGameSettingManager", "RefreshHwCsRedPoint");
+        Debug.Log("OnMessageArrived is called str:" + str);
+        var jnode = Johny.JSONNode.Parse(str);
+        if (jnode!=null&&jnode.IsObject)
+        {
+            var data = jnode["data"]?["cs_message_count"];
+            if(data != null && data.IsNumber){
+                AIHelp.AIHelpManager.IshaveUnreadMessage = (int)data > 0;
+            }
+        }
+
+       
+    }
+
+#endif
+    #endregion
 
     public void ShowTipCall(string tip)
     {
@@ -481,7 +575,7 @@ public class GameEngine : MonoBehaviour
         }
     }
 
-    #region Relogin
+#region Relogin
     private void RealRelogin()
     {
 		//Debug.LogWarning("RealRelogin!");
@@ -496,7 +590,7 @@ public class GameEngine : MonoBehaviour
     ///断开连接后，重返登陆
     public void Relogin(string error)
     {
-        EB.Debug.Log("GameEngine.Relogin=====>");
+        EB.Debug.Log("GameEngine.Relogin=====>error:{0}",error);
         UIStack.Instance.ExitStack(true);
         UIHierarchyHelper.ReloadAllHierarchyHelpers();
 

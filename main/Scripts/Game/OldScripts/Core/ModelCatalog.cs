@@ -16,7 +16,7 @@ public abstract class ModelCatalog<T> where T : BaseDataModel
 {
 	public const int InvalidModelID = 0;
 	public List<T> _models = new List<T>();
-	public bool isModelsLoaded = false;
+
 	public ModelCatalog()
 	{
 		ReloadModels();
@@ -82,41 +82,14 @@ public abstract class ModelCatalog<T> where T : BaseDataModel
 	public virtual void ReloadModels()
 	{
 		_models = new List<T>();
-#if UNITY_EDITOR
-		//±à¼­Æ÷ÏÂ×ßasset¼ÓÔØ
-		if (!UnityEngine.Application.isPlaying)
-		{
-			string[] paths = System.IO.Directory.GetFiles("Assets/" + GetAssetPath(), "*.asset", System.IO.SearchOption.TopDirectoryOnly);
-			foreach (var item in paths)
-			{
-				UnityEngine.Object asset = UnityEditor.AssetDatabase.LoadAssetAtPath(item, typeof(T));
-				T model = asset as T;
-				if (model != null)
-				{
-					_models.Add(model);
-				}
-			}			
-        }
-        else{
-			EB.Assets.LoadAllAsync(GetAssetPath(), typeof(T), models =>
-			{
-                foreach (UnityEngine.Object model in models)
-                {
-                    _models.Add((T)model);
-                }
-				isModelsLoaded = true;
-			});
-		}
-#else
+		//UnityEngine.Object[] models = EB.Assets.LoadAll(GetAssetPath(), typeof(T));
 		EB.Assets.LoadAllAsync(GetAssetPath(), typeof(T), models =>
 		{
 			foreach (UnityEngine.Object model in models)
 			{
 				_models.Add((T)model);
 			}
-			isModelsLoaded = true;
 		});
-#endif
 	}
 
 	public OrderedHashtable GetAllServerData()

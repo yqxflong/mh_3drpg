@@ -22,21 +22,40 @@ namespace ILRuntime.Runtime.Generated
             MethodBase method;
             Type[] args;
             Type type = typeof(global::GlobalUtils);
+            args = new Type[]{typeof(System.String)};
+            method = type.GetMethod("ASTUpLog", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, ASTUpLog_0);
             args = new Type[]{typeof(System.String), typeof(System.String), typeof(System.Object[])};
             method = type.GetMethod("CallStaticHotfix", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, CallStaticHotfix_0);
+            app.RegisterCLRMethodRedirection(method, CallStaticHotfix_1);
             args = new Type[]{typeof(System.String)};
             method = type.GetMethod("FBSendRecordEvent", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, FBSendRecordEvent_1);
+            app.RegisterCLRMethodRedirection(method, FBSendRecordEvent_2);
             args = new Type[]{typeof(System.String), typeof(System.String), typeof(System.Object[])};
             method = type.GetMethod("AndroidCall", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, AndroidCall_2);
+            app.RegisterCLRMethodRedirection(method, AndroidCall_3);
 
 
         }
 
 
-        static StackObject* CallStaticHotfix_0(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ASTUpLog_0(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.String @eventTag = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            global::GlobalUtils.ASTUpLog(@eventTag);
+
+            return __ret;
+        }
+
+        static StackObject* CallStaticHotfix_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -65,7 +84,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method, true);
         }
 
-        static StackObject* FBSendRecordEvent_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* FBSendRecordEvent_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -81,7 +100,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* AndroidCall_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* AndroidCall_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

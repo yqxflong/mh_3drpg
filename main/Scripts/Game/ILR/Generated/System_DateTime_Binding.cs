@@ -95,12 +95,15 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Double)};
             method = type.GetMethod("AddHours", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, AddHours_23);
-            args = new Type[]{typeof(System.String)};
+            args = new Type[]{typeof(System.String), typeof(System.IFormatProvider), typeof(System.Globalization.DateTimeStyles)};
             method = type.GetMethod("Parse", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Parse_24);
             args = new Type[]{typeof(System.TimeSpan)};
             method = type.GetMethod("Add", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Add_25);
+            args = new Type[]{typeof(System.Int32)};
+            method = type.GetMethod("AddMonths", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, AddMonths_26);
 
             field = type.GetField("MaxValue", flag);
             app.RegisterCLRFieldGetter(field, get_MaxValue_0);
@@ -114,15 +117,12 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Int32), typeof(System.Int32), typeof(System.Int32)};
             method = type.GetConstructor(flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Ctor_0);
-            args = new Type[]{typeof(System.Int64), typeof(System.DateTimeKind)};
+            args = new Type[]{typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32)};
             method = type.GetConstructor(flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Ctor_1);
             args = new Type[]{typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32)};
             method = type.GetConstructor(flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Ctor_2);
-            args = new Type[]{typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32)};
-            method = type.GetConstructor(flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Ctor_3);
 
         }
 
@@ -660,14 +660,22 @@ namespace ILRuntime.Runtime.Generated
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Globalization.DateTimeStyles @styles = (System.Globalization.DateTimeStyles)typeof(System.Globalization.DateTimeStyles).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.IFormatProvider @provider = (System.IFormatProvider)typeof(System.IFormatProvider).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
             System.String @s = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
 
-            var result_of_this_method = System.DateTime.Parse(@s);
+            var result_of_this_method = System.DateTime.Parse(@s, @provider, @styles);
 
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
@@ -687,6 +695,28 @@ namespace ILRuntime.Runtime.Generated
             System.DateTime instance_of_this_method = (System.DateTime)typeof(System.DateTime).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
 
             var result_of_this_method = instance_of_this_method.Add(@value);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            WriteBackInstance(__domain, ptr_of_this_method, __mStack, ref instance_of_this_method);
+
+            __intp.Free(ptr_of_this_method);
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* AddMonths_26(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @months = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            ptr_of_this_method = ILIntepreter.GetObjectAndResolveReference(ptr_of_this_method);
+            System.DateTime instance_of_this_method = (System.DateTime)typeof(System.DateTime).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+
+            var result_of_this_method = instance_of_this_method.AddMonths(@months);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
             WriteBackInstance(__domain, ptr_of_this_method, __mStack, ref instance_of_this_method);
@@ -750,16 +780,30 @@ namespace ILRuntime.Runtime.Generated
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+            StackObject* __ret = ILIntepreter.Minus(__esp, 7);
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.DateTimeKind @kind = (System.DateTimeKind)typeof(System.DateTimeKind).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
+            System.Int32 @millisecond = ptr_of_this_method->Value;
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.Int64 @ticks = *(long*)&ptr_of_this_method->Value;
+            System.Int32 @second = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
+            System.Int32 @minute = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 4);
+            System.Int32 @hour = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 5);
+            System.Int32 @day = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 6);
+            System.Int32 @month = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 7);
+            System.Int32 @year = ptr_of_this_method->Value;
 
 
-            var result_of_this_method = new System.DateTime(@ticks, @kind);
+            var result_of_this_method = new System.DateTime(@year, @month, @day, @hour, @minute, @second, @millisecond);
 
             if(!isNewObj)
             {
@@ -796,45 +840,6 @@ namespace ILRuntime.Runtime.Generated
 
 
             var result_of_this_method = new System.DateTime(@year, @month, @day, @hour, @minute, @second);
-
-            if(!isNewObj)
-            {
-                __ret--;
-                WriteBackInstance(__domain, __ret, __mStack, ref result_of_this_method);
-                return __ret;
-            }
-
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* Ctor_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 7);
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Int32 @millisecond = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.Int32 @second = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
-            System.Int32 @minute = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 4);
-            System.Int32 @hour = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 5);
-            System.Int32 @day = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 6);
-            System.Int32 @month = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 7);
-            System.Int32 @year = ptr_of_this_method->Value;
-
-
-            var result_of_this_method = new System.DateTime(@year, @month, @day, @hour, @minute, @second, @millisecond);
 
             if(!isNewObj)
             {

@@ -29,11 +29,11 @@ namespace ILRuntime.Runtime.Generated
             method = type.GetMethod("GetInt", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, GetInt_1);
             args = new Type[]{typeof(System.Int32)};
-            method = type.GetMethod("GetFloat", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, GetFloat_2);
-            args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("Get", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Get_3);
+            app.RegisterCLRMethodRedirection(method, Get_2);
+            args = new Type[]{typeof(System.Int32)};
+            method = type.GetMethod("GetFloat", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, GetFloat_3);
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("GetSbyte", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, GetSbyte_4);
@@ -82,27 +82,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* GetFloat_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Int32 @offset = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            FlatBuffers.ByteBuffer instance_of_this_method = (FlatBuffers.ByteBuffer)typeof(FlatBuffers.ByteBuffer).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            var result_of_this_method = instance_of_this_method.GetFloat(@offset);
-
-            __ret->ObjectType = ObjectTypes.Float;
-            *(float*)&__ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* Get_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* Get_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -119,6 +99,26 @@ namespace ILRuntime.Runtime.Generated
 
             __ret->ObjectType = ObjectTypes.Integer;
             __ret->Value = result_of_this_method;
+            return __ret + 1;
+        }
+
+        static StackObject* GetFloat_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @offset = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            FlatBuffers.ByteBuffer instance_of_this_method = (FlatBuffers.ByteBuffer)typeof(FlatBuffers.ByteBuffer).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            var result_of_this_method = instance_of_this_method.GetFloat(@offset);
+
+            __ret->ObjectType = ObjectTypes.Float;
+            *(float*)&__ret->Value = result_of_this_method;
             return __ret + 1;
         }
 

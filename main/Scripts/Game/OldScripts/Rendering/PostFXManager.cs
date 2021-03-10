@@ -569,13 +569,13 @@ public class PostFXManager : MonoBehaviour
 	private static Vector4 GenerateGaussianBlurKernel(POSTFX_GUASSIAN_BLUR_MODE mode, float sigma)
 	{
 		float lowEndFake = 1.0f;
-		if (GameFlowControlManager.Instance == null)
+		if (GameFlowControlManager.Instance == null || GameFlowControlManager.Instance.m_StateMachine == null)
 		{
 
 		}
 		else
 		{
-			PerformanceInfo.ePOSTFX_QUALITY fxquality = PerformanceManager.Instance.PerformanceInfo.EnvironmentInfoForScene(GameFlowControlManager.Instance.ActiveStateName).postFXQuality;
+			PerformanceInfo.ePOSTFX_QUALITY fxquality = PerformanceManager.Instance.PerformanceInfo.EnvironmentInfoForScene(GameFlowControlManager.Instance.m_StateMachine.ActiveStateName).postFXQuality;
 			if (fxquality == PerformanceInfo.ePOSTFX_QUALITY.Medium)
 			{
 				lowEndFake *= 1.8f;

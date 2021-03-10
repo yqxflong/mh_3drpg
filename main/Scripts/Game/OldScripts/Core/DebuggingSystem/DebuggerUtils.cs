@@ -15,6 +15,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Globalization;
 
 public class DebuggerUtils : MonoBehaviour
 {
@@ -93,7 +94,7 @@ public class DebuggerUtils : MonoBehaviour
         else if (type == typeof(float))
         {
             string newVar = GUILayout.TextField(value.ToString());
-            return float.Parse(newVar);
+            return float.Parse(newVar, NumberStyles.Any, CultureInfo.InvariantCulture);
         }
         else if (type == typeof(string))
         {
@@ -287,7 +288,7 @@ public class DebuggerUtils : MonoBehaviour
 					}
 					else if (fieldType == typeof(float).Name)
 					{
-						value = float.Parse(value.ToString());
+						value = float.Parse(value.ToString(), NumberStyles.Any, CultureInfo.InvariantCulture);
 					}
 				}
 				else

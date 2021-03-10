@@ -50,36 +50,33 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("MakePixelPerfect", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, MakePixelPerfect_8);
-            args = new Type[]{};
-            method = type.GetMethod("get_material", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_material_9);
             args = new Type[]{typeof(UnityEngine.Texture)};
             method = type.GetMethod("set_mainTexture", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_mainTexture_10);
+            app.RegisterCLRMethodRedirection(method, set_mainTexture_9);
             args = new Type[]{};
             method = type.GetMethod("MarkAsChanged", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, MarkAsChanged_11);
+            app.RegisterCLRMethodRedirection(method, MarkAsChanged_10);
             args = new Type[]{};
             method = type.GetMethod("get_mainTexture", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_mainTexture_12);
+            app.RegisterCLRMethodRedirection(method, get_mainTexture_11);
             args = new Type[]{};
             method = type.GetMethod("get_localSize", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_localSize_13);
+            app.RegisterCLRMethodRedirection(method, get_localSize_12);
             args = new Type[]{};
             method = type.GetMethod("ResizeCollider", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ResizeCollider_14);
+            app.RegisterCLRMethodRedirection(method, ResizeCollider_13);
             args = new Type[]{};
             method = type.GetMethod("get_color", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_color_15);
+            app.RegisterCLRMethodRedirection(method, get_color_14);
             args = new Type[]{};
             method = type.GetMethod("get_pivot", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_pivot_16);
+            app.RegisterCLRMethodRedirection(method, get_pivot_15);
             args = new Type[]{};
             method = type.GetMethod("get_localCenter", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_localCenter_17);
+            app.RegisterCLRMethodRedirection(method, get_localCenter_16);
             args = new Type[]{typeof(UnityEngine.Shader)};
             method = type.GetMethod("set_shader", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_shader_18);
+            app.RegisterCLRMethodRedirection(method, set_shader_17);
 
             field = type.GetField("keepAspectRatio", flag);
             app.RegisterCLRFieldGetter(field, get_keepAspectRatio_0);
@@ -256,22 +253,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* get_material_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            global::UIWidget instance_of_this_method = (global::UIWidget)typeof(global::UIWidget).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            var result_of_this_method = instance_of_this_method.material;
-
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* set_mainTexture_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* set_mainTexture_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -290,7 +272,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* MarkAsChanged_11(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* MarkAsChanged_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -305,7 +287,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* get_mainTexture_12(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_mainTexture_11(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -320,7 +302,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* get_localSize_13(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_localSize_12(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -340,7 +322,7 @@ namespace ILRuntime.Runtime.Generated
             }
         }
 
-        static StackObject* ResizeCollider_14(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ResizeCollider_13(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -355,7 +337,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* get_color_15(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_color_14(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -370,7 +352,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* get_pivot_16(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_pivot_15(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -385,7 +367,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* get_localCenter_17(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_localCenter_16(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -405,7 +387,7 @@ namespace ILRuntime.Runtime.Generated
             }
         }
 
-        static StackObject* set_shader_18(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* set_shader_17(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

@@ -108,6 +108,14 @@ namespace ILRuntime.Runtime.Generated
             app.RegisterCLRFieldGetter(field, get_category_20);
             app.RegisterCLRFieldSetter(field, set_category_20);
             app.RegisterCLRFieldBinding(field, CopyToStack_category_20, AssignFromStack_category_20);
+            field = type.GetField("currencyCode", flag);
+            app.RegisterCLRFieldGetter(field, get_currencyCode_21);
+            app.RegisterCLRFieldSetter(field, set_currencyCode_21);
+            app.RegisterCLRFieldBinding(field, CopyToStack_currencyCode_21, AssignFromStack_currencyCode_21);
+            field = type.GetField("productId", flag);
+            app.RegisterCLRFieldGetter(field, get_productId_22);
+            app.RegisterCLRFieldSetter(field, set_productId_22);
+            app.RegisterCLRFieldBinding(field, CopyToStack_productId_22, AssignFromStack_productId_22);
 
             app.RegisterCLRCreateArrayInstance(type, s => new EB.IAP.Item[s]);
 
@@ -653,6 +661,54 @@ namespace ILRuntime.Runtime.Generated
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.String @category = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             ((EB.IAP.Item)o).category = @category;
+            return ptr_of_this_method;
+        }
+
+        static object get_currencyCode_21(ref object o)
+        {
+            return ((EB.IAP.Item)o).currencyCode;
+        }
+
+        static StackObject* CopyToStack_currencyCode_21(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        {
+            var result_of_this_method = ((EB.IAP.Item)o).currencyCode;
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static void set_currencyCode_21(ref object o, object v)
+        {
+            ((EB.IAP.Item)o).currencyCode = (System.String)v;
+        }
+
+        static StackObject* AssignFromStack_currencyCode_21(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.String @currencyCode = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            ((EB.IAP.Item)o).currencyCode = @currencyCode;
+            return ptr_of_this_method;
+        }
+
+        static object get_productId_22(ref object o)
+        {
+            return ((EB.IAP.Item)o).productId;
+        }
+
+        static StackObject* CopyToStack_productId_22(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        {
+            var result_of_this_method = ((EB.IAP.Item)o).productId;
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static void set_productId_22(ref object o, object v)
+        {
+            ((EB.IAP.Item)o).productId = (System.String)v;
+        }
+
+        static StackObject* AssignFromStack_productId_22(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.String @productId = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            ((EB.IAP.Item)o).productId = @productId;
             return ptr_of_this_method;
         }
 

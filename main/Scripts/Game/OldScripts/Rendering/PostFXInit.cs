@@ -50,9 +50,9 @@ public class PostFXInit : MonoBehaviour {
 	void Start () 
 	{     
 		PerformanceInfo.ePOSTFX_QUALITY postfxquality = PerformanceInfo.ePOSTFX_QUALITY.Off;
-		if(!(GameFlowControlManager.Instance == null))
+		if(!(GameFlowControlManager.Instance == null || GameFlowControlManager.Instance.m_StateMachine == null))
 		{		
-			postfxquality = PerformanceManager.Instance.PerformanceInfo.EnvironmentInfoForScene (GameFlowControlManager.Instance.ActiveStateName).postFXQuality;
+			postfxquality = PerformanceManager.Instance.PerformanceInfo.EnvironmentInfoForScene (GameFlowControlManager.Instance.m_StateMachine.ActiveStateName).postFXQuality;
 		}
 
 		List<PerformanceInfo.ePOSTFX> fxtypes = new List<PerformanceInfo.ePOSTFX>(3);

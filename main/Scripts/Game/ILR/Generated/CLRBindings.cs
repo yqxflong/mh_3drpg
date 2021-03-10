@@ -39,10 +39,9 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Hashtable_Binding.Register(app);
             System_Convert_Binding.Register(app);
             System_Collections_IEnumerator_Binding.Register(app);
-            System_Collections_Generic_List_1_String_Binding.Register(app);
-            System_Object_Binding.Register(app);
             System_Collections_Generic_HashSet_1_Int32_Binding.Register(app);
             DynamicMonoILR_Binding.Register(app);
+            System_Collections_Generic_List_1_String_Binding.Register(app);
             UnityEngine_Component_Binding.Register(app);
             UnityEngine_Object_Binding.Register(app);
             UIButton_Binding.Register(app);
@@ -55,6 +54,7 @@ namespace ILRuntime.Runtime.Generated
             FlatBuffers_Offset_1_ILRuntime_Runtime_GeneratedAdapter_TableAdapter_Binding_Adapter_Binding.Register(app);
             FlatBuffers_VectorOffset_Binding.Register(app);
             UnityEngine_MonoBehaviour_Binding.Register(app);
+            System_Object_Binding.Register(app);
             UIPanel_Binding.Register(app);
             System_Action_Binding.Register(app);
             System_Boolean_Binding.Register(app);
@@ -140,6 +140,8 @@ namespace ILRuntime.Runtime.Generated
             Johny_HashtablePool_Binding.Register(app);
             UnityEngine_Material_Binding.Register(app);
             PSPoolManager_Binding.Register(app);
+            PlayMakerFSM_Binding.Register(app);
+            HutongGames_PlayMaker_Fsm_Binding.Register(app);
             MoveController_Binding.Register(app);
             MoveEditor_Move_Binding.Register(app);
             System_NotSupportedException_Binding.Register(app);
@@ -187,12 +189,15 @@ namespace ILRuntime.Runtime.Generated
             PerformanceManager_Binding.Register(app);
             PerformanceInfo_Binding_EnvironmentInfo_Binding.Register(app);
             UnityEngine_AnimatorStateInfo_Binding.Register(app);
+            System_Globalization_CultureInfo_Binding.Register(app);
             UnityEngine_TextAsset_Binding.Register(app);
             Johny_JSONNode_Binding.Register(app);
             Johny_JSONObject_Binding.Register(app);
             System_Collections_Generic_IEnumerable_1_KeyValuePair_2_String_JSONNode_Binding.Register(app);
             System_Collections_Generic_IEnumerator_1_KeyValuePair_2_String_JSONNode_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_String_JSONNode_Binding.Register(app);
+            System_Collections_Generic_List_1_KeyValuePair_2_Int32_Int32_Binding.Register(app);
+            System_Collections_Generic_KeyValuePair_2_Int32_Int32_Binding.Register(app);
             LoadingLogic_Binding.Register(app);
             UnityEngine_Screen_Binding.Register(app);
             Johny_Action_ActionGeneralParticle_Binding.Register(app);
@@ -214,6 +219,7 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_List_1_DynamicMonoILRObjectAdaptor_Binding_Adaptor_Binding.Register(app);
             Johny_Action_ActionCellUpAndDownLoop_Binding.Register(app);
             UnityEngine_Vector2Int_Binding.Register(app);
+            ILRDefine_Binding.Register(app);
             GameStateManager_Binding.Register(app);
             UIStack_Binding.Register(app);
             EB_Sparx_PushManager_Binding.Register(app);
@@ -223,7 +229,6 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_String_Texture2D_Binding.Register(app);
             LoginListenerFusion_Binding.Register(app);
             EB_Sparx_Authenticator_Binding.Register(app);
-            ILRDefine_Binding.Register(app);
             EB_Sparx_DataStore_Binding.Register(app);
             EB_Sparx_LoginDataStore_Binding.Register(app);
             ProfileManager_Binding.Register(app);
@@ -232,12 +237,13 @@ namespace ILRuntime.Runtime.Generated
             System_GC_Binding.Register(app);
             GameStateDownload_Binding.Register(app);
             AudioManager_Binding.Register(app);
+            EB_Sparx_AoshitangSDKManager_Binding.Register(app);
+            EB_Sparx_BaseSDKManager_Binding.Register(app);
             System_DateTime_Binding.Register(app);
             UnityEngine_WaitUntil_Binding.Register(app);
             UIHierarchyHelper_Binding.Register(app);
             UICamera_Binding.Register(app);
             EB_Sparx_DataCacheManager_Binding.Register(app);
-            EB_Sparx_NetworkFactory_Binding.Register(app);
             EB_Sparx_Config_Binding.Register(app);
             EB_Sparx_Key_Binding.Register(app);
             UserData_Binding.Register(app);
@@ -261,6 +267,7 @@ namespace ILRuntime.Runtime.Generated
             System_Text_StringBuilder_Binding.Register(app);
             HudRootEntry_Binding.Register(app);
             GameFlowControlManager_Binding.Register(app);
+            GlobalUtils_Binding.Register(app);
             System_Collections_Generic_List_1_EnemyController_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_EnemyController_Binding.Register(app);
             CombatCamera_Binding.Register(app);
@@ -390,14 +397,13 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_String_Object_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_Object_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_String_Object_Binding.Register(app);
-            EB_IAP_Item_Binding.Register(app);
-            EB_IAP_Transaction_Binding.Register(app);
             EB_Sparx_LevelRewardsStatus_Binding.Register(app);
             Umeng_Analytics_Binding.Register(app);
             UnityEngine_AndroidJavaClass_Binding.Register(app);
             UnityEngine_AndroidJavaObject_Binding.Register(app);
             Umeng_GA_Binding.Register(app);
-            EB_Sparx_BaseSDKManager_Binding.Register(app);
+            EB_IAP_Transaction_Binding.Register(app);
+            EB_IAP_Item_Binding.Register(app);
             System_Action_1_Response_Binding.Register(app);
             UnityEngine_Color32_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_Color32_Binding.Register(app);
@@ -430,7 +436,6 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding_Enumerator_Binding.Register(app);
             System_Activator_Binding.Register(app);
             EB_Collections_Stack_1_Object_Binding.Register(app);
-            GlobalUtils_Binding.Register(app);
             Hotfix_LT_Combat_CombatSyncData_Binding.Register(app);
             System_Collections_Generic_HashSet_1_String_Binding.Register(app);
             UIEventListener_Binding.Register(app);
@@ -441,6 +446,7 @@ namespace ILRuntime.Runtime.Generated
             MyFollowCamera_Binding.Register(app);
             System_Double_Binding.Register(app);
             System_Func_2_Response_Boolean_Binding.Register(app);
+            Appsflyer_AppsflyManager_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_ILTypeInstance_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_Int32_ILTypeInstance_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_Int32_Binding_ValueCollection_Binding.Register(app);
@@ -461,16 +467,10 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_List_1_RedeemerItem_Binding.Register(app);
             EB_Sparx_RedeemerItem_Binding.Register(app);
             UIEventListener_Binding_VoidDelegate_Binding.Register(app);
-            System_Collections_Generic_List_1_UISprite_Binding.Register(app);
-            System_Collections_Generic_List_1_ConsecutiveClickCoolTrigger_Binding.Register(app);
             DialogueTextureCmp_Binding.Register(app);
             System_Collections_Generic_Stack_1_Object_Binding.Register(app);
             CampaignTextureCmp_Binding.Register(app);
             ILRuntime_Runtime_Extensions_Binding.Register(app);
-            UIBasicSprite_Binding.Register(app);
-            System_Collections_Generic_List_1_ILRuntime_Runtime_GeneratedAdapter_TableAdapter_Binding_Adapter_Binding.Register(app);
-            System_Collections_Generic_List_1_UITexture_Binding.Register(app);
-            System_Collections_Generic_Dictionary_2_String_UISprite_Binding.Register(app);
             System_Collections_Generic_List_1_UIWidget_Binding.Register(app);
             System_Collections_Generic_Queue_1_Object_Binding.Register(app);
             TweenScale_Binding.Register(app);
@@ -482,6 +482,7 @@ namespace ILRuntime.Runtime.Generated
             EB_Sparx_ResourcesManager_Binding.Register(app);
             System_Collections_Generic_IEnumerable_1_DictionaryEntry_Binding.Register(app);
             System_Collections_Generic_IEnumerator_1_DictionaryEntry_Binding.Register(app);
+            System_Collections_Generic_List_1_UISprite_Binding.Register(app);
             System_Collections_Generic_List_1_ILRuntime_Runtime_GeneratedAdapter_DataLookILRObjectAdapter_Binding_Adapter_Binding.Register(app);
             System_Collections_Queue_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Object_List_1_Int32_Binding.Register(app);
@@ -502,7 +503,7 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Queue_1_Queue_1_String_Binding.Register(app);
             System_IO_Directory_Binding.Register(app);
             EB_Sparx_ChatMessage_Binding.Register(app);
-            System_Collections_Generic_Dictionary_2_Int32_List_1_ChatMessage_Binding.Register(app);
+            System_Collections_Generic_Dictionary_2_String_List_1_ChatMessage_Binding.Register(app);
             System_Collections_Generic_List_1_ChatMessage_Binding.Register(app);
             System_Collections_Generic_Queue_1_String_Binding.Register(app);
             System_IO_FileStream_Binding.Register(app);
@@ -510,11 +511,12 @@ namespace ILRuntime.Runtime.Generated
             System_Text_Encoding_Binding.Register(app);
             System_IO_BinaryWriter_Binding.Register(app);
             System_Action_1_List_1_ChatMessage_Binding.Register(app);
-            System_Collections_Generic_Dictionary_2_Int32_List_1_ChatMessage_Binding_Enumerator_Binding.Register(app);
-            System_Collections_Generic_KeyValuePair_2_Int32_List_1_ChatMessage_Binding.Register(app);
+            System_Collections_Generic_Dictionary_2_String_List_1_ChatMessage_Binding_Enumerator_Binding.Register(app);
+            System_Collections_Generic_KeyValuePair_2_String_List_1_ChatMessage_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Char_String_Binding.Register(app);
             UnityEngine_AudioClip_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int64_List_1_ChatMessage_Binding.Register(app);
+            System_Collections_Generic_List_1_UIButton_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_DynamicMonoILRObjectAdaptor_Binding_Adaptor_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_DynamicMonoILRObjectAdaptor_Binding_Adaptor_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_Int32_DynamicMonoILRObjectAdaptor_Binding_Adaptor_Binding.Register(app);
@@ -524,8 +526,8 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_String_UISymbolInput_Binding.Register(app);
             UISymbolInput_Binding.Register(app);
             UIToggledObjects_Binding.Register(app);
-            NGUISymbolText_Binding.Register(app);
             UnityEngine_Microphone_Binding.Register(app);
+            NGUISymbolText_Binding.Register(app);
             NGUIMath_Binding.Register(app);
             UnityEngine_TouchScreenKeyboard_Binding.Register(app);
             EB_Uri_Binding.Register(app);
@@ -534,6 +536,7 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_String_UIWidget_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_UIScrollView_Binding.Register(app);
             System_Collections_Generic_List_1_UIToggle_Binding.Register(app);
+            System_Collections_Generic_Dictionary_2_String_UISprite_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_TweenPosition_Binding.Register(app);
             MyFollowCamera_Binding_TouchDownInView_Binding.Register(app);
             AndroidKeyboard_Binding.Register(app);
@@ -549,7 +552,6 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_String_UIProgressBar_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_TweenAlpha_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_Int32_Binding_Enumerator_Binding.Register(app);
-            System_Collections_Generic_KeyValuePair_2_Int32_Int32_Binding.Register(app);
             UnityEngine_ParticleSystem_Binding_MainModule_Binding.Register(app);
             System_Action_2_GameObject_ILTypeInstance_Binding.Register(app);
             System_Collections_Generic_IDictionary_2_String_Int32_Binding.Register(app);
@@ -578,6 +580,7 @@ namespace ILRuntime.Runtime.Generated
             Hotfix_LT_Combat_CombatTeamSyncData_Binding.Register(app);
             System_Collections_Generic_List_1_CombatCharacterSyncData_Binding.Register(app);
             Hotfix_LT_Combat_CombatantIndex_Binding.Register(app);
+            UIBasicSprite_Binding.Register(app);
             MyFollowCamera_Binding_TouchCharacter_Binding.Register(app);
             UICamera_Binding_MouseOrTouch_Binding.Register(app);
             CharacterColorScale_Binding.Register(app);
@@ -622,8 +625,8 @@ namespace ILRuntime.Runtime.Generated
             UnityEngine_WaitForFixedUpdate_Binding.Register(app);
             System_Action_1_ChatMessage_Array_Binding.Register(app);
             System_Collections_Generic_List_1_Int64_Binding.Register(app);
-            System_Globalization_CultureInfo_Binding.Register(app);
             System_Globalization_CompareInfo_Binding.Register(app);
+            AIHelp_AIHelpManager_Binding.Register(app);
             System_Action_3_String_Int32_Boolean_Binding.Register(app);
             System_Collections_Generic_List_1_List_1_String_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_List_1_ILTypeInstance_Binding_Enumerator_Binding.Register(app);
@@ -632,7 +635,6 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_Dictionary_2_Int32_List_1_ILTypeInstance_Binding_KeyCollection_Binding_Enumerator_Binding.Register(app);
             System_Collections_ICollection_Binding.Register(app);
             System_Collections_Generic_List_1_Transform_Binding_Enumerator_Binding.Register(app);
-            System_Collections_Generic_List_1_UIButton_Binding.Register(app);
             TweenAlpha_Binding.Register(app);
             EB_Version_Binding.Register(app);
             EB_Sparx_Device_Binding.Register(app);
@@ -653,6 +655,7 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_List_1_EB_Sparx_MHAuthenticator_Binding_UserInfo_Binding.Register(app);
             EB_Sparx_MHAuthenticator_Binding_UserInfo_Binding.Register(app);
             EB_Encoding_Binding.Register(app);
+            System_Collections_Generic_List_1_KeyValuePair_2_Int32_Int32_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Object_Object_Binding.Register(app);
             System_Collections_Generic_List_1_Vector2_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_CampaignTextureCmp_Binding.Register(app);
@@ -669,7 +672,6 @@ namespace ILRuntime.Runtime.Generated
             UIRect_Binding_AnchorPoint_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_UISlider_Binding.Register(app);
             EB_Collections_Queue_1_ILTypeInstance_Binding.Register(app);
-            System_Collections_Generic_List_1_GameObject_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_Int32_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_String_Int32_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Boolean_String_Binding.Register(app);
@@ -679,7 +681,6 @@ namespace ILRuntime.Runtime.Generated
             System_Action_2_Boolean_Hashtable_Binding.Register(app);
             ToggleGroupState_Binding.Register(app);
             System_CharEnumerator_Binding.Register(app);
-            System_Collections_Generic_List_1_KeyValuePair_2_Int32_Int32_Binding.Register(app);
             System_Collections_Generic_HashSet_1_String_Binding_Enumerator_Binding.Register(app);
             System_Collections_IList_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_UIEventTrigger_Binding.Register(app);
@@ -701,6 +702,7 @@ namespace ILRuntime.Runtime.Generated
             System_Action_1_Int32_Array_Binding.Register(app);
             System_Collections_Generic_List_1_BoxCollider_Binding.Register(app);
             EventDelegate_Binding_Callback_Binding.Register(app);
+            System_Collections_Generic_List_1_UITexture_Binding.Register(app);
             UnityEngine_Handheld_Binding.Register(app);
             GaussianBlurRT_Binding.Register(app);
             UnityEngine_Coroutine_Binding.Register(app);
@@ -738,6 +740,8 @@ namespace ILRuntime.Runtime.Generated
             UIEventListener_Binding_BoolDelegate_Binding.Register(app);
             UIEventListener_Binding_KeyCodeDelegate_Binding.Register(app);
             UIEventListener_Binding_FloatDelegate_Binding.Register(app);
+            HutongGames_PlayMaker_FsmState_Binding.Register(app);
+            HutongGames_PlayMaker_FsmStateAction_Binding.Register(app);
             TweenRotation_Binding.Register(app);
             EB_Collections_Queue_1_String_Binding.Register(app);
             CartoonHelp_Binding.Register(app);
@@ -752,6 +756,7 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_List_1_StringView_Binding.Register(app);
             ZString_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Single_String_Binding.Register(app);
+            System_Globalization_DateTimeFormatInfo_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_String_Binding_KeyCollection_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_String_Binding_KeyCollection_Binding_Enumerator_Binding.Register(app);
             Main_DataCache_SceneTemplateManagerHelper_Binding.Register(app);

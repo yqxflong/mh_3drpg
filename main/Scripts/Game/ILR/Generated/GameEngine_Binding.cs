@@ -102,6 +102,10 @@ namespace ILRuntime.Runtime.Generated
             app.RegisterCLRFieldGetter(field, get_IsFTE_5);
             app.RegisterCLRFieldSetter(field, set_IsFTE_5);
             app.RegisterCLRFieldBinding(field, CopyToStack_IsFTE_5, AssignFromStack_IsFTE_5);
+            field = type.GetField("ASTIsHaveCommond", flag);
+            app.RegisterCLRFieldGetter(field, get_ASTIsHaveCommond_6);
+            app.RegisterCLRFieldSetter(field, set_ASTIsHaveCommond_6);
+            app.RegisterCLRFieldBinding(field, CopyToStack_ASTIsHaveCommond_6, AssignFromStack_ASTIsHaveCommond_6);
 
 
         }
@@ -568,6 +572,32 @@ namespace ILRuntime.Runtime.Generated
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.Boolean @IsFTE = ptr_of_this_method->Value == 1;
             ((global::GameEngine)o).IsFTE = @IsFTE;
+            return ptr_of_this_method;
+        }
+
+        static object get_ASTIsHaveCommond_6(ref object o)
+        {
+            return global::GameEngine.ASTIsHaveCommond;
+        }
+
+        static StackObject* CopyToStack_ASTIsHaveCommond_6(ref object o, ILIntepreter __intp, StackObject* __ret, IList<object> __mStack)
+        {
+            var result_of_this_method = global::GameEngine.ASTIsHaveCommond;
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method ? 1 : 0;
+            return __ret + 1;
+        }
+
+        static void set_ASTIsHaveCommond_6(ref object o, object v)
+        {
+            global::GameEngine.ASTIsHaveCommond = (System.Boolean)v;
+        }
+
+        static StackObject* AssignFromStack_ASTIsHaveCommond_6(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, IList<object> __mStack)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.Boolean @ASTIsHaveCommond = ptr_of_this_method->Value == 1;
+            global::GameEngine.ASTIsHaveCommond = @ASTIsHaveCommond;
             return ptr_of_this_method;
         }
 

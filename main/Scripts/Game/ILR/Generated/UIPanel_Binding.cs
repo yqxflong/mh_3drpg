@@ -29,33 +29,33 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Boolean)};
             method = type.GetMethod("set_IsPause", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, set_IsPause_1);
-            args = new Type[]{};
-            method = type.GetMethod("SetDirty", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, SetDirty_2);
-            args = new Type[]{};
-            method = type.GetMethod("GetViewSize", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, GetViewSize_3);
-            args = new Type[]{};
-            method = type.GetMethod("get_sortingOrder", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_sortingOrder_4);
-            args = new Type[]{typeof(UnityEngine.Vector2)};
-            method = type.GetMethod("set_clipOffset", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_clipOffset_5);
-            args = new Type[]{};
-            method = type.GetMethod("get_baseClipRegion", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_baseClipRegion_6);
-            args = new Type[]{};
-            method = type.GetMethod("Refresh", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Refresh_7);
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("set_sortingOrder", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_sortingOrder_8);
-            args = new Type[]{};
-            method = type.GetMethod("get_depth", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_depth_9);
+            app.RegisterCLRMethodRedirection(method, set_sortingOrder_2);
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("set_depth", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, set_depth_10);
+            app.RegisterCLRMethodRedirection(method, set_depth_3);
+            args = new Type[]{};
+            method = type.GetMethod("SetDirty", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, SetDirty_4);
+            args = new Type[]{};
+            method = type.GetMethod("GetViewSize", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, GetViewSize_5);
+            args = new Type[]{};
+            method = type.GetMethod("get_sortingOrder", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_sortingOrder_6);
+            args = new Type[]{typeof(UnityEngine.Vector2)};
+            method = type.GetMethod("set_clipOffset", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, set_clipOffset_7);
+            args = new Type[]{};
+            method = type.GetMethod("get_baseClipRegion", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_baseClipRegion_8);
+            args = new Type[]{};
+            method = type.GetMethod("Refresh", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, Refresh_9);
+            args = new Type[]{};
+            method = type.GetMethod("get_depth", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_depth_10);
             args = new Type[]{};
             method = type.GetMethod("get_clipOffset", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_clipOffset_11);
@@ -117,7 +117,43 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* SetDirty_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* set_sortingOrder_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @value = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            global::UIPanel instance_of_this_method = (global::UIPanel)typeof(global::UIPanel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.sortingOrder = value;
+
+            return __ret;
+        }
+
+        static StackObject* set_depth_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @value = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            global::UIPanel instance_of_this_method = (global::UIPanel)typeof(global::UIPanel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.depth = value;
+
+            return __ret;
+        }
+
+        static StackObject* SetDirty_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -132,7 +168,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* GetViewSize_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* GetViewSize_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -152,7 +188,7 @@ namespace ILRuntime.Runtime.Generated
             }
         }
 
-        static StackObject* get_sortingOrder_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_sortingOrder_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -169,7 +205,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* set_clipOffset_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* set_clipOffset_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -193,7 +229,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* get_baseClipRegion_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_baseClipRegion_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -208,7 +244,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* Refresh_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* Refresh_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -223,25 +259,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* set_sortingOrder_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Int32 @value = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            global::UIPanel instance_of_this_method = (global::UIPanel)typeof(global::UIPanel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            instance_of_this_method.sortingOrder = value;
-
-            return __ret;
-        }
-
-        static StackObject* get_depth_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_depth_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -256,24 +274,6 @@ namespace ILRuntime.Runtime.Generated
             __ret->ObjectType = ObjectTypes.Integer;
             __ret->Value = result_of_this_method;
             return __ret + 1;
-        }
-
-        static StackObject* set_depth_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Int32 @value = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            global::UIPanel instance_of_this_method = (global::UIPanel)typeof(global::UIPanel).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            instance_of_this_method.depth = value;
-
-            return __ret;
         }
 
         static StackObject* get_clipOffset_11(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)

@@ -44,9 +44,12 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("EmptyingAnchors", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, EmptyingAnchors_6);
+            args = new Type[]{};
+            method = type.GetMethod("ResetAndUpdateAnchors", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, ResetAndUpdateAnchors_7);
             args = new Type[]{typeof(UnityEngine.GameObject), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32)};
             method = type.GetMethod("SetAnchor", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, SetAnchor_7);
+            app.RegisterCLRMethodRedirection(method, SetAnchor_8);
 
             field = type.GetField("leftAnchor", flag);
             app.RegisterCLRFieldGetter(field, get_leftAnchor_0);
@@ -195,7 +198,22 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* SetAnchor_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ResetAndUpdateAnchors_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            global::UIRect instance_of_this_method = (global::UIRect)typeof(global::UIRect).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.ResetAndUpdateAnchors();
+
+            return __ret;
+        }
+
+        static StackObject* SetAnchor_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

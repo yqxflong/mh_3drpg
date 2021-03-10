@@ -505,6 +505,12 @@ public static class GlobalUtils
 #endif
     }
 
+    public static void ASTUpLog(string eventTag)
+    {
+#if USE_AOSHITANGSDK
+        EB.Sparx.AoshitangSDKManager.getInstance().UploadLog(eventTag, null);
+#endif
+    }
 
     public static bool Comparer<T>(T t)
     {

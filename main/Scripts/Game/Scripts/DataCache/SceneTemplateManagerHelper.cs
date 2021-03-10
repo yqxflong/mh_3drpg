@@ -4,6 +4,7 @@
 using System.Collections.Generic;
 using Unity.Standard.ScriptsWarp;
 using UnityEngine;
+using System.Globalization;
 
 namespace Main.DataCache
 {
@@ -11,12 +12,13 @@ namespace Main.DataCache
     {
         public static Vector3 LostChallengeChapterRole_ParseRotation(int id, string str)
         {
+            //EB.Debug.Log("LostChallengeChapterRole_ParseRotation: id -> {0}, str -> {1}", id, str);
             if (!string.IsNullOrEmpty(str))
             {
                 string[] rotationSplit = str.Split(',');
                 if (rotationSplit.Length >= 3)
                 {
-                    return new Vector3(float.Parse(rotationSplit[0]), float.Parse(rotationSplit[1]), float.Parse(rotationSplit[2]));
+                    return new Vector3(float.Parse(rotationSplit[0], NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(rotationSplit[1], NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(rotationSplit[2], NumberStyles.Any, CultureInfo.InvariantCulture));
                 }
                 else
                 {
@@ -29,12 +31,13 @@ namespace Main.DataCache
 
         public static Vector2 LostChallengeChapterRole_ParseSpan(int id, string str)
         {
+            //EB.Debug.Log("LostChallengeChapterRole_ParseSpan: id -> {0}, str -> {1}", id, str);
             if (!string.IsNullOrEmpty(str))
             {
                 string[] spanSplit = str.Split(',');
                 if (spanSplit.Length >= 2)
                 {
-                    return new Vector2(float.Parse(spanSplit[0]), float.Parse(spanSplit[1]));
+                    return new Vector2(float.Parse(spanSplit[0], NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(spanSplit[1], NumberStyles.Any, CultureInfo.InvariantCulture));
                 }
                 else
                 {
@@ -47,12 +50,13 @@ namespace Main.DataCache
 
         public static Vector2 LostChallengeChapterRole_ParseOffset(int id, string str)
         {
+            //EB.Debug.Log("LostChallengeChapterRole_ParseOffset: id -> {0}, str -> {1}", id, str);
             if (!string.IsNullOrEmpty(str))
             {
                 string[] offsetSplit = str.Split(',');
                 if (offsetSplit.Length >= 2)
                 {
-                    return new Vector2(float.Parse(offsetSplit[0]), float.Parse(offsetSplit[1]));
+                    return new Vector2(float.Parse(offsetSplit[0], NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(offsetSplit[1], NumberStyles.Any, CultureInfo.InvariantCulture));
                 }
                 else
                 {
@@ -65,6 +69,7 @@ namespace Main.DataCache
 
         public static string[] LostChallengeChapterRole_ParseGuide(int id, string str)
         {
+            //EB.Debug.Log("LostChallengeChapterRole_ParseGuide: id -> {0}, str -> {1}", id, str);
             string[] ret;
             if (!string.IsNullOrEmpty(str))
             {
@@ -94,6 +99,7 @@ namespace Main.DataCache
 
         public static void LostChallengeChapterRole_ParseModel(string str, out string model, out float scale)
         {
+            //EB.Debug.Log("LostChallengeChapterRole_ParseModel: str -> {0}", str);
             str = str ?? "";
 
 			StringView view = new StringView(str);
@@ -101,7 +107,7 @@ namespace Main.DataCache
             model = split.Count > 0 ? split[0].ToString() : string.Empty;
             if (split.Count > 1)
             {
-                float.TryParse(split[1].ToString(), out scale);
+                float.TryParse(split[1].ToString(), NumberStyles.Any, CultureInfo.InvariantCulture, out scale);
             }
             else
             {

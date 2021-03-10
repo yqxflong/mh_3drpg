@@ -34,6 +34,6 @@ public class TargetChangedEvent : GameEvent, IPlayMakerEvent
 
 	public void UpdateFsmEventData()
 	{
-//		HutongGames.PlayMaker.Fsm.EventData.GameObjectData = newTarget;
+		HutongGames.PlayMaker.Fsm.EventData.GameObjectData = newTarget;
 	}
 }

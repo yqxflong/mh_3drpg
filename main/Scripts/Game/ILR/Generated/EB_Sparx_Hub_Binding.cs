@@ -86,11 +86,11 @@ namespace ILRuntime.Runtime.Generated
             method = type.GetMethod("FatalError", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, FatalError_8);
             args = new Type[]{};
-            method = type.GetMethod("get_LevelRewardsManager", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_LevelRewardsManager_9);
-            args = new Type[]{};
             method = type.GetMethod("get_mBaseSdkManager", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_mBaseSdkManager_10);
+            app.RegisterCLRMethodRedirection(method, get_mBaseSdkManager_9);
+            args = new Type[]{};
+            method = type.GetMethod("get_LevelRewardsManager", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_LevelRewardsManager_10);
             args = new Type[]{typeof(global::DataLookupSparxManager)};
             if (genericMethods.TryGetValue("GetManager", out lst))
             {
@@ -362,7 +362,22 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* get_LevelRewardsManager_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_mBaseSdkManager_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            EB.Sparx.Hub instance_of_this_method = (EB.Sparx.Hub)typeof(EB.Sparx.Hub).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            var result_of_this_method = instance_of_this_method.mBaseSdkManager;
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* get_LevelRewardsManager_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -379,21 +394,6 @@ namespace ILRuntime.Runtime.Generated
             {    
                 return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
             }
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* get_mBaseSdkManager_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            EB.Sparx.Hub instance_of_this_method = (EB.Sparx.Hub)typeof(EB.Sparx.Hub).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            var result_of_this_method = instance_of_this_method.mBaseSdkManager;
-
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 

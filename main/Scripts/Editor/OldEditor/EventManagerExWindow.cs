@@ -134,7 +134,7 @@ public class EventManagerExWindow : EditorWindow
         else if(name.Contains("/"))
         {
             eventName = name;
-            objName = name.Replace( "/", "_");
+            objName = name.Replace("_", "/");
         }
         else
         {

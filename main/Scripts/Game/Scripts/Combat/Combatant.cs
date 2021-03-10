@@ -2263,8 +2263,88 @@ namespace Hotfix_LT.Combat
         }
 
         #region 分帧
+        private int _OnHitDamageDatasFramerHandler_minorder;
         private int _OnHitDamageDatasFramerHandler_seq = 0;
-        
+        private int _OnHitDamageDatasFramerHandler_BlockNum = 0;
+        private void Update_OnHitDamageDatasFramerHandler(int seq)
+        {
+            switch (_OnHitDamageDatasFramerHandler_BlockNum)
+            {
+                case 1:
+                    Update_OnHitDamageDatasFramerHandler_Block1();
+                    _OnHitDamageDatasFramerHandler_BlockNum++;
+                    break;
+                case 2:
+                    Update_OnHitDamageDatasFramerHandler_Block2();
+                    _OnHitDamageDatasFramerHandler_BlockNum++;
+                    break;
+                case 3:
+                    Update_OnHitDamageDatasFramerHandler_Block3();
+                    _OnHitDamageDatasFramerHandler_BlockNum++;
+                    break;
+                case 4:
+                    Update_OnHitDamageDatasFramerHandler_Block4();
+                    _OnHitDamageDatasFramerHandler_BlockNum++;
+                    break;
+                default:
+                    TimerManager.instance.RemoveTimerSafely(ref _OnHitDamageDatasFramerHandler_seq);
+                    _OnHitDamageDatasFramerHandler_BlockNum = 0;
+                    break;
+            }
+        }
+
+        private void Update_OnHitDamageDatasFramerHandler_Block1()
+        {
+            var enumerator = CombatSyncData.Instance.DamageDatas.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                while (enumerator.Current.Value.Count > 0)
+                {
+                    var dmgTargetData = enumerator.Current.Value.Peek();
+                    if (dmgTargetData.IsDirect && dmgTargetData.Order != -1) break;
+                    dmgTargetData.OnHit();
+                    enumerator.Current.Value.Dequeue();
+                }
+            }
+        }
+
+        private void Update_OnHitDamageDatasFramerHandler_Block2()
+        {
+            _OnHitDamageDatasFramerHandler_minorder = int.MaxValue;
+            var enumerator1 = CombatSyncData.Instance.DamageDatas.GetEnumerator();
+            while (enumerator1.MoveNext())
+            {
+                if (enumerator1.Current.Value.Count > 0)
+                {
+                    var data = enumerator1.Current.Value.Peek();
+                    if (data.Order < _OnHitDamageDatasFramerHandler_minorder)
+                    {
+                        _OnHitDamageDatasFramerHandler_minorder = data.Order;
+                    }
+                }
+            }
+        }
+
+        private void Update_OnHitDamageDatasFramerHandler_Block3()
+        {
+            var enumerator2 = CombatSyncData.Instance.DamageDatas.GetEnumerator();
+            while (enumerator2.MoveNext())
+            {
+                while (enumerator2.Current.Value.Count > 0)
+                {
+                    var dmgTargetData = enumerator2.Current.Value.Peek();
+                    if (dmgTargetData.Order != _OnHitDamageDatasFramerHandler_minorder) break;
+                    dmgTargetData.OnHit();
+                    enumerator2.Current.Value.Dequeue();
+                }
+            }
+        }
+
+        private void Update_OnHitDamageDatasFramerHandler_Block4()
+        {
+            ShowBuffFloatFont();
+        }
+
         private void OnHitDamageDatasFramerHandler(object arg)
         {
             //战斗改为不在事件触发上做分帧，改为在ui飘字上做分帧。
@@ -2284,7 +2364,6 @@ namespace Hotfix_LT.Combat
                             dmgTargetData = enumerator.Current.Value.Peek();
                             if (!dmgTargetData.IsDirect)
                             {
-                                dmgTargetData= enumerator.Current.Value.Dequeue();
                                 dmgTargetData.OnHit();
                             }
                         }
@@ -2295,6 +2374,12 @@ namespace Hotfix_LT.Combat
                     }
                 }
             }
+            //TimerManager.instance.RemoveTimerSafely(ref _OnHitDamageDatasFramerHandler_seq);
+            //_OnHitDamageDatasFramerHandler_BlockNum = 1;
+            //if (!preExit)
+            //{
+            //    _OnHitDamageDatasFramerHandler_seq = TimerManager.instance.AddTimer(1, 0, Update_OnHitDamageDatasFramerHandler);
+            //}
         }
         #endregion
 

@@ -13,44 +13,33 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 
 public static class UserData
 {
-    // public const string defaultStartingLevel = "DressingLevel";
     public const string defaultPlayerName = "GuestPlayer";
-#if USE_AMAZON_API //国外连接的是amazon的服务器，国内还是原先的
-    public const string defaultApiServerAddress = "https://s3.ca-central-1.amazonaws.com/api.manhuanggame.com";
-#else
+
+#if USE_OVERSEAS
+    public const string defaultApiServerAddress = "https://apios.manhuang.org";
+#else 
     public const string defaultApiServerAddress = "https://api.manhuang.org";
+
 #endif
     public const string defaultAuthServerAddress = "https://auth.ubei.io:20181";
 
-    // public const string defaultAndroidOtaServerAddress = "https://lostoss.oss-cn-shenzhen.aliyuncs.com/lt/android/bundle";
-    // public const string defaultIOSOtaServerAddress = "https://lostoss.oss-cn-shenzhen.aliyuncs.com/lt/ios/bundle";
-#if UNITY_ANDROID && USE_DOWNLOAD_AB
-    public static readonly string localAssetAddress = defaultAndroidOtaServerAddress;
-#elif UNITY_IOS && USE_DOWNLOAD_AB
-    public static readonly string localAssetAddress = defaultIOSOtaServerAddress;
-#elif !UNITY_EDITOR && UNITY_ANDROID
+#if !UNITY_EDITOR && UNITY_ANDROID
 	public static readonly string localAssetAddress = Application.streamingAssetsPath + "/" + GM.AssetUtils.STREAMING_ASSETS_BUNDLE_FOLDER_NAME;
 #else
     public static readonly string localAssetAddress = "file://" + Application.streamingAssetsPath + "/" + GM.AssetUtils.STREAMING_ASSETS_BUNDLE_FOLDER_NAME;
 #endif
-    // static readonly string localAssetAddress = defaultAndroidOtaServerAddress;//Application.streamingAssetsPath + "/" + GM.AssetUtils.STREAMING_ASSETS_BUNDLE_FOLDER_NAME;
-    //#if UNITY_EDITOR && UNITY_ANDROID
-    //	public static readonly string localAssetAddress = Application.streamingAssetsPath + "/" + GM.AssetUtils.STREAMING_ASSETS_BUNDLE_FOLDER_NAME;
-    //#else
-    //    public static readonly string localAssetAddress = "file://" + Application.streamingAssetsPath + "/" + GM.AssetUtils.STREAMING_ASSETS_BUNDLE_FOLDER_NAME;
-    //#endif
+
     public const int defaultCharacterId = 0;
     public const float defaultVolume = 1.0f;
     public const float defaultVolume_Low = 0.6f;
     public const float defaultVolume_Low2 = 0.4f;
     public const bool defaultAudioMuteSet = false;
-    // public const bool defaultFirstEverLogin = false;
     public const string defaultCustomDataVersion = "";
-    // public const int defaultCharacterSlotNum = 10;
-    // public const EB.Language defaultLanguage = EB.Language.English;
+    public const EB.Language defaultLanguage = EB.Language.English;
 
     public static readonly char[] kDefaultNameChars =
         {
@@ -75,25 +64,7 @@ public static class UserData
         get { return _vigorRecoverFullNotification; }
         set { _vigorRecoverFullNotification = value; }
     }
-
-    // static private string SettingPath = "SettingTag.receivePkRequest";
-    // public static bool PkRequestEnabled
-    // {
-    //     set
-    //     {
-    //         DataLookupsCache.Instance.CacheData(SettingPath, value);
-    //         //SocialIntactManager已经迁移
-    //     //    SparxHub.Instance.GetManager<EB.Sparx.SocialIntactManager>().SaveReceivePkRequest(value, null);
-    //     }
-    //     get
-    //     {
-    //         bool value = false;
-    //         if (!DataLookupsCache.Instance.SearchDataByID<bool>(SettingPath, out value))
-    //             EB.Debug.LogError("search data settingTag.receivePkRequest fail");
-    //         return value;
-    //     }
-    // }
-
+    
     private static bool _skillCameraRotateEnabled = true;
     public static bool SkillCameraRotateEnabled
     {
@@ -206,7 +177,7 @@ public static class UserData
         set { _customDataVersion = value; }
     }
 
-    private static bool _tutorialCompleteForStatTracking = false; // is the tutorial complete so far as stat tracking libs are concerned? Nanigans etc (may be earlier than screen blocking/hints end)
+    private static bool _tutorialCompleteForStatTracking = false; 
     public static bool TutorialCompleteForStatTracking
     {
         get { return _tutorialCompleteForStatTracking; }
@@ -297,16 +268,13 @@ public static class UserData
             }
         }
     }
-    //ToDo:迁移到热更
-    //public static List<LTDailyData> PushMessageDataList = new List<LTDailyData>();
-    //public static Dictionary<int, bool> PushMessageDataDic = new Dictionary<int, bool>();
 
     public static Vector3 GetVector3(string rString)
     {
         string[] temp = rString.Substring(1, rString.Length - 2).Split(',');
-        float x = float.Parse(temp[0]);
-        float y = float.Parse(temp[1]);
-        float z = float.Parse(temp[2]);
+        float x = float.Parse(temp[0], NumberStyles.Any, CultureInfo.InvariantCulture);
+        float y = float.Parse(temp[1], NumberStyles.Any, CultureInfo.InvariantCulture);
+        float z = float.Parse(temp[2], NumberStyles.Any, CultureInfo.InvariantCulture);
         Vector3 rValue = new Vector3(x, y, z);
 
         return rValue;
@@ -379,7 +347,7 @@ public static class UserData
         PlayerNum = PlayerPrefs.GetInt("SettingPlayerNum", -1);
 
         LatestCharacterId = PlayerPrefs.GetInt("LatestCharacterId", defaultCharacterId);
-        MusicVolume = PlayerPrefs.GetFloat("MusicVolume", defaultVolume_Low2);//defaultVolume_Low);
+        MusicVolume = PlayerPrefs.GetFloat("MusicVolume", defaultVolume_Low2);
         SFXVolume = PlayerPrefs.GetFloat("SFXVolume", defaultVolume_Low);
         AmbienceVolume = PlayerPrefs.GetFloat("AmbienceVolume", defaultVolume_Low);
         IsMusicMute = PlayerPrefs.GetInt("IsMusicMute", 0) == 1 ? true : false;

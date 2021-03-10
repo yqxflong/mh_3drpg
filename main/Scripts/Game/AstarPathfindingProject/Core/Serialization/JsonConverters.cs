@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Pathfinding.Serialization.JsonFx;
+using System.Globalization;
 #if NETFX_CORE
 using System.Reflection;
 #endif
@@ -139,7 +140,7 @@ namespace Pathfinding.Serialization {
 				return m;
 			}
 
-			for (int i = 0; i < 16; i++) m[i] = System.Convert.ToSingle(arr.GetValue(new [] { i }));
+			for (int i = 0; i < 16; i++) m[i] = System.Convert.ToSingle(arr.GetValue(new [] { i }), CultureInfo.InvariantCulture);
 
 			return m;
 		}

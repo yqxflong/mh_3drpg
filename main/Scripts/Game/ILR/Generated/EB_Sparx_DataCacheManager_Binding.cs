@@ -35,7 +35,7 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("GetVersions", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, GetVersions_3);
-            args = new Type[]{typeof(System.Collections.Hashtable), typeof(System.Action<System.String>), typeof(System.Action<System.Int32>)};
+            args = new Type[]{typeof(System.Collections.Hashtable), typeof(System.Action<System.String>), typeof(System.Action<System.Int32, System.String>)};
             method = type.GetMethod("ProcessCaches", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ProcessCaches_4);
             args = new Type[]{typeof(System.String), typeof(System.String), typeof(System.ArraySegment<System.Byte>)};
@@ -139,7 +139,7 @@ namespace ILRuntime.Runtime.Generated
             StackObject* __ret = ILIntepreter.Minus(__esp, 4);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Action<System.Int32> @addPrgAct = (System.Action<System.Int32>)typeof(System.Action<System.Int32>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            System.Action<System.Int32, System.String> @addPrgAct = (System.Action<System.Int32, System.String>)typeof(System.Action<System.Int32, System.String>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);

@@ -31,6 +31,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.DateTime)};
             method = type.GetMethod("ToUniversalTime", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ToUniversalTime_2);
+            args = new Type[]{typeof(System.DateTime)};
+            method = type.GetMethod("GetUtcOffset", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, GetUtcOffset_3);
 
 
         }
@@ -81,6 +84,25 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
             var result_of_this_method = instance_of_this_method.ToUniversalTime(@time);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* GetUtcOffset_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.DateTime @time = (System.DateTime)typeof(System.DateTime).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.TimeZone instance_of_this_method = (System.TimeZone)typeof(System.TimeZone).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            var result_of_this_method = instance_of_this_method.GetUtcOffset(@time);
 
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }

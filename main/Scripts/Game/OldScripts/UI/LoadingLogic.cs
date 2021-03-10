@@ -63,6 +63,9 @@ public class LoadingLogic : MonoBehaviour
 	
 	private string[] LoadingStr = {".  ", " . ", "  ."};
 
+    //用于输出debug信息
+    private static UILabel LABEL_DEBUG_OUTPUT;
+
     ///自行判空
     public static LoadingLogic Instance{get; set;} = null;
 
@@ -80,7 +83,7 @@ public class LoadingLogic : MonoBehaviour
         }
     }
 
-    public static void AddCustomProgress(int prg)
+    public static void AddCustomProgress(int prg, string flag)
     {
         if(Instance == null)
         {
@@ -96,13 +99,21 @@ public class LoadingLogic : MonoBehaviour
         {
             Instance.CustomProgress += prg;
             Instance.CustomProgress = Mathf.Clamp(Instance.CustomProgress, 0, 99);
+#if DEBUG
+            EB.Debug.LogError($"[DEBUG]RealProgress: {Instance.CustomProgress}=Flag: {flag}");
+            LABEL_DEBUG_OUTPUT.text = $"[DEBUG]RealProgress: {Instance.CustomProgress}=Flag: {flag}";
+#endif
         }
     }
     #endregion
 
     void Awake()
 	{
+        //debug
+        LABEL_DEBUG_OUTPUT = gameObject.GetComponent<UILabel>("LoadingScreen/Label_Debug");
+
 		_panel = GetComponent<UIPanel>();
+        
 
         string loadingText = EB.Localizer.GetString("ID_LOADING");
 		for (int i = 0, len = LoadingStr.Length; i < len; ++i)

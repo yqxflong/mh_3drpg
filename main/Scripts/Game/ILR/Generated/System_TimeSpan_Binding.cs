@@ -35,11 +35,11 @@ namespace ILRuntime.Runtime.Generated
             method = type.GetMethod("get_TotalHours", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_TotalHours_3);
             args = new Type[]{};
-            method = type.GetMethod("get_Hours", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_Hours_4);
-            args = new Type[]{};
             method = type.GetMethod("get_Minutes", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_Minutes_5);
+            app.RegisterCLRMethodRedirection(method, get_Minutes_4);
+            args = new Type[]{};
+            method = type.GetMethod("get_Hours", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_Hours_5);
             args = new Type[]{};
             method = type.GetMethod("get_Days", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_Days_6);
@@ -55,6 +55,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.TimeSpan), typeof(System.TimeSpan)};
             method = type.GetMethod("op_GreaterThan", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, op_GreaterThan_10);
+            args = new Type[]{};
+            method = type.GetMethod("get_TotalDays", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_TotalDays_11);
 
             app.RegisterCLRCreateDefaultInstance(type, () => new System.TimeSpan());
 
@@ -191,28 +194,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* get_Hours_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            ptr_of_this_method = ILIntepreter.GetObjectAndResolveReference(ptr_of_this_method);
-            System.TimeSpan instance_of_this_method = (System.TimeSpan)typeof(System.TimeSpan).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-
-            var result_of_this_method = instance_of_this_method.Hours;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            WriteBackInstance(__domain, ptr_of_this_method, __mStack, ref instance_of_this_method);
-
-            __intp.Free(ptr_of_this_method);
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* get_Minutes_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_Minutes_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -223,6 +205,27 @@ namespace ILRuntime.Runtime.Generated
             System.TimeSpan instance_of_this_method = (System.TimeSpan)typeof(System.TimeSpan).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
 
             var result_of_this_method = instance_of_this_method.Minutes;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            WriteBackInstance(__domain, ptr_of_this_method, __mStack, ref instance_of_this_method);
+
+            __intp.Free(ptr_of_this_method);
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method;
+            return __ret + 1;
+        }
+
+        static StackObject* get_Hours_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            ptr_of_this_method = ILIntepreter.GetObjectAndResolveReference(ptr_of_this_method);
+            System.TimeSpan instance_of_this_method = (System.TimeSpan)typeof(System.TimeSpan).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+
+            var result_of_this_method = instance_of_this_method.Hours;
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
             WriteBackInstance(__domain, ptr_of_this_method, __mStack, ref instance_of_this_method);
@@ -329,6 +332,27 @@ namespace ILRuntime.Runtime.Generated
 
             __ret->ObjectType = ObjectTypes.Integer;
             __ret->Value = result_of_this_method ? 1 : 0;
+            return __ret + 1;
+        }
+
+        static StackObject* get_TotalDays_11(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            ptr_of_this_method = ILIntepreter.GetObjectAndResolveReference(ptr_of_this_method);
+            System.TimeSpan instance_of_this_method = (System.TimeSpan)typeof(System.TimeSpan).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+
+            var result_of_this_method = instance_of_this_method.TotalDays;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            WriteBackInstance(__domain, ptr_of_this_method, __mStack, ref instance_of_this_method);
+
+            __intp.Free(ptr_of_this_method);
+            __ret->ObjectType = ObjectTypes.Double;
+            *(double*)&__ret->Value = result_of_this_method;
             return __ret + 1;
         }
 

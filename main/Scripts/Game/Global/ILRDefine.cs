@@ -76,7 +76,37 @@ public class ILRDefine
     public static bool IS_FX = true;
 #else
     public static bool IS_FX = false;
-#endif 
+#endif
+
+#if USE_APPSFLYER
+    public static bool USE_APPSFLYER = true;
+#else
+    public static bool USE_APPSFLYER = false;
+#endif
+
+#if USE_AOSHITANGSDK
+    public static bool USE_AOSHITANGSDK = true;
+#else
+    public static bool USE_AOSHITANGSDK = false;
+#endif
+
+#if USE_ASTTEST||USE_AOSHITANGSDK
+    public static bool USE_ASTTEST = true;
+#else
+    public static bool USE_ASTTEST = false;
+#endif
+
+#if USE_AIHELP
+    public static bool USE_AIHELP = true;
+#else
+    public static bool USE_AIHELP = false;
+#endif
+
+#if USE_OVERSEAS
+    public static bool USE_OVERSEAS = true;
+#else
+    public static bool USE_OVERSEAS = false;
+#endif
 
     public void Test()
     {

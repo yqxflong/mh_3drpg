@@ -38,9 +38,9 @@ public class SkillSelectionHandler : MonoBehaviour
 		HideQTE();
 	}
 
-	// public void TriggerSkill() {
-	// 	FindObjectOfType<PlayMakerFSM>().Fsm.BroadcastEvent("UpdateSkillSelection");
-	// }
+	public void TriggerSkill() {
+		FindObjectOfType<PlayMakerFSM>().Fsm.BroadcastEvent("UpdateSkillSelection");
+	}
 	
 	public void OnSkillSelected(SkillUpdate myUpdate)
 	{

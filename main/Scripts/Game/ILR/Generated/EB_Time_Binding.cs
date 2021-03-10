@@ -37,42 +37,36 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("FromPosixTime", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, FromPosixTime_4);
-            args = new Type[]{};
-            method = type.GetMethod("get_LocalYear", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_LocalYear_5);
-            args = new Type[]{};
-            method = type.GetMethod("get_LocalMonth", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_LocalMonth_6);
-            args = new Type[]{};
-            method = type.GetMethod("get_LocalDay", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_LocalDay_7);
-            args = new Type[]{typeof(System.DateTime)};
-            method = type.GetMethod("Since", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Since_8);
-            args = new Type[]{typeof(System.DateTime)};
-            method = type.GetMethod("After", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, After_9);
             args = new Type[]{typeof(System.DateTime)};
             method = type.GetMethod("ToPosixTime", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ToPosixTime_10);
+            app.RegisterCLRMethodRedirection(method, ToPosixTime_5);
             args = new Type[]{};
             method = type.GetMethod("get_deltaTime", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_deltaTime_11);
+            app.RegisterCLRMethodRedirection(method, get_deltaTime_6);
             args = new Type[]{typeof(System.Double)};
             method = type.GetMethod("FromPosixTime", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, FromPosixTime_12);
+            app.RegisterCLRMethodRedirection(method, FromPosixTime_7);
+            args = new Type[]{};
+            method = type.GetMethod("get_LocalMonth", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_LocalMonth_8);
+            args = new Type[]{};
+            method = type.GetMethod("get_LocalDay", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_LocalDay_9);
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("After", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, After_13);
+            app.RegisterCLRMethodRedirection(method, After_10);
             args = new Type[]{typeof(System.Double)};
             method = type.GetMethod("IsLocalToday", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, IsLocalToday_14);
+            app.RegisterCLRMethodRedirection(method, IsLocalToday_11);
             args = new Type[]{};
             method = type.GetMethod("get_LocalDaysInMonth", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, get_LocalDaysInMonth_15);
+            app.RegisterCLRMethodRedirection(method, get_LocalDaysInMonth_12);
             args = new Type[]{typeof(System.TimeSpan), typeof(System.TimeSpan)};
             method = type.GetMethod("LocalInRange", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, LocalInRange_16);
+            app.RegisterCLRMethodRedirection(method, LocalInRange_13);
+            args = new Type[]{};
+            method = type.GetMethod("get_LocalYear", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, get_LocalYear_14);
 
 
         }
@@ -141,82 +135,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* get_LocalYear_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
-
-
-            var result_of_this_method = EB.Time.LocalYear;
-
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* get_LocalMonth_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
-
-
-            var result_of_this_method = EB.Time.LocalMonth;
-
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* get_LocalDay_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
-
-
-            var result_of_this_method = EB.Time.LocalDay;
-
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* Since_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.DateTime @dt = (System.DateTime)typeof(System.DateTime).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = EB.Time.Since(@dt);
-
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* After_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.DateTime @dt = (System.DateTime)typeof(System.DateTime).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = EB.Time.After(@dt);
-
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* ToPosixTime_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ToPosixTime_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -234,7 +153,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* get_deltaTime_11(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_deltaTime_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* __ret = ILIntepreter.Minus(__esp, 0);
@@ -247,7 +166,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* FromPosixTime_12(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* FromPosixTime_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -262,7 +181,33 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* After_13(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_LocalMonth_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
+
+
+            var result_of_this_method = EB.Time.LocalMonth;
+
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method;
+            return __ret + 1;
+        }
+
+        static StackObject* get_LocalDay_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
+
+
+            var result_of_this_method = EB.Time.LocalDay;
+
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method;
+            return __ret + 1;
+        }
+
+        static StackObject* After_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -279,7 +224,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* IsLocalToday_14(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* IsLocalToday_11(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -296,7 +241,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* get_LocalDaysInMonth_15(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* get_LocalDaysInMonth_12(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* __ret = ILIntepreter.Minus(__esp, 0);
@@ -309,7 +254,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static StackObject* LocalInRange_16(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* LocalInRange_13(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -328,6 +273,19 @@ namespace ILRuntime.Runtime.Generated
 
             __ret->ObjectType = ObjectTypes.Integer;
             __ret->Value = result_of_this_method ? 1 : 0;
+            return __ret + 1;
+        }
+
+        static StackObject* get_LocalYear_14(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
+
+
+            var result_of_this_method = EB.Time.LocalYear;
+
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method;
             return __ret + 1;
         }
 

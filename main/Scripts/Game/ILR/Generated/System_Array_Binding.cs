@@ -109,6 +109,9 @@ namespace ILRuntime.Runtime.Generated
                     }
                 }
             }
+            args = new Type[]{typeof(System.Array), typeof(System.Int32), typeof(System.Array), typeof(System.Int32), typeof(System.Int32)};
+            method = type.GetMethod("Copy", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, Copy_6);
             args = new Type[]{typeof(ILRuntime.Runtime.Intepreter.ILTypeInstance)};
             if (genericMethods.TryGetValue("Find", out lst))
             {
@@ -117,7 +120,7 @@ namespace ILRuntime.Runtime.Generated
                     if(m.MatchGenericParameters(args, typeof(ILRuntime.Runtime.Intepreter.ILTypeInstance), typeof(ILRuntime.Runtime.Intepreter.ILTypeInstance[]), typeof(System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance>)))
                     {
                         method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, Find_6);
+                        app.RegisterCLRMethodRedirection(method, Find_7);
 
                         break;
                     }
@@ -131,7 +134,7 @@ namespace ILRuntime.Runtime.Generated
                     if(m.MatchGenericParameters(args, typeof(global::DynamicMonoILRObjectAdaptor.Adaptor), typeof(global::DynamicMonoILRObjectAdaptor.Adaptor[]), typeof(System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor>)))
                     {
                         method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, Find_7);
+                        app.RegisterCLRMethodRedirection(method, Find_8);
 
                         break;
                     }
@@ -145,15 +148,12 @@ namespace ILRuntime.Runtime.Generated
                     if(m.MatchGenericParameters(args, typeof(System.Int32), typeof(System.String[]), typeof(System.String)))
                     {
                         method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, IndexOf_8);
+                        app.RegisterCLRMethodRedirection(method, IndexOf_9);
 
                         break;
                     }
                 }
             }
-            args = new Type[]{typeof(System.Array), typeof(System.Int32), typeof(System.Array), typeof(System.Int32), typeof(System.Int32)};
-            method = type.GetMethod("Copy", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Copy_9);
             args = new Type[]{typeof(System.Array), typeof(System.Int32), typeof(System.Int32)};
             method = type.GetMethod("Clear", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Clear_10);
@@ -451,74 +451,7 @@ namespace ILRuntime.Runtime.Generated
             return __ret;
         }
 
-        static StackObject* Find_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance> @match = (System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance>)typeof(System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            ILRuntime.Runtime.Intepreter.ILTypeInstance[] @array = (ILRuntime.Runtime.Intepreter.ILTypeInstance[])typeof(ILRuntime.Runtime.Intepreter.ILTypeInstance[]).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = System.Array.Find<ILRuntime.Runtime.Intepreter.ILTypeInstance>(@array, @match);
-
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* Find_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor> @match = (System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor>)typeof(System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            global::DynamicMonoILRObjectAdaptor.Adaptor[] @array = (global::DynamicMonoILRObjectAdaptor.Adaptor[])typeof(global::DynamicMonoILRObjectAdaptor.Adaptor[]).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = System.Array.Find<global::DynamicMonoILRObjectAdaptor.Adaptor>(@array, @match);
-
-            object obj_result_of_this_method = result_of_this_method;
-            if(obj_result_of_this_method is CrossBindingAdaptorType)
-            {    
-                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
-            }
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* IndexOf_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.String @value = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.String[] @array = (System.String[])typeof(System.String[]).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = System.Array.IndexOf<System.String>(@array, @value);
-
-            __ret->ObjectType = ObjectTypes.Integer;
-            __ret->Value = result_of_this_method;
-            return __ret + 1;
-        }
-
-        static StackObject* Copy_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* Copy_6(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -545,6 +478,73 @@ namespace ILRuntime.Runtime.Generated
             System.Array.Copy(@sourceArray, @sourceIndex, @destinationArray, @destinationIndex, @length);
 
             return __ret;
+        }
+
+        static StackObject* Find_7(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance> @match = (System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance>)typeof(System.Predicate<ILRuntime.Runtime.Intepreter.ILTypeInstance>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            ILRuntime.Runtime.Intepreter.ILTypeInstance[] @array = (ILRuntime.Runtime.Intepreter.ILTypeInstance[])typeof(ILRuntime.Runtime.Intepreter.ILTypeInstance[]).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            var result_of_this_method = System.Array.Find<ILRuntime.Runtime.Intepreter.ILTypeInstance>(@array, @match);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* Find_8(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor> @match = (System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor>)typeof(System.Predicate<global::DynamicMonoILRObjectAdaptor.Adaptor>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            global::DynamicMonoILRObjectAdaptor.Adaptor[] @array = (global::DynamicMonoILRObjectAdaptor.Adaptor[])typeof(global::DynamicMonoILRObjectAdaptor.Adaptor[]).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            var result_of_this_method = System.Array.Find<global::DynamicMonoILRObjectAdaptor.Adaptor>(@array, @match);
+
+            object obj_result_of_this_method = result_of_this_method;
+            if(obj_result_of_this_method is CrossBindingAdaptorType)
+            {    
+                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
+            }
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* IndexOf_9(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.String @value = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.String[] @array = (System.String[])typeof(System.String[]).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            var result_of_this_method = System.Array.IndexOf<System.String>(@array, @value);
+
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method;
+            return __ret + 1;
         }
 
         static StackObject* Clear_10(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)

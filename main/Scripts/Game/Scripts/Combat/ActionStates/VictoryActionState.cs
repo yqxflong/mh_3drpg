@@ -13,8 +13,7 @@ namespace Hotfix_LT.Combat
 		public override void Init(Combatant combatant)
 		{
 			base.Init(combatant);
-            MoveState = MoveController.CombatantMoveState.kVictoryDance;
-        }
+		}
 
 		public override void Start()
 		{

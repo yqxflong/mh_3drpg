@@ -28,12 +28,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.String), typeof(System.Object[])};
             method = type.GetMethod("Format", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Format_1);
-            args = new Type[]{typeof(System.String), typeof(System.Char)};
-            method = type.GetMethod("Splits", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, Splits_2);
             args = new Type[]{typeof(System.String[]), typeof(System.String)};
             method = type.GetMethod("IndexOf", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, IndexOf_3);
+            app.RegisterCLRMethodRedirection(method, IndexOf_2);
 
 
         }
@@ -79,26 +76,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* Splits_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
-        {
-            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
-            StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Char @separator = (char)ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.String @self = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
-            __intp.Free(ptr_of_this_method);
-
-
-            var result_of_this_method = EB.StringUtil.Splits(@self, @separator);
-
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
-        }
-
-        static StackObject* IndexOf_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* IndexOf_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

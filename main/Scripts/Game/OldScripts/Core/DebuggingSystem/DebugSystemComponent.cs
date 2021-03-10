@@ -3,6 +3,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Globalization;
 
 public partial class DebugSystemComponent : MonoBehaviour, IDebuggable
 {
@@ -461,6 +462,11 @@ public partial class DebugSystemComponent : MonoBehaviour, IDebuggable
 		_gameSystems[render].isDebuggingEnabled = true;
 		_gameSystems[render].showLog = true;
 
+		PlayMakerGUI playMakerGUI = (PlayMakerGUI)FindObjectOfType(typeof(PlayMakerGUI));
+		if (playMakerGUI != null)
+		{
+			RegisterSystem(new PlayMakerDebuggable(playMakerGUI), "PlayMaker", null, true, true);
+		}
 	}
 
 	void Update()
@@ -713,7 +719,7 @@ public partial class DebugSystemComponent : MonoBehaviour, IDebuggable
 						{
 							if (field.FieldType == typeof(float))
 							{
-								newValue = float.Parse(newValue.ToString());
+								newValue = float.Parse(newValue.ToString(), NumberStyles.Any, CultureInfo.InvariantCulture);
 							}
 							else if (field.FieldType == typeof(int))
 							{

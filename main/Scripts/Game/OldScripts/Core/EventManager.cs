@@ -219,19 +219,19 @@ public class EventManager
 		}
 
 		// Trigger event in PlayMaker if it's visible
-//		if (e.GetType().GetCustomAttributes(typeof(VisibleAtDesignLevelAttribute), false).Length > 0)
-//		{
-//			if (e is IPlayMakerEvent)
-//			{
-//				((IPlayMakerEvent)e).UpdateFsmEventData();
-//				GameObject[] relevantGOs = ((IPlayMakerEvent)e).GetRelevantGameObjects();
-//				BroadcastToPlayMaker(e, relevantGOs == null ? null : new List<GameObject>(relevantGOs));
-//			}
-//			else
-//			{
-//				BroadcastToPlayMaker(e);
-//			}
-//		}
+		if (e.GetType().GetCustomAttributes(typeof(VisibleAtDesignLevelAttribute), false).Length > 0)
+		{
+			if (e is IPlayMakerEvent)
+			{
+				((IPlayMakerEvent)e).UpdateFsmEventData();
+				GameObject[] relevantGOs = ((IPlayMakerEvent)e).GetRelevantGameObjects();
+				BroadcastToPlayMaker(e, relevantGOs == null ? null : new List<GameObject>(relevantGOs));
+			}
+			else
+			{
+				BroadcastToPlayMaker(e);
+			}
+		}
 
 		EventDelegate del;
 		if (delegates.TryGetValue(e.GetType(), out del))
@@ -266,33 +266,33 @@ public class EventManager
 		}
 	}
 
-//	private void BroadcastToPlayMaker(GameEvent e, List<GameObject> relevantTargets = null)
-//	{
-//		// no specific target(s) passed, broadcast to all FSMs
-//		if (relevantTargets == null)
-//		{
-//			PlayMakerFSM[] fsms = PlayMakerFSM.FsmList.ToArray();
-//			foreach (PlayMakerFSM fsm in fsms)
-//			{
-//				fsm.SendEvent("FUSION_" + e.GetType().Name);
-//			}
-//			
-//			return;
-//		}
-//
-//		foreach (GameObject target in relevantTargets)
-//		{
-//			if (target != null)
-//			{
-//				PlayMakerFSM[] fsms = target.GetComponentsInChildren<PlayMakerFSM>();
-//				if (fsms != null)
-//				{
-//					foreach (PlayMakerFSM fsm in fsms)
-//					{
-//						fsm.SendEvent("FUSION_" + e.GetType().Name);
-//					}
-//				}
-//			}
-//		}
-//	}
+	private void BroadcastToPlayMaker(GameEvent e, List<GameObject> relevantTargets = null)
+	{
+		// no specific target(s) passed, broadcast to all FSMs
+		if (relevantTargets == null)
+		{
+			PlayMakerFSM[] fsms = PlayMakerFSM.FsmList.ToArray();
+			foreach (PlayMakerFSM fsm in fsms)
+			{
+				fsm.SendEvent("FUSION_" + e.GetType().Name);
+			}
+			
+			return;
+		}
+
+		foreach (GameObject target in relevantTargets)
+		{
+			if (target != null)
+			{
+				PlayMakerFSM[] fsms = target.GetComponentsInChildren<PlayMakerFSM>();
+				if (fsms != null)
+				{
+					foreach (PlayMakerFSM fsm in fsms)
+					{
+						fsm.SendEvent("FUSION_" + e.GetType().Name);
+					}
+				}
+			}
+		}
+	}
 }

@@ -87,7 +87,6 @@ public class DebugHandler : MonoBehaviour
     private bool synthesize = false;
     private bool setcampaign = false;
     private bool partner = false;
-    private bool activityracing = false;
 
     private Dictionary<string, bool> gemConvertToggleDic = new Dictionary<string, bool>();
     private Dictionary<string, bool> gemRecycleToggleDic = new Dictionary<string, bool>();
@@ -168,7 +167,6 @@ public class DebugHandler : MonoBehaviour
         //ChangeHeroTemplate(btnStyle, btnWidth);
         //ChangeHeroColor(btnStyle, btnWidth);
         //ChangeEquipmentColor(btnStyle, btnWidth);	
-        ActivityRacing(btnStyle, btnWidth);
         PrintLoadRecord(btnStyle, btnWidth);
         ChallengeTools(btnStyle, btnWidth);
 
@@ -1661,60 +1659,6 @@ public class DebugHandler : MonoBehaviour
         }
     }
 
-    #region ActivityRacing
-    private string activity_racing_group = "1";
-    private string activity_racing_num = "1";
-
-    private void ActivityRacing(GUIStyle btnStyle, GUILayoutOption btnWidth)
-    {
-        activityracing = GUILayout.Toggle(activityracing, "ActivityRacing", btnStyle);
-
-        if (!activityracing)
-            return;
-
-        GUILayout.BeginVertical();
-        GUILayout.Label("Group: ");
-        activity_racing_group = GUILayout.TextField(activity_racing_group);
-        if(!int.TryParse(activity_racing_group, out int nGroup))
-        {
-            return;
-        }
-
-        if(GUILayout.Button("StartBet"))
-        {
-            GlobalUtils.CallStaticHotfixEx("Hotfix_LT.UI.LTActivityRacingManager", "Instance", "DebugRequestEnterBet", nGroup);
-        }
-
-        if(GUILayout.Button("StartCalc"))
-        {
-            GlobalUtils.CallStaticHotfixEx("Hotfix_LT.UI.LTActivityRacingManager", "Instance", "DebugRequestCalcResult", nGroup);
-        }
-
-        GUILayout.Label("Num: ");
-        activity_racing_num = GUILayout.TextField(activity_racing_num);
-        if(GUILayout.Button("Bet"))
-        {
-            int nNum = int.Parse(activity_racing_num);
-            GlobalUtils.CallStaticHotfixEx("Hotfix_LT.UI.LTActivityRacingManager", "Instance", "RequestBet", nGroup, nNum);
-        }
-
-        if(GUILayout.Button("AddBet"))
-        {
-            GlobalUtils.CallStaticHotfixEx("Hotfix_LT.UI.LTActivityRacingManager", "Instance", "RequestAddBet", nGroup);
-        }
-
-        if(GUILayout.Button("SendAward"))
-        {
-            GlobalUtils.CallStaticHotfixEx("Hotfix_LT.UI.LTActivityRacingManager", "Instance", "DebugRequestSendReward", nGroup);
-        }
-
-        if(GUILayout.Button("CleanStatus"))
-        {
-            GlobalUtils.CallStaticHotfixEx("Hotfix_LT.UI.LTActivityRacingManager", "Instance", "DebugRequestCleanStatus", nGroup);
-        }
-        GUILayout.EndVertical();
-    }
-    #endregion
 
     #region enchantments
     private void EnchantsDebug(GUIStyle btnStyle, GUILayoutOption btnWidth)

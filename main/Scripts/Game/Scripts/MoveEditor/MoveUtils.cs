@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace MoveEditor
 {
@@ -659,10 +660,10 @@ namespace MoveEditor
 			{
 				string[] values = items[i].Split(',');
 
-				float.TryParse(values[0], out key.x);
-				float.TryParse(values[1], out key.y);
-				float.TryParse(values[2], out key.z);
-				float.TryParse(values[3], out key.w);
+				float.TryParse(values[0], NumberStyles.Any, CultureInfo.InvariantCulture, out key.x);
+				float.TryParse(values[1], NumberStyles.Any, CultureInfo.InvariantCulture, out key.y);
+				float.TryParse(values[2], NumberStyles.Any, CultureInfo.InvariantCulture, out key.z);
+				float.TryParse(values[3], NumberStyles.Any, CultureInfo.InvariantCulture, out key.w);
 
 				keys.Add(new Keyframe(key.x, key.y, key.z, key.w));
 			}
@@ -678,8 +679,8 @@ namespace MoveEditor
 			string sub = s.Substring(start, s.IndexOf(')') - start);
 			string[] items = sub.Split(',');
 			
-			float.TryParse(items[0], out v.x);
-			float.TryParse(items[1], out v.y);
+			float.TryParse(items[0], NumberStyles.Any, CultureInfo.InvariantCulture, out v.x);
+			float.TryParse(items[1], NumberStyles.Any, CultureInfo.InvariantCulture, out v.y);
 
 			return v;
 		}
@@ -692,9 +693,9 @@ namespace MoveEditor
 			string sub = s.Substring(start, s.IndexOf(')') - start);
 			string[] items = sub.Split(',');
 			
-			float.TryParse(items[0], out v.x);
-			float.TryParse(items[1], out v.y);
-			float.TryParse(items[2], out v.z);
+			float.TryParse(items[0], NumberStyles.Any, CultureInfo.InvariantCulture, out v.x);
+			float.TryParse(items[1], NumberStyles.Any, CultureInfo.InvariantCulture, out v.y);
+			float.TryParse(items[2], NumberStyles.Any, CultureInfo.InvariantCulture, out v.z);
 			
 			return v;
 		}
@@ -707,10 +708,10 @@ namespace MoveEditor
 			string sub = s.Substring(start, s.IndexOf(')') - start);
 			string[] items = sub.Split(',');
 
-			float.TryParse(items[0], out color.r);
-			float.TryParse(items[1], out color.g);
-			float.TryParse(items[2], out color.b);
-			float.TryParse(items[3], out color.a);
+			float.TryParse(items[0], NumberStyles.Any, CultureInfo.InvariantCulture, out color.r);
+			float.TryParse(items[1], NumberStyles.Any, CultureInfo.InvariantCulture, out color.g);
+			float.TryParse(items[2], NumberStyles.Any, CultureInfo.InvariantCulture, out color.b);
+			float.TryParse(items[3], NumberStyles.Any, CultureInfo.InvariantCulture, out color.a);
 
 			return color;
 		}
@@ -725,7 +726,7 @@ namespace MoveEditor
 				GradientColorKey key = new GradientColorKey();
 				string[] items = pairs[i].Split(new char[]{'&'});
 				key.color = MoveEditor.MoveUtils.ParseColor(items[0]);
-				key.time = float.Parse(items[1]);
+				key.time = float.Parse(items[1], NumberStyles.Any, CultureInfo.InvariantCulture);
 				colorKeys.Add(key);
 			}
 			
@@ -761,7 +762,7 @@ namespace MoveEditor
 			if( s != null )
 			{
 				float value = 0.0f;
-				float.TryParse( s, out value );
+				float.TryParse( s, NumberStyles.Any, CultureInfo.InvariantCulture, out value );
 				return value;
 			}
 			return defaultValue;

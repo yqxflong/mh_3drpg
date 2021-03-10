@@ -155,7 +155,7 @@ namespace BE.Level
         /// <param name="zone">区域类型</param>
         private void LoadLevelZone(enZoneType zone)
         {
-            LoadingLogic.AddCustomProgress(10);
+            LoadingLogic.AddCustomProgress(10, "LoadLevelZone.Begin");
             for (var i = 0; i < _coroutines.Count; i++)
             {
                 if (_coroutines[i] != null)
@@ -313,7 +313,7 @@ namespace BE.Level
 
         private void ClearLightMap(List<LevelInfo> levelInfos)
         {
-            LoadingLogic.AddCustomProgress(10);
+            LoadingLogic.AddCustomProgress(10, "ClearLightMap.Begin");
             //将之前还在内存里的释放掉
             List<enZoneType> clearList = new List<enZoneType>();
 
